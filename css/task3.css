@@ -5,28 +5,40 @@ body {
     background-color:#68cdd5;
     font-size:1rem;
 }
-.arrow{
-    padding:1rem 1 1 1;
+.arrow
+{
+    margin:2%;
     position:relative;
 }
-h1{
+.headlogo{
     text-align:center;
+    padding-top:5%;
+    position:relative;
     line-height:3rem;
-    padding:2rem;
+}
+h1{
+    font-size:3rem;
+    color:white;
+    font-family:宋体;
+    text-align:center;
+    position:relative;
+    margin-top:4rem;
 }
 p{
-    line-height:3rem;
-    text-align:center;
-    padding:0 2rem 0 2rem;
-    font-size:1.5rem;
+    font-size:2rem;
     color:white;
+    font-family:宋体;
+    text-align:center;
 }
-.footer{padding: 3.5rem 0 0 0 ;
-    text-align: center;
+.xueyuan
+{
+    float:left;
+    padding:20rem 0 5rem 20rem;
 }
-.bluelogo{float: left;
-    margin: 13rem 0 5rem 2rem;
+.contentlogo
+{
+    float:right;
+    padding:20rem 20rem 5rem 0;
 }
-.pptlogo{
-    float: right;
-    margin: 13rem 2rem 5rem 0 ;  }
+
+
