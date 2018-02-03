@@ -1,44 +1,48 @@
 html {
-    font-size: 62.5%;
+    font-size:625%;
 }
 body {
     background-color:#68cdd5;
-    font-size:1rem;
 }
 .arrow
 {
     margin:2%;
-    position:relative;
-}
+position:absolute;}
 .headlogo{
     text-align:center;
-    padding-top:5%;
+    padding-top:0.6rem;
     position:relative;
-    line-height:3rem;
+    line-height:0.2rem;
 }
 h1{
-    font-size:3rem;
+    font-size:0.1rem;
     color:white;
     font-family:宋体;
     text-align:center;
     position:relative;
-    margin-top:4rem;
+    padding: 0.5rem 0.4rem 0 0.4rem;
 }
 p{
-    font-size:2rem;
+    font-size:0.1rem;
     color:white;
     font-family:宋体;
     text-align:center;
+    position:relative;
 }
 .xueyuan
 {
     float:left;
-    padding:20rem 0 5rem 20rem;
+    width:1.2rem;
+    padding:0.9rem 0.2rem 0 0;
+    margin-left:0.2rem;
+    text-align:center;
 }
 .contentlogo
 {
     float:right;
-    padding:20rem 20rem 5rem 0;
-}
-
+    width:1.2rem;
+    padding:0.9rem 0 0 0.2rem;
+    display:inline;
+    text-align:center;
+    margin-right:0.2rem;
 
