@@ -1,0 +1,10 @@
+html{
+    font-size:625%;
+}
+header{
+    background-color:#eff0f4;
+    width:0.8rem;
+    padding:0;
+    margin:0;
+    position:fixed;
+}
