@@ -15,7 +15,7 @@ header{
 }
 header a {
     color: white;
-    font-size:0.6rem;
+    font-size:0.3rem;
 }
 .a1{
     float:left;
@@ -28,7 +28,7 @@ header a {
 header h2 {
     text-align: center;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.4rem;
     color:white;
 }
 main{
@@ -41,24 +41,24 @@ main{
 }
 .login{
     width:100%;
-    background-color:white;
     margin: .3rem 0 0 0;
 }
-.login-row input {
+.login input {
     box-sizing: border-box;
     width: 100%;
-    font-size: 0.6rem;
+    font-size: 0.3rem;
     line-height: 0.5rem;
     padding:0 0 0 0.8rem;
     border:none;
+    }
+input[type=text] {
+    background:white url("../img/iphone.png") no-repeat 2% center;
+    height: 1rem;
+
 }
-.login-row input[type=text] {
-    background: url("../img/iphone.png") no-repeat;
-    background-position: 1.2%;
-}
-.login-row input[type=password] {
-    background: url("../img/locked 2.png") no-repeat;
-    background-position: 1.2%;
+input[type=password] {
+    background: white url("../img/locked2.png") no-repeat 2% center;
+    height: 1rem;
 }
 .bt{
     margin-top:0.2rem;
@@ -70,10 +70,10 @@ main{
     background-color:#5fc0cd;
     color:white;
 }
-.ff{
+.ff a{
     float:right;
     position:relative;
     color:#5fc0cd;
     padding:0.2rem 0.3rem 0 0;
-    font-size:0.4rem;
+    font-size:0.2rem;
 }
