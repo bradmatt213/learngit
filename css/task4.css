@@ -1,83 +1,85 @@
-html{
-    font-size:625%;
+html {
+    font-size: 625%;
 }
 body{
     background-color:#eff0f4;
+    margin:0;
 }
 header{
-    position: fixed;
-    height: 1.2rem;
-    line-height: 1.2rem;
+       position:fixed;
     background: #5fc0cd;
+    height:0.32rem;
+    line-height: 0.32rem;
+    font-size:0.16rem;
+    padding: 0.07rem 0.1rem;
     left: 0;
     right: 0;
     top: 0;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
 }
 header a {
-    color: white;
-    font-size:0.3rem;
-}
-.a1{
-    float:left;
-    margin-left:0.2rem;
-}
-.a2{
-    float:right;
-    margin-right:0.2rem;
-}
-header h2 {
-    text-align: center;
-    margin: 0;
-    font-size: 0.4rem;
     color:white;
+    font-size:0.14rem;
+    text-decoration:none;
+}
+header .a3{
+    font-size:0.18rem;
 }
 main{
     position: absolute;
-    top: 1.4rem;
+    top:0.46rem;
     bottom:0;
     left: 0;
     right: 0;
     background-color:#eff0f4;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
-.login{
+main .content{
+    height:auto;
+    font-size:0.14rem;
+}
+.login1{
     width:100%;
-    margin: .3rem 0 0 0;
+    background: #fff;
+    margin: .1rem 0 0 0;
 }
 .login input {
     box-sizing: border-box;
     width: 100%;
-    font-size: 0.3rem;
+    font-size: 0.16rem;
     line-height: 0.5rem;
-    padding:0 0 0 0.8rem;
-    border:none;
+    padding:0 0.1rem 0 1.5rem;
+    outline:none;
+    border: 0 none;
     }
-.login button{
-    height:1rem;
-    font-size:0.4rem;
-}
+
 input[type=text] {
-    background:white url("../img/iphone.png") no-repeat 1% center;
-    height: 1rem;
+    background:white url("../img/iphone.png") no-repeat 0.32rem center;
 
 }
 input[type=password] {
-    background: white url("../img/locked2.png") no-repeat 1% center;
-    height: 1rem;
+    background: white url("../img/locked2.png") no-repeat 0.3rem center;
+
+
 }
-.bt{
-    margin-top:0.2rem;
-    width:100%;
-    line-height:0.4rem;
-    font-size: .16rem;
+.button1{
+    margin-top: .3rem;
+    width: 100%;
+    line-height: .5rem;
+    font-size: .18rem;
     letter-spacing: 1em;
-    padding:0 0 0 0;
-    background-color:#5fc0cd;
+    background: #5fc0cd;
     color:white;
+    border: 0 none;
 }
-.tt a{
-    float:right;
-    position:relative;
-    color:#5fc0cd;
-    padding:0.2rem 0.3rem 0 0;
-    font-size:0.2rem;
+.code a{
+    float: right;
+    color: #5fc0cd;
+    padding:0 0.1rem 0 0;
+    font-size:0.15rem;
 }
