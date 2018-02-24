@@ -51,13 +51,17 @@ main{
     padding:0 0 0 0.8rem;
     border:none;
     }
+.login button{
+    height:1rem;
+    font-size:0.4rem;
+}
 input[type=text] {
-    background:white url("../img/iphone.png") no-repeat 2% center;
+    background:white url("../img/iphone.png") no-repeat 1% center;
     height: 1rem;
 
 }
 input[type=password] {
-    background: white url("../img/locked2.png") no-repeat 2% center;
+    background: white url("../img/locked2.png") no-repeat 1% center;
     height: 1rem;
 }
 .bt{
@@ -70,7 +74,7 @@ input[type=password] {
     background-color:#5fc0cd;
     color:white;
 }
-.ff a{
+.tt a{
     float:right;
     position:relative;
     color:#5fc0cd;
