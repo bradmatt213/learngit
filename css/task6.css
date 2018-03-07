@@ -1,6 +1,9 @@
 html{
     font-size:625%;
 }
+body{
+    text-overflow:ellipsis;
+    }
 /*header*/
 header{
     position:fixed;
@@ -14,6 +17,7 @@ header{
     height: 0.5rem;
     background: #5fc0cd url("../img/iconheader.png") no-repeat 90% center;
     background-size:0.3rem 0.3rem;
+
     }
 header button{
     width: 0.72rem;
@@ -40,6 +44,7 @@ header button{
     display:flex;
     width:100%;
     border-bottom:1px solid #adadad;
+    background-color:white;
    }
 .dp-cell{
     flex:1;
@@ -51,15 +56,21 @@ header button{
     color:#adadad;
 }
 /*content*/
+li{
+    list-style: none;
+}
 .content{
-    position:fixed;
-    top:0.93rem;
+    position:absolute;
+    top:1rem;
     width:100%;
     font-size:0.14rem;
-}
+    overflow: auto;
+    }
 .textarea{
-        border-bottom: 1px solid #adadad;
+    border-bottom: 1px solid #adadad;
     padding:0.1rem 0.2rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .date{
 color:#cccccc;
@@ -73,14 +84,22 @@ color:#cccccc;
     display:flex;
     justify-content:space-between;
     background:url("../img/green.png") no-repeat right center;
+    overflow: hidden;
+    text-overflow:ellipsis;
     }
 .time1{
     padding-left:0.25rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .price
 {
     padding-right:0.2rem;
     color:#e63b0e;
+    overflow: hidden;
+    text-overflow:ellipsis;
+        white-space: nowrap;
 }
 .location{
     color:#cccccc;
