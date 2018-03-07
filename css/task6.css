@@ -65,6 +65,7 @@ li{
     width:100%;
     font-size:0.14rem;
     overflow: auto;
+    z-index: -2;
     }
 .textarea{
     border-bottom: 1px solid #adadad;
