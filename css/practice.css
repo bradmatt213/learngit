@@ -1,7 +1,225 @@
-html{
-    font-size:62.5%;
+html {
+    font-size: 625%;
 }
-.wrapper{
-    width: 920px;
-    margin: 0 auto;
+
+body {
+    margin: 0;
+    font-size: .13rem;
+    color: #fff;
+    font-size: .14rem;
+    background-color: #29bde0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: .18rem;
+    line-height: .5rem;
+    text-align: center;
+    background-color: #29bde0;
+    z-index: 1;
+}
+
+.header .menu {
+    background: url(../img/img.png) no-repeat;
+    display: inline-block;
+    transform: scale(0.5);
+    height: 40px;
+    width: 39px;
+    background-position: 0 -209px;
+    float: left;
+    margin-left: .1rem;
+    margin-top: 3px;
+}
+
+.header .cancel {
+    background: url(../img/img.png) no-repeat;
+    display: inline-block;
+    transform: scale(0.5);
+    height: 36px;
+    width: 36px;
+    background-position: 0 -163px;
+    float: right;
+    margin-right: .1rem;
+    margin-top: 3px;
+}
+
+.body {
+    margin-top: .5rem;
+    margin-bottom: .9rem;
+    background-color: #29bde0;
+}
+
+.body .music {
+    position: relative;
+    line-height: .5rem;
+    font-size: .12rem;
+    background-color: #b9e9f5;
+    color: #464646;
+    padding-left: .25rem;
+}
+
+.body .music .audio {
+    width: .5rem;
+    position: absolute;
+    left: 0;
+    margin-right: -200px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.body .music .areuok {
+    background: url(../img/img.png) no-repeat;
+    display: inline-block;
+    transform: scale(0.5);
+    height: 52px;
+    width: 52px;
+    background-position: 0 -259px;
+    transform: scale(0.65);
+    float: right;
+    margin-right: .08rem;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+}
+
+.body .music .triangle {
+    position: absolute;
+    top: 35px;
+    left: .35rem;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #b9e9f5 transparent transparent;
+    transform: rotate(22deg);
+}
+
+.body .text {
+    padding-left: .28rem;
+    font-size: .12rem;
+}
+
+.body .flex {
+    margin-left: .1rem;
+}
+
+.body .flex .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.body .flex .content .item {
+    height: 25vw;
+    width: 25vw;
+    margin-right: 3vw;
+    margin-bottom: 8vw;
+    font-size: .15rem;
+    text-align: center;
+    border: .5vw solid #fff;
+}
+
+.body .flex .content .item:hover .wrap {
+    display: flex;
+}
+
+.body .flex .content .item .id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    color: #565656;
+    background-color: #f5c97b;
+}
+
+.body .flex .content .item .num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    margin: 0;
+    background-color: #83b09a;
+}
+
+.body .flex .content .item .wrap {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vw;
+    margin-top: 1vw;
+}
+
+.body .flex .content .item .wrap .photo1 {
+    width: 100%;
+    height: auto;
+    max-width: 5vw;
+    min-width: 5vw;
+}
+
+.body .flex .content .item .wrap .photo2 {
+    width: 100%;
+    height: auto;
+    max-width: 5vw;
+    min-width: 5vw;
+}
+
+.body .flex .content .item .wrap .photo3 {
+    width: 100%;
+    height: auto;
+    max-width: 5vw;
+    min-width: 5vw;
+}
+
+.body .flex .content .item .wrap .photo4 {
+    width: 100%;
+    height: auto;
+    max-width: 5vw;
+    min-width: 5vw;
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    height: .9rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    background-color: #29bde0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.footer .btn {
+    box-sizing: border-box;
+    width: 100%;
+    line-height: .45rem;
+    background-color: #fbb435;
+    border-radius: 0;
+    color: #fff;
+    font-size: .2rem;
+    letter-spacing: .05rem;
+    margin-bottom: .1rem;
+    border: none;
 }

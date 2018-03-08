@@ -74,7 +74,7 @@ li{
     text-overflow:ellipsis;
 }
 .date{
-color:#cccccc;
+    color:#cccccc;
     background:url("../img/calendar2.png") no-repeat left top;
     background-size:0.2rem 0.2rem;
     }
