@@ -1,0 +1,247 @@
+html{
+    font-size:625%;
+}
+/*header*/
+header{
+    position:fixed;
+    width:100%;
+    left:0;
+    right:0;
+    top:0;
+    height:1.5rem;
+    z-index:999;
+}
+.followus{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding-left:12%;
+    padding-right:12%;
+    color:#29b078;
+    background:white;
+
+}
+.followus a{
+    width:0.3rem;
+    height:0.3rem;
+    display:inline-block;
+}
+.wechat{
+    background:url("../img/wechat.png") no-repeat right bottom;
+}
+.qq{
+    background:url("../img/qq.png") no-repeat right bottom;
+}
+.sina{
+    background:url("../img/sina.png") no-repeat right bottom;
+}
+.navigation{
+    position:fixed;
+    background-color:#29b078;
+    width:100%;
+    height:1.2rem;
+    padding-right:12%;
+    }
+.navigation a{
+    display:block;
+    float:right;
+    margin-top:0.5rem;
+    margin-left:4.5vw;
+    color:white;
+    font-size:0.15rem;
+    height:0.7rem;
+    text-decoration: none;
+    text-align:center;
+    width:5vw;
+    white-space: nowrap;
+    }
+.navigation a:hover{
+    border-bottom:4px solid white;
+}
+main{
+    position:absolute;
+    top:1.55rem;
+}
+h5{
+    text-align:center;
+    font-weight:bold;
+}
+.about{
+    display:flex;
+    justify-content: space-between;
+    font-size:1vw;
+    padding-left:12%;
+    padding-right:12%;
+    padding-top: 0.5rem;
+                        }
+.about p{
+    padding-top: 0.8rem;
+    display:inline-block;
+    height:10vw;
+    width:20vw;
+    }
+.about p span{
+    display:block;
+}
+.rocket{
+    background: url("../img/rocket.png") no-repeat center top;
+}
+.archive{
+    background: url("../img/archive.png") no-repeat center top;
+}
+.source{
+    background: url("../img/Shape253.png") no-repeat center top;
+    border-right:2px dashed lightgrey;
+}
+.static{
+    font-size:0.15rem;
+    color:green;
+    margin-top:-1rem;
+    display:block;
+}
+.static a{
+    font-size:0.15rem;
+    color:green;
+    padding:0.2rem 0 0 0.2rem;
+    display:block;
+}
+.f1{
+    font-size:0.2rem;
+    text-align:center;
+}
+.f2{
+    color:lightgrey;
+    text-align:center;
+}
+.f3{
+    color:lightgrey !important;
+    }
+/*how*/
+.gmn{
+    position:relative;
+    margin-top:1rem;
+    font-size:0.1rem;
+}
+.howtolearn{
+    display: flex;
+    justify-content: space-between;
+    height:0.7rem;
+
+}
+.num{
+    color:green;
+    border:1px solid lightgrey;
+    box-shadow: 0.01rem 0.01rem 0.1rem lightgrey;
+    width:0.3rem;
+    height:0.3rem;
+    border-radius: 0.15rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-box{
+    color:lightgrey;
+    margin-top:0.1rem;
+}
+.arrow{
+    display:inline-block;
+    background: url("../img/形状7拷贝.png") no-repeat right 15%;
+    width:0.2rem;
+
+}
+/*show*/
+.students{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height:3rem;
+    border:1px solid lightgrey;
+    box-shadow: 0.01rem 0.01rem 0.1rem lightgrey;
+    padding-top:0.2rem;
+    padding-left:0.1rem;
+    width:2.1rem;
+    margin-right:0.82rem;
+}
+/*cooperation*/
+.cooperate{
+    height:1.8rem;
+position:relative;
+    top:0.1rem;
+  display:flex;
+    justify-content: space-around;
+    margin-left:1.73rem;
+    margin-right:2.53rem;
+box-shadow: 3px 3px 5px lightgrey;
+
+}
+.company1{
+margin-top:0.2rem;
+
+}
+.company2{
+    box-shadow: 1px 5px 15px lightgrey;
+}
+.fff4 h5{
+   margin-top:2.5rem;
+    font-weight:bold;
+}
+.links{
+    margin-top:0.5rem;
+}
+ul{
+display:flex;
+    width:100%;
+    justify-content: space-around;
+    padding-left:12%;
+    padding-right:14%;
+}
+li a{
+    color:lightgrey;
+}
+footer{
+    position:relative;
+    margin-top:23rem;
+    background-color:#29b078;
+    width:100%;
+    left:0;
+    right:0;
+    bottom:0;
+    height:2.4rem;
+    color:white;
+    font-size:0.17rem;
+    }
+footer a{
+    font-size:0.15rem;
+    color:white;
+
+}
+.aboutus{
+    padding-top:0.5rem;
+    display:flex;
+    justify-content: space-between;
+    padding-left:12%;
+    padding-right:12%;
+}
+.left1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cc2 a{
+    border-right:2px solid white;
+    padding-right:0.2rem;
+}
+.middle1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.copyright{
+    margin-top:0.3rem;
+    text-align: center;
+    color:white;
+    font-size:0.13rem;
+}
