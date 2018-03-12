@@ -60,85 +60,79 @@ header{
 .navigation a:hover{
     border-bottom:4px solid white;
 }
-.faster{
-    margin-top:1.2rem;
-    margin-left:-1rem;
-}
-.HolyGrail {
-    display: flex;
-    min-height: 60vh;
-    flex-direction: column;
-    margin-top:4.2rem;
+main{
     position: absolute;
+    margin-top:1.7rem;
+    padding-left:12%;
+    padding-right:12%;
 }
-.hd1 footer{
-    flex:1;
-}
-.HolyGrail-body {
-    display: flex;
-    flex: 1;
-}
-
-.HolyGrail-content {
-    flex: 1;
-    padding-top:0.5rem;
-    margin-bottom:3.1rem;
-    box-shadow: 2px 2px 10px lightgrey;
-    padding-bottom: 2.9rem;
-    padding-right:2rem;
-    padding-left:2rem;
-}
-.HolyGrail-content h4{
-    color:lightgrey;
-    height:1rem;
-    padding-left:30%;
-    background:url("../img/tudou.png") no-repeat left 70%;
-    }
-.HolyGrail-content p{
-    color:lightgrey;
-    text-indent: 40px;
-    margin-top:0.3rem;
+.slidebar{
+    border-bottom:1px solid lightgrey;
+    width:12rem;
+    right:0;
+    left:0;
+    padding-top:0.3rem;
 
 }
-.HolyGrail-nav, .HolyGrail-ads {
-    /* 两个边栏的宽度设为12em */
-    flex: 0 0 12em;
-    margin-bottom:3rem;
-}
+.ff1{
 
-.HolyGrail-nav {
-    /* 导航放到最左边 */
-    order: -1;
-    display: flex;
-}
-.HolyGrail-nav ul{
-    justify-content: space-around;
-    flex-direction: column;
-    display:flex;
-    list-style-type: none;
-    box-shadow:2px 2px 3px lightgrey;
-}
-.HolyGrail-nav ul li{
-    background: url("../img/tuoyuan.png") no-repeat left 50%;
-    padding-left:0.2rem;
-    padding-right:0.3rem;
-    }
-.chose{
-    color:orange!important;
-}
-.HolyGrail-nav a{
     color:green;
 }
-
+.breadcrumb{
+    background-color:white;
+}
+.breadcrumb > li + li:before {
+    color: black;
+     content: " ";
+    padding: 0 5px;
+}
+.breadcrumb > li a{
+    color: black;
+}
+.breadcrumb > li a:hover{
+    background-color:#29b078;
+    color:white;
+}
+.cc1{
+    color:lightgrey;
+   display:inline-block;
+    margin-top:25%;
+    margin-left:17%;
+}
+.ff5{
+    margin-top:-0.2rem;
+}
+.qps {
+    color: lightgrey;
+    white-space: nowrap;
+    font-size:0.1rem;
+}
+.qpt{
+    box-shadow: 2px 2px 10px lightgrey;
+    margin-top:0.3rem;
+}
+.biaoti{
+    margin-top:0.3rem;
+}
+.red{
+    color:red;
+}
+.fk{
+    display:flex;
+    justify-content: space-between;
+}
+main{
+    position: relative;
+    margin-bottom:1.5rem;
+}
 footer{
-
-
-        background-color:#29b078;
+    position: relative;
+    background-color:#29b078;
     width:100%;
     left:0;
     right:0;
     bottom:0;
-    height:2.4rem;
+    height:2.5rem;
     color:white;
     font-size:0.17rem;
 }
