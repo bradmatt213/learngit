@@ -13,20 +13,23 @@ body{
     font-size:0.15rem;
     padding:0.2rem 0.2rem;
     background:url("../img/icon1.png") no-repeat 95% center;
+    background-size:0.2rem 0.2rem;
     background-color:#fff;
-    color:lightgrey;
+    color:#a0a0a0;
+    border-radius: 0.01px;
 }
 .b1{
     position:fixed;
-    background:#fff url("../img/多边形1.png") no-repeat 95% center;
-    margin:0.1rem 0.3rem;
+    background:#fff url("../img/多边形1.png") no-repeat 97% 52%;
+    
+        margin:0.1rem 0.3rem;
     bottom:0;
     top:1.2rem;
     left:0;
     right:0;
 
     }
-h1{
+h3  {
     padding:0.2rem;
     border-bottom:1px solid orange;
     color:orange;
@@ -40,7 +43,7 @@ h1{
 .f4{
     background-color:#69d1e9;
     color:white;
-
+    border-radius: 0.01px;
     font-size:0.25rem;
     padding:0.25rem 0.7rem;
         width:80%;
