@@ -3,24 +3,46 @@ html{
 }
 /*header*/
 header{
-    position:fixed;
+    position:absolute;
     width:100%;
     left:0;
     right:0;
     top:0;
-    height:1.5rem;
+    height:2rem;
     z-index:999;
 }
+/*客服热线以及三个图标*/
 .followus{
     display:flex;
     justify-content: space-between;
     align-items: center;
     width:100%;
-    padding-left:12%;
-    padding-right:12%;
+    padding-left:18.7%;
+    padding-right:18.7%;
     color:#29b078;
     background:white;
-
+    font-size:14px;
+}
+.login{
+    display: none;
+}
+@media screen and (max-width: 1080px){
+    .followus{
+        display:none;
+    }
+    .login{
+        display: block;
+        height:36px;
+        margin-left:80%;
+        padding-top:10px;
+    }
+    .login1{
+        border-right:1px solid #29b078;
+        padding-right:5px;
+    }
+    .login a{
+        color:black;
+    }
 }
 .followus a{
     width:0.3rem;
@@ -36,203 +58,426 @@ header{
 .sina{
     background:url("../img/sina.png") no-repeat right bottom;
 }
+/*导航栏*/
 .navigation{
-    position:fixed;
-    background-color:#29b078;
+    position:absolute;
+    background:#29b078 url("../img/jinengshu.png") no-repeat 20% center;
     width:100%;
-    height:1.2rem;
-    padding-right:12%;
-    }
+    height:1.01rem;
+    padding-right:18.7%;
+}
 .navigation a{
     display:block;
     float:right;
     margin-top:0.5rem;
-    margin-left:4.5vw;
     color:white;
-    font-size:0.15rem;
-    height:0.7rem;
+    font-size:16px;
+    height:0.5rem;
     text-decoration: none;
     text-align:center;
-    width:5vw;
+    width:98px;
     white-space: nowrap;
+}
+.frontpage{
+   margin-right:-32px;
+}
+.dp{
+    display: none;
+}
+@media screen and (max-width:1080px) {
+    .dp{
+        display: block;
+        float:right;
+        margin-top:0.1rem;
     }
+}
+@media screen and (max-width:1080px) {
+    .navigation {
+        position: absolute;
+        background: #29b078 url("../img/jinengshu.png") no-repeat 12% center;
+        width: 100%;
+        height: 0.8rem;
+        padding-right: 12%;
+    }
+    .navigation a {
+        display: none;
+        float: right;
+        margin-top: 0.3rem;
+        margin-left: 2.5vw;
+        color: white;
+        font-size: 0.12rem;
+        height: 0.5rem;
+        text-decoration: none;
+        text-align: center;
+        width: 5vw;
+        white-space: nowrap;
+    }
+}
 .navigation a:hover{
     border-bottom:4px solid white;
 }
+.hidden{
+    z-index:999;
+}
+/*轮播图及自适应*/
 main{
-    position:absolute;
-    top:1.55rem;
+    position: relative;
+    top:1.35rem;
 }
-h5{
-    text-align:center;
-    font-weight:bold;
-}
-.about{
-    display:flex;
-    justify-content: space-between;
-    font-size:1vw;
-    padding-left:12%;
-    padding-right:12%;
-    padding-top: 0.5rem;
-                        }
-.about p{
-    padding-top: 0.8rem;
-    display:inline-block;
-    height:10vw;
-    width:20vw;
+@media screen and (max-width: 1080px) {
+    main {
+        top: 1.11rem;
     }
-.about p span{
-    display:block;
+}
+/*优点*/
+.ct1{
+    margin-top:1.63rem;
+    width:12rem;
+    font-size:16px;
+}
+.wearegood{
+    height:2.2rem;
+    color:lightgrey;
+    }
+.wearegood1{
+    height:2.2rem;
+    color:lightgrey;
+    text-align:center;
+}
+.wearegood p{
+    text-align: center;
+}
+@media screen and (max-width: 1080px){
+    .ct1{
+        margin-top:1.63rem;
+        width:100%;
+        font-size:16px;
+        margin-left:10px;
+    }
+    .wearegood{
+        height:2.2rem;
+        color:lightgrey;
+        text-align:center;
+    }
+    .wearegood1{
+        height:2.2rem;
+        color:lightgrey;
+        text-align:center;
+    }
 }
 .rocket{
-    background: url("../img/rocket.png") no-repeat center top;
+    width:2rem;
+    height:1rem;
+    background:url("../img/rocket.png") no-repeat center top;
+    display: block;
+    margin: 0 auto;
 }
 .archive{
-    background: url("../img/archive.png") no-repeat center top;
+    width:2rem;
+    height:1rem;
+    background:url("../img/archive.png") no-repeat center top;
+    display: block;
+    margin: 0 auto;
 }
-.source{
-    background: url("../img/Shape253.png") no-repeat center top;
-    border-right:2px dashed lightgrey;
+.regulation{
+    width:2rem;
+    height:1rem;
+    background:url("../img/Shape253.png") no-repeat center top;
+    display: block;
+    margin: 0 auto;
 }
-.static{
-    font-size:0.15rem;
-    color:green;
-    margin-top:-1rem;
+.advantage p{
+    font-weight:bold!important;
+    color:black;
+    font-size:18px;
+}
+.count{
+    border-left:1px dashed lightgrey;
+    padding-left:80px;
+    font-size:18px!important;
+}
+@media screen and (max-width: 1080px){
+    .count{
+        border-left:1px dashed lightgrey;
+        padding-left:10px;
+        font-size:18px!important;
+        text-align: center;
+    }
+}
+.count a{
+    color:#29b078;
     display:block;
-}
-.static a{
-    font-size:0.15rem;
-    color:green;
-    padding:0.2rem 0 0 0.2rem;
-    display:block;
-}
-.f1{
-    font-size:0.2rem;
-    text-align:center;
-}
-.f2{
-    color:lightgrey;
-    text-align:center;
+    padding-top:0.3rem;
+    text-decoration: none;
 }
 .f3{
-    color:lightgrey !important;
-    }
-/*how*/
-.gmn{
-    position:relative;
-    margin-top:1rem;
-    font-size:0.1rem;
+    color:lightgrey!important;
+    font-weight:normal;
+}
+/*如何学习*/
+h5{
+    text-align:center;
+    font-size:18px!important;
+    font-weight: bold;
 }
 .howtolearn{
+    height:2.3rem;
+    margin-left:16.6%;
+    margin-right:18.6%;
+    position: relative;
+     }
+@media screen and (max-width: 1080px){
+    .howtolearn{
+        height:2.3rem;
+        margin-left:1px;
+        margin-right:18.6%;
+        position: relative;
+        width:100%;
+    }
+}
+.onetofour {
     display: flex;
     justify-content: space-between;
-    height:0.7rem;
-
-}
-.num{
-    color:green;
-    border:1px solid lightgrey;
-    box-shadow: 0.01rem 0.01rem 0.1rem lightgrey;
-    width:0.3rem;
-    height:0.3rem;
-    border-radius: 0.15rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.text-box{
-    color:lightgrey;
-    margin-top:0.1rem;
-}
-.arrow{
-    display:inline-block;
-    background: url("../img/形状7拷贝.png") no-repeat right 15%;
-    width:0.2rem;
-
-}
-/*show*/
-.students{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    height:3rem;
-    border:1px solid lightgrey;
-    box-shadow: 0.01rem 0.01rem 0.1rem lightgrey;
-    padding-top:0.2rem;
-    padding-left:0.1rem;
-    width:2.1rem;
-    margin-right:0.82rem;
-}
-/*cooperation*/
-.cooperate{
-    height:1.8rem;
-position:relative;
-    top:0.1rem;
-  display:flex;
-    justify-content: space-around;
-    margin-left:1.73rem;
-    margin-right:2.53rem;
-box-shadow: 3px 3px 5px lightgrey;
-
-}
-.company1{
-margin-top:0.2rem;
-
-}
-.company2{
-    box-shadow: 1px 5px 15px lightgrey;
-}
-.fff4 h5{
-   margin-top:2.5rem;
-    font-weight:bold;
-}
-.links{
     margin-top:0.5rem;
 }
-ul{
-display:flex;
-    width:100%;
-    justify-content: space-around;
-    padding-left:12%;
-    padding-right:14%;
+@media screen and (max-width: 1080px){
+    .onetofour {
+        display: flex;
+        flex-direction: column;
+        margin-top:0.5rem;
+    }
 }
-li a{
+.num{
+     width:50px;
+     height:50px;
+     border-radius: 50%;
+     color:#29b078;
+     border:1px solid lightgrey;
+     padding-right:20px;
+     margin-right:10px;
+     box-shadow:1px 1px 3px lightgrey;
+     display:flex;
+     align-items: center;
+    padding-left:20px;
+    font-size:18px;
+}
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:3.2rem;
+    font-size:12px;
+    padding-left:40px;
+}
+.arrow div{
+    margin-right:10px;
+ }
+@media screen and (max-width: 1080px){
+    .arrow{
+        display:flex;
+        justify-content: flex-start;
+        margin-bottom:30px;
+        font-size:10px;
+        width:300px;
+    }
+    .arrow{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:3.2rem;
+        font-size:12px;
+        padding-left:2px;
+    }
+    .num{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        color:#29b078;
+        border:1px solid lightgrey;
+        padding-right:20px;
+        margin-right:10px;
+        box-shadow:1px 1px 3px lightgrey;
+        display:flex;
+        align-items: center;
+        padding-left:20px;
+        font-size:18px;
+    }
+}
+.arrow p{
+    font-size:14px;
+}
+.students{
+    height: 368px;
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #e6e7e6 ;
+    border-radius: 6px;
+    box-shadow:1px 1px  1px lightgrey;
+
+}
+@media screen and (max-width: 1080px){
+    .show{
+        margin-top:4.4rem;
+    }
+}
+.showone{
+    margin-left:345px;
+}
+@media screen and (max-width: 1080px){
+    .showone{
+        margin-left:10px;
+    }
+}
+.show h5{
+    margin-bottom: 71px;
+    font-weight:bold;
+    font-size:18px;
+}
+.students img{
+    width: 110px;
+    height: 110px;
+    margin: 17px 0 0 70px;
+}
+.title{
+    font-weight:bold;
+    padding-top:29px;
+}
+.students p{
+    padding-top:29px;
+    font-size:0.13rem;
     color:lightgrey;
+    padding-left:50px;
+    padding-right:50px;
 }
+/*合作公司*/
+.cooperate{
+    margin-top:1rem;
+}
+.company{
+    margin-left:18.7%;
+    margin-right:18.7%;
+    box-shadow:1px 1px 1px lightgrey;
+    width:11.68rem;
+}
+.company a{
+    width:2.3rem;
+    height:2rem;
+    display: inline-block;
+}
+.company a:hover{
+    box-shadow:1px 1px 1px 1px lightgrey;
+}
+@media screen and (max-width: 1080px){
+    .company{
+        height: 15rem;
+        width: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #e6e7e6 ;
+        border-radius: 6px;
+        box-shadow:2px 2px 5px 2px lightgrey;
+    }
+    .company span{
+        width:2rem;
+        height:2rem;
+        display:block;
+        margin-left:-23px;
+    }
+    }
+/*友情链接*/
+.links{
+    margin-top:1.14rem;
+    margin-left:290px;
+    margin-right:18.7%;
+}
+.links h5{
+   margin-bottom:30px;
+   margin-left:70px;
+}
+.links ul{
+     display:flex;
+     flex-direction:row;
+     justify-content: space-around;
+}
+.lins ul li{
+    list-style: none;
+}
+.links a{
+    color:lightgrey;
+    text-decoration: none;
+}
+.links a:hover{
+    border-bottom: 1px solid #29b078;
+}
+@media screen and (max-width: 1080px) {
+    .links {
+        height: 6rem;
+        width: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    .links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .links ul li {
+        margin: 0 auto;
+    }
+}
+/*footer*/
 footer{
-    position:relative;
-    margin-top:23rem;
+    margin-top:2rem;
+    position: relative;
     background-color:#29b078;
     width:100%;
     left:0;
     right:0;
     bottom:0;
-    height:2.4rem;
+    height:2.01rem;
     color:white;
-    font-size:0.17rem;
-    }
+    font-size:0.16rem;
+}
 footer a{
-    font-size:0.15rem;
+    font-size:0.14rem;
     color:white;
+    text-decoration: none;
+    padding-bottom:5px;
+}
+footer a:hover{
+    color:white;
+    border-bottom:1px solid white;
 
+    text-decoration: none;
 }
 .aboutus{
-    padding-top:0.5rem;
+    padding-top:0.37rem;
     display:flex;
     justify-content: space-between;
-    padding-left:12%;
-    padding-right:12%;
+    padding-left:18.7%;
+    padding-right:18.7%;
 }
 .left1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
-.cc2 a{
-    border-right:2px solid white;
-    padding-right:0.2rem;
+.left1 a{
+
 }
 .middle1{
     display: flex;
@@ -240,8 +485,29 @@ footer a{
     justify-content: space-between;
 }
 .copyright{
-    margin-top:0.3rem;
+    padding-top:0.1rem;
     text-align: center;
     color:white;
     font-size:0.13rem;
+    border-top:1px solid #32c086;
+}
+@media screen and (max-width:1080px){
+    .aboutus{
+        display:flex;
+        flex-direction: column;
+        padding-left:12%;
+        padding-right:12%;
+    }
+    footer{
+        height:4rem;
+    }
+}
+@media screen and (max-width:1080px){
+    .copyright{
+        padding-top:0.1rem;
+        text-align: center;
+        color:white;
+        font-size:0.05rem;
+        border-top:1px solid #32c086;
+    }
 }

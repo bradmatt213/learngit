@@ -8,19 +8,41 @@ header{
     left:0;
     right:0;
     top:0;
-    height:1.5rem;
+    height:2rem;
     z-index:999;
 }
+/*客服热线以及三个图标*/
 .followus{
     display:flex;
     justify-content: space-between;
     align-items: center;
     width:100%;
-    padding-left:12%;
-    padding-right:12%;
+    padding-left:18.7%;
+    padding-right:18.7%;
     color:#29b078;
     background:white;
-
+    font-size:14px;
+}
+.login{
+    display: none;
+}
+@media screen and (max-width: 1080px){
+    .followus{
+        display:none;
+    }
+    .login{
+        display: block;
+        height:36px;
+        margin-left:80%;
+        padding-top:10px;
+    }
+    .login1{
+        border-right:1px solid #29b078;
+        padding-right:5px;
+    }
+    .login a{
+        color:black;
+    }
 }
 .followus a{
     width:0.3rem;
@@ -36,132 +58,221 @@ header{
 .sina{
     background:url("../img/sina.png") no-repeat right bottom;
 }
+/*导航栏*/
 .navigation{
     position:absolute;
-    background:#29b078 url("../img/jinengshu.png") no-repeat 12% center;
+    background:#29b078 url("../img/jinengshu.png") no-repeat 20% center;
     width:100%;
-    height:1.2rem;
-    padding-right:12%;
-
+    height:1.01rem;
+    padding-right:18.7%;
 }
 .navigation a{
     display:block;
     float:right;
     margin-top:0.5rem;
-    margin-left:4.5vw;
     color:white;
-    font-size:0.15rem;
-    height:0.7rem;
+    font-size:16px;
+    height:0.5rem;
     text-decoration: none;
     text-align:center;
-    width:5vw;
+    width:98px;
     white-space: nowrap;
+}
+.frontpage{
+    margin-right:-32px;
+}
+.dp{
+    display: none;
+}
+@media screen and (max-width:1080px) {
+    .dp{
+        display: block;
+        float:right;
+        margin-top:0.1rem;
+    }
+}
+@media screen and (max-width:1080px) {
+    .navigation {
+        position: absolute;
+        background: #29b078 url("../img/jinengshu.png") no-repeat 12% center;
+        width: 100%;
+        height: 0.8rem;
+        padding-right: 12%;
+    }
+    .navigation a {
+        display: none;
+        float: right;
+        margin-top: 0.3rem;
+        margin-left: 2.5vw;
+        color: white;
+        font-size: 0.12rem;
+        height: 0.5rem;
+        text-decoration: none;
+        text-align: center;
+        width: 5vw;
+        white-space: nowrap;
+    }
 }
 .navigation a:hover{
     border-bottom:4px solid white;
 }
+.hidden{
+    z-index:999;
+}
 .faster{
-    margin-top:1.2rem;
-    margin-left:-1rem;
+    margin-top:1rem;
+    padding-left:2%;
+    width:100%;
+    background-color:#f1a750;
 }
-.HolyGrail {
-    display: flex;
-    min-height: 60vh;
-    flex-direction: column;
-    margin-top:4.2rem;
-    position: absolute;
-}
-.hd1 footer{
-    flex:1;
-}
-.HolyGrail-body {
-    display: flex;
-    flex: 1;
-}
-
-.HolyGrail-content {
-    flex: 1;
-    padding-top:0.5rem;
-    margin-bottom:3.1rem;
-    box-shadow: 2px 2px 10px lightgrey;
-    padding-bottom: 2.9rem;
-    padding-right:2rem;
-    padding-left:2rem;
-}
-.HolyGrail-content h4{
-    color:lightgrey;
-    height:1rem;
-    padding-left:30%;
-    background:url("../img/tudou.png") no-repeat left 70%;
+@media screen and (max-width:1080px ){
+    .faster{
+        margin-top:0.7rem;
+        padding-left:11%;
+        width:100%;
+        background-color:#f1a750;
     }
-.HolyGrail-content p{
-    color:lightgrey;
-    text-indent: 40px;
-    margin-top:0.3rem;
-
 }
-.HolyGrail-nav, .HolyGrail-ads {
-    /* 两个边栏的宽度设为12em */
-    flex: 0 0 12em;
+.hd1{
+    margin-left:12%;
+}
+main{
+    margin-top:4rem;
+    margin-left:18.7%;
+    margin-right:290px;
+}
+@media screen and (max-width: 1080px){
+    main{
+        width:300px;
+        margin:0 auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1080px){
+    main{
+        margin-top:2rem;
+        margin-left:12%;
+        margin-right:12%;
+    }
+}
+.firstpage span{
+    color:#29b078;
+}
+/*nav-bar*/
+.nav1{
+    box-shadow:2px 2px 2px 2px lightgrey;
+}
+.hzqy{
+    font-size:0.15rem;
+    color:black;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom:10px;
+    padding-top:10px;
+    padding-left:50px;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+.company{
+    text-decoration: none;
+}
+.company li{
+    padding-top:0.3rem;
+    padding-bottom:0.2rem;
+    list-style-image:url("../img/椭圆7.png");
+}
+.company li a{
+    color:#29b078;
+}
+.company a:hover{
+    color:#f9a372!important;
+    }
+.company li:hover{
+    list-style-image:url("../img/椭圆8.png")!important;
+}
+
+/*content*/
+.content1{
+    box-shadow:2px 2px 2px 2px lightgrey;
+    margin-left:20px;
+}
+@media screen and (max-width:1080px ){
+    .content1{
+        box-shadow:2px 2px 2px 2px lightgrey;
+        margin-left:0.01rem;
+        margin-top:0.5rem;
+    }
+    .title{
+        display: flex;
+        color:lightgrey;
+        flex-direction: column;
+    }
+}
+.maincontent{
+   margin-top:30px;
+    width:1280px;
+}
+@media screen and (max-width: 1080px){
+    .maincontent{
+        margin-top:30px;
+        width:100%;
+    }
+}
+.title{
+   display: flex;
+    color:lightgrey;
+    align-items: center;
+}
+.tudou{
+    padding:0.1rem 0.3rem;
+    color:lightgrey;
+}
+.tudou p{
+    margin-top:0.3rem;
+    text-indent: 30px;
+}
+.last{
     margin-bottom:3rem;
 }
-
-.HolyGrail-nav {
-    /* 导航放到最左边 */
-    order: -1;
-    display: flex;
-}
-.HolyGrail-nav ul{
-    justify-content: space-around;
-    flex-direction: column;
-    display:flex;
-    list-style-type: none;
-    box-shadow:2px 2px 3px lightgrey;
-}
-.HolyGrail-nav ul li{
-    background: url("../img/tuoyuan.png") no-repeat left 50%;
-    padding-left:0.2rem;
-    padding-right:0.3rem;
-    }
-.chose{
-    color:orange!important;
-}
-.HolyGrail-nav a{
-    color:green;
-}
-
+/*footer*/
 footer{
-
-
-        background-color:#29b078;
+    margin-top:2rem;
+    position: relative;
+    background-color:#29b078;
     width:100%;
     left:0;
     right:0;
     bottom:0;
-    height:2.4rem;
+    height:2.01rem;
     color:white;
-    font-size:0.17rem;
+    font-size:0.16rem;
 }
 footer a{
-    font-size:0.15rem;
+    font-size:0.14rem;
     color:white;
+    text-decoration: none;
+    padding-bottom:5px;
+}
+footer a:hover{
+    color:white;
+    border-bottom:1px solid white;
 
+    text-decoration: none;
 }
 .aboutus{
-    padding-top:0.5rem;
+    padding-top:0.37rem;
     display:flex;
     justify-content: space-between;
-    padding-left:12%;
-    padding-right:12%;
+    padding-left:18.7%;
+    padding-right:18.7%;
 }
 .left1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
-.cc2 a{
-    border-right:2px solid white;
-    padding-right:0.2rem;
+.left1 a{
+
 }
 .middle1{
     display: flex;
@@ -169,8 +280,32 @@ footer a{
     justify-content: space-between;
 }
 .copyright{
-    margin-top:0.3rem;
+    padding-top:0.1rem;
     text-align: center;
     color:white;
     font-size:0.13rem;
+    border-top:1px solid #32c086;
+}
+@media screen and (max-width:1080px){
+    .aboutus{
+        display:flex;
+        flex-direction: column;
+        padding-left:12%;
+        padding-right:12%;
+    }
+    footer{
+        height:3.2rem;
+    }
+}
+@media screen and (max-width:1080px){
+    .copyright{
+        padding-top:0.1rem;
+        text-align: center;
+        color:white;
+        font-size:0.05rem;
+        border-top:1px solid #32c086;
+    }
+}
+.company{
+    color:#32c086;
 }
