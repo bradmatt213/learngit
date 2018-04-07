@@ -1,0 +1,142 @@
+@charset "utf-8";
+.space {
+  display: flex;
+  justify-content: space-between;
+}
+.puman {
+  width: 100%;
+}
+.padding {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.border {
+  border: 1px solid #d3d3d3;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 625%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  background-color: #5fc0cd;
+  color: white;
+  font-size: 0.32rem;
+  line-height: 0.32rem;
+  padding: 0.22rem;
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+  height: 0.82rem;
+}
+header .pip {
+  width: 30px;
+  height: 60px;
+  display: inline-block;
+}
+main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.82rem;
+}
+main .content {
+  font-size: 0.36rem;
+}
+main .content .section {
+  background: url("../img/head.png") no-repeat center;
+  padding-left: 4%;
+  padding-right: 4%;
+  color: white;
+  width: 100%;
+  background-size: cover;
+  height: 3.2rem;
+  position: relative;
+}
+.info {
+  position: relative;
+  left: 2.3rem;
+  top: 1.15rem;
+}
+.head {
+  position: absolute;
+  top: 0.8rem;
+}
+.location {
+  background: url("../img/Shape 4.png") no-repeat left center;
+  background-size: 0.16rem 0.16rem;
+  font-size: 0.24rem;
+  padding-left: 0.3rem;
+}
+.form .formtitle {
+  line-height: 0.3rem;
+  margin: 30px 0;
+  padding-left: 30px;
+  border-left: 2px solid #5fc0cd;
+  font-size: 0.32rem;
+  margin-left: 4%;
+}
+.form .formlist {
+  width: 100%;
+}
+.form .formlist li {
+  height: 1rem;
+  overflow: auto;
+}
+.form .require {
+  width: 100%;
+  border-top: 1px solid lightgrey;
+  height: 1rem;
+  padding-top: 30px;
+  padding-left: 8%;
+}
+.form .formtag {
+  display: inline;
+  background: url("../img/starbig.png") no-repeat left center;
+  padding-left: 42px;
+  font-size: 0.31rem;
+}
+.form .formtag span {
+  padding-right: 0.3rem;
+  border-right: 0.01rem solid #ccc;
+}
+.form .lable {
+  height: 1rem;
+}
+.form .lable span {
+  display: inline-block;
+}
+.form .lable .small {
+  float: right;
+  display: inline;
+  width: 220px;
+  height: 100px;
+  padding-right: 30%;
+  font-size: 24px;
+}
