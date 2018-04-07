@@ -2,52 +2,19 @@ html{
     font-size:625%;
 }
 /*header*/
-header{
-    position:absolute;
-    width:100%;
-    left:0;
-    right:0;
-    top:0;
-    height:2rem;
-    z-index:999;
-}
-/*客服热线以及三个图标*/
-.followus{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    padding-left:18.7%;
-    padding-right:18.7%;
-    color:#29b078;
-    background:white;
-    font-size:14px;
-}
-.login{
-    display: none;
-}
-@media screen and (max-width: 1080px){
-    .followus{
-        display:none;
-    }
-    .login{
-        display: block;
-        height:36px;
-        margin-left:80%;
-        padding-top:10px;
-    }
-    .login1{
-        border-right:1px solid #29b078;
-        padding-right:5px;
-    }
-    .login a{
-        color:black;
-    }
-}
 .followus a{
     width:0.3rem;
     height:0.3rem;
     display:inline-block;
+}
+.followus{
+    color:#29b078;
+    font-size:0.14rem;
+}
+.followus p{
+    padding-top:0.07rem;
+    display: inline-block;
+    margin-left:-30px;
 }
 .wechat{
     background:url("../img/wechat.png") no-repeat right bottom;
@@ -58,13 +25,37 @@ header{
 .sina{
     background:url("../img/sina.png") no-repeat right bottom;
 }
+/*手机页面导航*/
+@media screen and (max-width: 1080px){
+    .followus{
+        display:none;
+    }
+    .login{
+        display:block!important;
+        width:100%;
+        text-align: right;
+        padding-right:3%;
+
+    }
+    .login1{
+        border-right:1px solid #29b078;
+        padding-right:5px;
+    }
+    .login a{
+        color:black;
+    }
+}
+.login{
+    display: none;
+}
 /*导航栏*/
+.btl{
+    background:#29b078;
+}
 .navigation{
-    position:absolute;
-    background:#29b078 url("../img/jinengshu.png") no-repeat 20% center;
+    background:#29b078 url("../img/jinengshu.png") no-repeat left center;
     width:100%;
     height:1.01rem;
-    padding-right:18.7%;
 }
 .navigation a{
     display:block;
@@ -89,6 +80,7 @@ header{
         display: block;
         float:right;
         margin-top:0.1rem;
+        z-index:999;
     }
 }
 @media screen and (max-width:1080px) {
@@ -118,6 +110,15 @@ header{
 }
 .hidden{
     z-index:999;
+}
+
+@media screen and (max-width:1080px ){
+    .faster{
+        margin-top:0.7rem;
+        padding-left:11%;
+        width:100%;
+        background-color:#f1a750;
+    }
 }
 main{
     position: relative;
@@ -391,8 +392,6 @@ footer a:hover{
     padding-top:0.37rem;
     display:flex;
     justify-content: space-between;
-    padding-left:18.7%;
-    padding-right:18.7%;
 }
 .left1{
     display: flex;
@@ -434,4 +433,7 @@ footer a:hover{
         font-size:0.05rem;
         border-top:1px solid #32c086;
     }
+}
+.container{
+    max-width:1200px;
 }
