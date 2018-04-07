@@ -129,6 +129,9 @@ main{
         top: 1.11rem;
     }
 }
+.imgw{
+    width:100%;
+}
 /*优点*/
 .ct1{
     margin-top:1.63rem;
