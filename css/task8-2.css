@@ -133,13 +133,8 @@ header{
         background-color:#f1a750;
     }
 }
-.hd1{
-    margin-left:12%;
-}
 main{
     margin-top:4rem;
-    margin-left:18.7%;
-    margin-right:290px;
 }
 @media screen and (max-width: 1080px){
     main{
@@ -159,8 +154,17 @@ main{
     color:#29b078;
 }
 /*nav-bar*/
+
 .nav1{
     box-shadow:2px 2px 2px 2px lightgrey;
+    width:25%;
+    top:24px;
+}
+@media screen and (max-width: 1080px){
+    .nav1{
+        width:100%;
+        margin:0 auto;
+    }
 }
 .hzqy{
     font-size:0.15rem;
@@ -168,9 +172,12 @@ main{
     border-bottom: 1px solid lightgrey;
     padding-bottom:10px;
     padding-top:10px;
-    padding-left:50px;
+
     margin-left:-15px;
     margin-right:-15px;
+}
+.hzqy p{
+    margin-left:65px;
 }
 .company{
     text-decoration: none;
@@ -179,6 +186,8 @@ main{
     padding-top:0.3rem;
     padding-bottom:0.2rem;
     list-style-image:url("../img/椭圆7.png");
+    width:100px;
+    margin:0 auto;
 }
 .company li a{
     color:#29b078;
@@ -193,13 +202,17 @@ main{
 /*content*/
 .content1{
     box-shadow:2px 2px 2px 2px lightgrey;
+    width:72.5%;
+    top:24px;
     margin-left:20px;
+
 }
 @media screen and (max-width:1080px ){
     .content1{
         box-shadow:2px 2px 2px 2px lightgrey;
         margin-left:0.01rem;
         margin-top:0.5rem;
+        width:100%;
     }
     .title{
         display: flex;
@@ -208,13 +221,19 @@ main{
     }
 }
 .maincontent{
-   margin-top:30px;
-    width:1280px;
+    max-width:1200px;
+}
+.row{
+    width:1200px;
 }
 @media screen and (max-width: 1080px){
     .maincontent{
         margin-top:30px;
         width:100%;
+    }
+    .row{
+        width:100%;
+        margin:0 auto;
     }
 }
 .title{
