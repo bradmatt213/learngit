@@ -6,7 +6,7 @@ body{
     margin:0;
 }
 header{
-       position:fixed;
+    position:fixed;
     background: #5fc0cd;
     height:0.32rem;
     line-height: 0.32rem;
@@ -71,7 +71,7 @@ input[type=password] {
     margin-top: .3rem;
     width: 100%;
     line-height: .5rem;
-    font-size: .18rem;
+    .font-s(36px);
     letter-spacing: 1em;
     background: #5fc0cd;
     color:white;
