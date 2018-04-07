@@ -1,0 +1,127 @@
+@charset "utf-8";
+//less库
+@import "z";
+//公用的变量
+@import "bl";
+.space{
+  display:flex;
+  justify-content: space-between;
+}
+.puman{
+  width:100%;
+}
+.padding{
+  padding-left:4%;
+  padding-right:4%;
+}
+.border{
+  border:1px solid lightgrey
+}
+.reset();
+html {
+  font-size: 625%;
+}
+//header
+header{
+  @h:0.82rem;
+  .space;
+  .fix();
+  z-index:999;
+  background-color: @main_bgc;
+  color:white;
+  .font-s(0.32rem);
+  line-height: 0.32rem;
+  padding: 0.22rem;
+  .puman;
+  .padding;
+  height:@h;
+  .pip{
+    width:30px;
+    height:60px;
+    .d-ib();
+  }
+  }
+//main
+//看护人头像
+main{
+  .abs();
+  left: 0;
+  right: 0;
+  top:0.82rem;
+  .content{
+    .font-s(0.36rem);
+    .section{
+      background: url("../img/head.png") no-repeat center;
+      .padding;
+      color:white;
+      .puman;
+      background-size: cover;
+      height:3.2rem;
+      .rel();
+    }
+  }
+}
+.info{
+  .rel();
+    left:2.3rem;
+    top:1.15rem;
+}
+.head{
+  .abs();
+  top:0.8rem;
+}
+.location{
+  background:url("../img/Shape 4.png") no-repeat left center;
+  background-size: 0.16rem 0.16rem;
+  .font-s(0.24rem);
+  padding-left:0.3rem;
+}
+//专业技能
+.form {
+  @h: 1rem;
+  .formtitle {
+    line-height: 0.3rem;
+    margin: 30px 0;
+    padding-left: 30px;
+    border-left: 2px solid @main_bgc;
+    .font-s(0.32rem);
+    margin-left: 4%;
+  }
+  .formlist {
+    width: 100%;
+    li {
+      height: 1rem;
+      overflow: auto;
+    }
+  }
+  .require {
+    .puman;
+    border-top: 1px solid lightgrey;
+    height: @h;
+    padding-top: 30px;
+    padding-left: 8%;
+  }
+  .formtag {
+    .d-i();
+    background: url("../img/starbig.png") no-repeat left center;
+    padding-left: 42px;
+    .font-s(0.31rem);
+    & span {
+      padding-right: 0.3rem;
+      border-right: 0.01rem solid #ccc;
+    }
+  }
+  .lable{
+   height:@h;
+    & span{
+      .d-ib();
+    }
+    .small{
+      .fr();
+      width:220px;
+      height:100px;
+      padding-right:30%;
+      .font-s(24px);
+    }
+  }
+}
