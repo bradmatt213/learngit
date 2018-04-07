@@ -136,20 +136,6 @@ header{
 main{
     margin-top:4rem;
 }
-@media screen and (max-width: 1080px){
-    main{
-        width:300px;
-        margin:0 auto;
-        text-align: center;
-    }
-}
-@media screen and (max-width: 1080px){
-    main{
-        margin-top:2rem;
-        margin-left:12%;
-        margin-right:12%;
-    }
-}
 .firstpage span{
     color:#29b078;
 }
@@ -162,7 +148,7 @@ main{
 }
 @media screen and (max-width: 1080px){
     .nav1{
-        width:100%;
+        width:80%;
         margin:0 auto;
     }
 }
@@ -212,7 +198,7 @@ main{
         box-shadow:2px 2px 2px 2px lightgrey;
         margin-left:0.01rem;
         margin-top:0.5rem;
-        width:100%;
+        width:80%;
     }
     .title{
         display: flex;
@@ -226,16 +212,27 @@ main{
 .row{
     width:1200px;
 }
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 377px){
     .maincontent{
         margin-top:30px;
         width:100%;
     }
     .row{
-        width:100%;
+        width:375px;
         margin:0 auto;
     }
 }
+@media screen and (max-width: 1080px) and (min-width:377px){
+    .maincontent{
+        margin-top:30px;
+        width:100%;
+    }
+    .row{
+        width:600px;
+        margin:0 auto;
+    }
+}
+
 .title{
    display: flex;
     color:lightgrey;
