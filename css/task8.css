@@ -6,10 +6,17 @@ html{
     width:0.3rem;
     height:0.3rem;
     display:inline-block;
+    line-height: 0.3rem;
 }
 .followus{
     color:#29b078;
     font-size:0.14rem;
+    height:0.35rem;
+}
+.followus span{
+    display: inline-block;
+    height:0.35rem;
+    line-height: 0.35rem;
 }
 .wechat{
     background:url("../img/wechat.png") no-repeat right bottom;

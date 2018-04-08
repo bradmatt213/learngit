@@ -149,9 +149,10 @@ main {
 /*nav-bar*/
 
 .nav1 {
-    box-shadow: 2px 2px 2px 2px lightgrey;
+    box-shadow: 1px 1px 1px 1px lightgrey;
     width: 25%;
     top: 24px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -212,10 +213,11 @@ main {
 
 /*content*/
 .content1 {
-    box-shadow: 2px 2px 2px 2px lightgrey;
+    box-shadow: 1px 1px 1px 1px lightgrey;
     width: 72.5%;
     top: 24px;
     margin-left: 20px;
+    border-radius: 5px;
 
 }
 
