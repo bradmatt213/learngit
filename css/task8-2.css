@@ -175,7 +175,12 @@ main {
 .hzqy p {
     margin-left: 65px;
 }
-
+@media screen and (max-width: 1080px){
+    .hzqy p {
+        width:100px;
+        margin: 0 auto;
+    }
+}
 .company {
     text-decoration: none;
 }
@@ -260,10 +265,11 @@ main {
     display: flex;
     color: lightgrey;
     align-items: center;
+    padding: 0 0.4rem;
 }
 
 .tudou {
-    padding: 0.1rem 0.3rem;
+    padding: 0.1rem 0.4rem;
     color: lightgrey;
 }
 
