@@ -1,0 +1,157 @@
+@charset "utf-8";
+.pumant {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.pumanb {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  background-color: #29bde0;
+}
+.padding_2 {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.headerbt_2 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 50px;
+  font-size: 22px;
+  color: white;
+}
+.headerbt_2 span {
+  display: inline-block;
+  width: 73px;
+  text-align: center;
+}
+.vote {
+  background-color: #b9e9f5;
+  width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+  height: 85px;
+  line-height: 85px;
+}
+.vote .item2 {
+  height: 60px;
+  width: 60px;
+  background: url("../img/buttonleft.png") no-repeat;
+  float: right;
+  display: inline;
+  *zoom: 1;
+  margin-top: 20px;
+}
+.vote .item2:before,
+.vote .item2:after {
+  display: table;
+  content: "";
+}
+.vote .item2:after {
+  clear: both;
+}
+.vote .item1 {
+  margin-left: 50px;
+  font-size: 0.16rem;
+}
+.click {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.click p {
+  padding-left: 10%;
+  font-size: 0.12rem;
+  color: white;
+}
+.triangele {
+  border-style: solid dashed dashed dashed;
+  border-color: #b9e9f5 transparent transparent transparent;
+  border-width: 10px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  margin-left: 10%;
+}
+.card {
+  margin-left: 0.1rem;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin-top: 3%;
+  position: relative;
+}
+.card .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+.card .content .card1 {
+  height: 25vw;
+  width: 25vw;
+  margin-right: 3vw;
+  margin-bottom: 8vw;
+  font-size: 0.17rem;
+  text-align: center;
+  border: 1vw solid white;
+}
+.num {
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  background-color: #83b09a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+}
+.name {
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  margin: 0;
+  color: #565656;
+  background-color: #f5c97b;
+}
+.wrap {
+  display: none;
+  height: 8vw;
+  margin-top: 1vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap img {
+  width: 3vw;
+}
+.card1:hover .wrap {
+  display: flex;
+}
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.4rem;
+  background-color: #29bde0;
+  text-align: center;
+}
+.f3 {
+  color: white;
+  background-color: #fbb435;
+  width: 80%;
+  font-size: 0.4rem;
+  margin-top: 0.2rem;
+}
