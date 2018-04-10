@@ -4,6 +4,7 @@ html{
 body,p,ul,li{
     margin:0;
     padding:0;
+
 }
 ul,li{
     list-style:none;
@@ -37,6 +38,7 @@ main {
     left: 0;
     right: 0;
     background: #fff;
+    overflow: auto;
 }
 main .content {
     height: auto;
@@ -139,7 +141,6 @@ footer{
     border:0.01rem solid #5fc0cd;
     border-radius: 5px;
     margin-right:0.05rem;
-
 }
 .footerright{
     flex:1;

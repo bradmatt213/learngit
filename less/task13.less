@@ -1,0 +1,86 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "css3";
+//公用的变量
+@import "bl";
+html{
+  font-size:625%;
+}
+
+body{
+  .bgcolor(@body_bgc);
+}
+
+//header
+header{
+  height:1rem;
+  .bgcolor(@main_bgc);
+  .w100;
+  a{
+    .db;
+    padding-top:0.5rem;
+  }
+}
+main{
+  margin:30px 6% 59px 6%;
+ .mainb{
+   margin-top:0.3rem;
+   background: white url("../img/多边形1.png")97% 52% no-repeat;
+ }
+  .btnb{
+    .w100;
+    height:0.8rem;
+    padding-left:10%;
+    padding-right:10%;
+    .tc;
+    .font-s20;
+    color:#9a9a9a;
+    .bg-m(white,"../img/icon1.png",95%,center);
+    border:none;
+  }
+  .btn{
+   width:70%;
+    .bc;
+    .db;
+    .font-s14;
+    color:white;
+    background-color:@main_bgc;
+    height:0.7rem;
+    border-radius: 0.01px;
+
+  }
+  p{
+    .tc;
+    .font-s12;
+    color:#9a9a9a;
+  }
+  .ghost{
+    color:#fbb435;
+    .font-s22;
+    padding:0.3rem;
+    border-bottom:1px solid #fbb435;
+  }
+  .yuanquan{
+    width:0.6rem;
+    .bc;
+  }
+  .circle1{
+    background-color:#69d1e9;
+    .border-radius(50%);
+    width:0.1rem;
+    height:0.1rem;
+    .dib;
+      }
+  .circle{
+    background-color:@body_bgc;
+    .border-radius(50%);
+    width:0.1rem;
+    height:0.1rem;
+    .dib;
+  }
+
+}
+
+
+

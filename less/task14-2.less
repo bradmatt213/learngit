@@ -1,0 +1,171 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "font-awesome";
+@import "css3";
+//公用的变量
+@import "blmatt";
+html{
+  font-size:625%;
+}
+.bxshadow{
+  box-shadow:1px 1px 3px lightgrey;
+}
+.borderr{
+  .border-radius(5px);
+}
+.fonthead{
+  font-weight:bold;
+  font-size:18px;
+  .tc;
+}
+.media{
+  width: 100%;
+  margin: 0 auto;
+  .flex;
+  flex-direction: column;
+}
+
+///header样式
+   //标题栏按钮样式
+ .contact {
+   .flexb;
+   color: @main_bgc;
+   .font-s14;
+   width: @main-width;
+   margin: 0 auto;
+   a {
+     width: 0.5rem;
+     height: 0.2rem;
+     .dib;
+     padding-left: 0.1rem;
+     line-height: 0.2rem;
+     .tc;
+     color: @main_bgc;
+     .text-n;
+     border-right: 1px solid lightgrey;
+     padding-right: 0.1rem;
+     :hover{
+       color:@link_hover;
+     }
+   }
+   div {
+     .dib;
+     height: 0.35rem;
+     line-height: 0.35rem;
+   }
+ }
+@media screen and (max-width: 1080px) {
+  .contact {
+    display: none;
+  }}
+.cellphone{
+  display:none;
+}
+@media screen and (max-width:1080px) {
+  .cellphone {
+    display: block;
+    width: 100%;
+    .flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      width: 15%;
+      .dib;
+      .font-s(0.15rem);
+      .tc;
+      color: @main_bgc;
+      .text-n;
+    }
+  }
+}
+//导航栏样式
+.navigation{
+  width:100%;
+  left:0;
+  right:0;
+  .abs;
+  color:@link_color;
+  .bgcolor(@main_bgc);
+  .font-s15;
+  .flexb;
+  align-items: center;
+  height:1rem;
+  div{
+    width:@main-width;
+    .flexb;
+    align-items: center;
+    .h100;
+    margin: 0 auto;
+  }
+  span a{
+    .text-n();
+    height:0.6rem;
+    margin-top:0.4rem;
+    color:@link_color;
+    .dib;
+    margin-left:0.2rem;
+    &:hover{
+      color:@link_hover;
+      border-bottom:4px solid white;
+    }
+
+  }
+}
+@media screen and (max-width: 1080px) {
+  .navigation{
+    span{
+      margin-left:0.2rem;
+    }
+  }
+  .link{
+    display: none;
+  }
+}
+//手机页面下的下拉菜单
+.dropdown{
+  display: none;
+}
+@media screen and (max-width: 1080px){
+  .dropdown{
+    display: block;
+  }
+  .btn1{
+    .bgcolor(@main_bgc);
+    width:0.8rem;
+    .db;
+    .fr;
+    margin-right:0.1rem;
+    margin-top:0.15rem;
+  }
+  .menu1{
+    width:100%;
+    .bgcolor(@main_bgc);
+    .rel;
+    color:white;
+    .tc;
+    li a{
+      color:white;
+    }
+  }
+}
+.clearfix{
+  .clearfix;
+}
+//图片样式
+.faster{
+  width:100%;
+  .bgcolor(#f1a750);
+  margin-top:1rem;
+  .resp{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width:1200px;
+    margin:0 auto;
+      }
+}
+
+//两栏布局
+
+

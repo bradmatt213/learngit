@@ -1,0 +1,137 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "css3";
+//公用的变量
+@import "bl";
+html{
+  font-size:625%;
+}
+
+body{
+  .bgcolor(@main_bgc);
+}
+
+//页面2
+.padding_2{
+  padding-left:6%;
+  padding-right:6%;
+}
+.headerbt_2{
+  .flexb;
+  .padding_2;
+  padding-top:50px;
+  .font-s22;
+  color:white;
+  span{
+    .dib;
+    width:73px;
+    .tc;
+  }
+
+}
+.vote {
+  .bgcolor(#b9e9f5);
+  .w100;
+  height:85px;
+  .padding_2;
+  .txt-ver(85px);
+  .item2{
+    height:60px;
+    width:60px;
+    background:url("../img/buttonleft.png") no-repeat;
+    .fr;
+    .clearfix;
+    margin-top:20px;
+  }
+  .item1{
+    margin-left:50px;
+    .font-s(0.16rem);
+  }
+}
+.click{
+  .padding_2;
+  p{
+    padding-left:10%;
+    .font-s(0.12rem);
+    color:white;
+  }
+}
+.triangele{
+  .triangle-b(10px,#b9e9f5);
+  .db;
+  margin-left:10%;
+}
+.card{
+  margin-left:0.1rem;
+
+  .padding_2;
+  margin-top:3%;
+  .rel();
+  .content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    .card1{
+      height: 25vw;
+      width: 25vw;
+      margin-right: 3vw;
+      margin-bottom: 8vw;
+      .font-s(0.17rem);
+      .tc;
+      border: 1vw solid white;
+    }
+    }
+  }
+.num{
+ .w100;
+  height: 30%;
+  margin: 0;
+  .bgcolor(#83b09a);
+  .flex;
+  justify-content: center;
+  align-items: center;
+  .font-s22;
+  color:white;
+}
+.name{
+  .flex;
+  .font-s22;
+  justify-content: center;
+  align-items: center;
+  .w100;
+  height: 70%;
+  margin: 0;
+  color: #565656;
+  .bgcolor(#f5c97b);
+}
+.wrap{
+  display: none;
+  height: 8vw;
+  margin-top: 1vw;
+  justify-content: space-between;
+  align-items: center;  img{
+    width:3vw;
+  }
+}
+.card1:hover .wrap {
+  .flex;
+}
+footer{
+  .fix();
+ .pumanb;
+  height:1.4rem;
+  .bgcolor(#29bde0);
+  .tc;
+}
+.f3 {
+  color:white;
+  .bgcolor(#fbb435);
+  width:80%;
+  .font-s(0.4rem);
+  margin-top:0.2rem;
+}
+
+
