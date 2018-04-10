@@ -2512,3 +2512,148 @@ html {
   width: 1200px;
   margin: 0 auto;
 }
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+main .frontpage {
+  margin-top: 0.37rem;
+  font-size: 0.16rem;
+}
+main .frontpage span {
+  color: #29b078;
+}
+main .navbar {
+  width: 3.05rem;
+  margin: 0.26rem 0;
+  box-shadow: 1px 1px 3px lightgrey;
+  float: left;
+  display: inline;
+}
+main .navbar div {
+  text-align: center;
+  font-size: 0.16rem;
+  height: 0.63rem;
+  line-height: 0.63rem;
+  border-bottom: 1px solid lightgrey;
+}
+main .navbar ul {
+  color: #29b078;
+  margin-left: 20%;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+main .navbar ul li {
+  margin-top: 0.3rem;
+  background: url("../img/round7.png") left center no-repeat;
+  padding-left: 10%;
+}
+main .navbar ul li:hover {
+  background: url("../img/round8.png") left center no-repeat;
+  color: #fd9f0b;
+}
+main .maincontent {
+  margin-top: 0.26rem;
+  margin-bottom: 2.3rem;
+  width: 71.5%;
+  box-shadow: 1px 1px 3px lightgrey;
+  float: right;
+  display: inline;
+  color: #a8a8a8;
+  font-size: 0.14rem;
+}
+main .maincontent .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+main .maincontent .tudou {
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+main .maincontent .tudou p {
+  margin-top: 0.2rem;
+  text-indent: 2em;
+}
+@media screen and (max-width: 1080px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .navbar {
+    float: none;
+    width: 70%;
+    display: block;
+    margin: 0.3rem auto;
+  }
+  main .maincontent {
+    float: none;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .maincontent .title {
+    flex-direction: column;
+  }
+}
+footer {
+  margin-top: 0.3rem;
+  color: white;
+  font-size: 0.18rem;
+  width: 100%;
+  background-color: #29b078;
+}
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 0.16rem;
+  height: 0.4rem;
+  padding: 0 0 0 0;
+  padding-bottom: 0.1rem;
+}
+footer a:hover {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+footer .fot1 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.3rem;
+  height: 1.5rem;
+  width: 1200px;
+  background-color: #29b078;
+  margin: 0 auto;
+}
+footer .fr {
+  display: flex;
+  flex-direction: column;
+}
+footer .qixia div span {
+  padding-right: 0.3rem;
+}
+@media screen and (max-width: 1080px) {
+  footer {
+    height: 5rem;
+  }
+  footer .fot1 {
+    flex-direction: column;
+    width: 2rem;
+    margin: 0 auto;
+    padding-top: 0.3rem;
+  }
+  footer .fr img {
+    width: 0.93rem;
+    height: 0.93rem;
+  }
+}
+.copyright {
+  text-align: center;
+  width: 100%;
+  background-color: #29b078;
+  color: white;
+  border-top: 1px solid #32c086;
+  padding-top: 0.1rem;
+}
