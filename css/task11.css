@@ -59,7 +59,7 @@ body {
 header {
   top: 0;
   position: fixed;
-  background: #29bde0;
+  background: #5fc0cd;
   height: 0.88rem;
   line-height: 0.32rem;
   font-size: 32px;
@@ -135,7 +135,7 @@ main .content .login1 {
 .code a {
   float: right;
   display: inline;
-  color: #29bde0;
+  color: #5fc0cd;
   padding: 0 0.1rem 0 0;
   font-size: 32px;
   margin-top: 0.1rem;
