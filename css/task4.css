@@ -71,8 +71,9 @@ input[type=password] {
     margin-top: .3rem;
     width: 100%;
     line-height: .5rem;
-    .font-s(36px);
-    letter-spacing: 1em;
+    font-size:0.16rem;
+    text-align: center;
+    
     background: #5fc0cd;
     color:white;
     border: 0 none;
@@ -82,4 +83,5 @@ input[type=password] {
     color: #5fc0cd;
     padding:0 0.1rem 0 0;
     font-size:0.15rem;
+    text-decoration: none;
 }
