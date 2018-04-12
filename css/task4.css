@@ -12,21 +12,31 @@ header{
     line-height: 0.32rem;
     font-size:0.16rem;
     padding: 0.07rem 0.1rem;
+    text-align: center;
     left: 0;
     right: 0;
     top: 0;
     color:white;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
 }
 header a {
     color:white;
     font-size:0.14rem;
     text-decoration:none;
 }
+header .a2{
+    float:right;
+}
 header .a3{
     font-size:0.18rem;
+    width:0.5rem;
+    margin: 0 auto;
+    display: inline-block;
+}
+header .a1{
+float:left;
+}
+.clear{
+    clear: both;
 }
 main{
     position: absolute;
