@@ -1,0 +1,167 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "font-awesome";
+@import "css3";
+//公用的变量
+@import "blmatt";
+html{
+  font-size:625%;
+}
+body{
+  .bgcolor(#f0f0f0);
+}
+//header
+header{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  height:1.28rem;
+  .bgcolor(@main_bgc);
+  .font-s(0.34rem);
+  padding:0.58rem 3.5% 0.1rem 3.5%;
+  color:white;
+  span{
+    .dib;
+  }
+}
+.main_tp{
+  width:93%;
+  margin:0.2rem auto;
+  .bgcolor(white);
+  height:4.53rem;
+  align-items: center;
+  .playermatch{
+    width:20%;
+    .fl;
+    .flex;
+    justify-content: center;
+    border-right:1px solid lightgrey;
+    align-items: center;
+    .font-s(2.6vw);
+    height:100%;
+    span{
+      .dib;
+      width:2.6vw;
+    }
+  }
+  .playernumber{
+    width:80%;
+    .fr;
+    .flex;
+    flex-direction: column;
+    ul{
+      .list-sn;
+      .w100;
+      .flex;
+      height:3.92rem;
+      margin-top:0.14rem;
+      border-bottom: 1px solid lightgrey;
+      flex-wrap: wrap;
+        li{
+          width:50%;
+          .font-s(2vw);
+          color:@main_fontcolor;
+          letter-spacing: 1vw;
+
+          .orange{
+            .dib;
+            width:0.1rem;
+            height:0.1rem;
+            .bgcolor(@link_hover);
+            margin-right:0.3rem;
+          }
+          .blue{
+            .dib;
+            width:0.1rem;
+            height:0.1rem;
+            .bgcolor(@main_bgc);
+            margin-right:0.3rem;
+          }
+        }
+    }
+    .set{
+      .tc;
+      .font-s(0.26rem);
+      color: @main_bgc;
+    }
+  }
+  }
+.main_letter{
+  .main_tp;
+  height:1.98rem;
+  ul{
+    .list-sn;
+    .font-s(0.28rem);
+    color:#f0f0f0;
+    li{
+      padding:0.22rem 0;
+      width:95%;
+      border-bottom: 3px solid #f0f0f0;
+    }
+  }
+}
+.main_number{
+  .main_tp;
+  height:1.48rem;
+  .font-s(0.28rem);
+  .tc;
+  input{
+    width:0.51rem;
+    .bgcolor(#f4f5f5);
+    .tc;
+    color:@link_hover;
+    border: none;
+    &::placeholder{
+      color:@link_hover;
+      .tc;
+    }
+  }
+  p{
+    padding:0.26rem 0.61rem 0 0.4rem;
+  }
+  .grey{
+    width:0.51rem;
+    height:0.40rem;
+    .tc;
+    .dib;
+    .bgcolor(#f4f5f5);
+    color:@link_hover;
+    margin:0 0.26rem;
+  }
+  span{
+    .dib;
+
+    div{
+      .dib;
+      width:4.1rem;
+        }
+    .progress {
+      .bgcolor(#ffe6be);
+      width:60vw;
+      height:0.06rem;
+      margin-bottom: 0;
+      .progress-bar {
+        .bgcolor(@link_hover);
+        height:0.37rem;
+        img{
+          .abs;
+          margin-top:-15px;
+          margin-left:10%;
+        }
+      }
+    }
+  }
+
+}
+.fapai{
+  width:93%;
+  margin:0 auto;
+  .db;
+  height:0.87rem;
+  .bgcolor(@link_hover);
+  border:none;
+  .font-s(0.4rem);
+  color: white;
+  letter-spacing: 0.5vw;
+}
