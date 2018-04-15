@@ -32,6 +32,8 @@ function appendText(){
             $("ul").append(txt[k]);
 
     }
+    localStorage.clear();
+    localStorage.setItem('kills', JSON.stringify(kills));
 }
 function change(){
     var num=document.getElementById("range");
@@ -128,22 +130,4 @@ function put() {
         kills.push("狙击手");}
     kills.sort(function(){
         return 0.5-Math.random()});
-}
-
-
-function fapai() {
-    alert(kills);
-    var i=document.getElementById("num").value;
-    i++;
-    if( i%2 !== 0) {
-        $("#num").attr("value",i);
-        $("#icon").attr("src","img/headicon.png");
-        $("#fanpai").attr("value","隐藏身份并传递给"+i+"号");
-    }
-    else{
-        $("#num").attr("value",i);
-        $("#icon").attr("src","img/myking.png");
-        $("#fanpai").attr("value","查看"+i+"号玩家身份");
-    }
-
 }

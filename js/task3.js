@@ -1,6 +1,9 @@
 function jump() {
     window.location.href="https://bradmatt213.github.io/learngit/task2-js";
 }
+function judge() {
+    window.location.href="https://bradmatt213.github.io/learngit/task7-2";
+}
 var i=0;
 var k=0;
 function fapai() {
@@ -19,9 +22,9 @@ function fapai() {
         $("#fanpai").attr("value","查看"+(k+1)+"号玩家身份");
         $(".matt").empty();
     }
-    else{
+    else {
         $("#fanpai").attr("value","法官查看");
-
+        judge();
     }
 
 }
