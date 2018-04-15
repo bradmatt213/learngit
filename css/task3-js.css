@@ -2378,13 +2378,47 @@ header button {
 }
 main {
   width: 95%;
-  margin: 0 auto;
+  margin: 1.5rem auto;
   text-align: center;
 }
-main button {
+main .whiteside {
+  background-color: #ffffff;
+  width: 4.69rem;
+  height: 4.57rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .whiteside .yellowbc {
+  background-color: #ffedc5;
+  width: 4.40rem;
+  height: 4.20rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .whiteside .yellowbc #num {
+  display: inline-block;
+  width: 0.6rem;
+  font-size: 0.35rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid #ffedc5;
+  color: #f56b81;
+  margin-top: -40px;
+}
+main .whiteside .yellowbc .icon {
+  margin-top: 0.3rem;
+}
+main .fanpai {
   height: 0.77rem;
-  margin-top: 0.1rem;
+  margin-top: 0.3rem;
   width: 90%;
   background-color: #fd9f0b;
   color: white;
+  border: none;
+  font-size: 0.48rem;
 }
