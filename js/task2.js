@@ -2,7 +2,7 @@ function jump() {
     window.location.href="https://bradmatt213.github.io/learngit/task2-js";
 }
 function  task3() {
-
+window.location.href="https://bradmatt213.github.io/learngit/task3-js"
 }
 function jumpback() {
     window.location.href="https://bradmatt213.github.io/learngit/task7";
