@@ -2,7 +2,12 @@ function jump() {
     window.location.href="https://bradmatt213.github.io/learngit/task2-js";
 }
 function  task3() {
-window.location.href="https://bradmatt213.github.io/learngit/task3-js"
+   if(kills.length === 0){
+       alert("请先设置人数");
+   }
+   else{
+       window.location.href="https://bradmatt213.github.io/learngit/task3-js";
+   }
 }
 function jumpback() {
     window.location.href="https://bradmatt213.github.io/learngit/task7";
@@ -123,4 +128,22 @@ function put() {
         kills.push("狙击手");}
     kills.sort(function(){
         return 0.5-Math.random()});
+}
+
+
+function fapai() {
+    alert(kills);
+    var i=document.getElementById("num").value;
+    i++;
+    if( i%2 !== 0) {
+        $("#num").attr("value",i);
+        $("#icon").attr("src","img/headicon.png");
+        $("#fanpai").attr("value","隐藏身份并传递给"+i+"号");
+    }
+    else{
+        $("#num").attr("value",i);
+        $("#icon").attr("src","img/myking.png");
+        $("#fanpai").attr("value","查看"+i+"号玩家身份");
+    }
+
 }
