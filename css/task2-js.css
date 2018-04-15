@@ -2370,6 +2370,12 @@ header {
 header span {
   display: inline-block;
 }
+header button {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  opacity: 0;
+}
 .maintp {
   width: 95%;
   margin: 0 auto;

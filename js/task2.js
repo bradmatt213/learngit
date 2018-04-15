@@ -4,6 +4,9 @@ function jump() {
 function  task3() {
 
 }
+function jumpback() {
+    window.location.href="https://bradmatt213.github.io/learngit/task7";
+}
 var police;
 var famer;
 var sniper;
