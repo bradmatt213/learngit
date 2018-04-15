@@ -2413,6 +2413,10 @@ main .whiteside .yellowbc #num {
 main .whiteside .yellowbc .icon {
   margin-top: 0.3rem;
 }
+main .whiteside .yellowbc .matt {
+  font-size: 0.26rem;
+  color: #29bde0;
+}
 main .fanpai {
   height: 0.77rem;
   margin-top: 0.3rem;
