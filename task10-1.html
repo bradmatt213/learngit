@@ -9,12 +9,15 @@
     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/task10-1.css"/>
+    <script src="js/js-10.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
 <header>
+
     <div class="login">
         <span class="phone">客服热线:010-594-78634</span>
-        <span>
+        <span class="bth">
             <a class="loginin" href="#">登录</a>
             <a class="signin" href="#">注册</a>
         </span>
@@ -26,33 +29,30 @@
         <button type="button" class="btn btn-default bt1">品质保证</button>
     </div>
 </header>
-<div class="self-order">
-    <div class="progress progress1">
-        <div class="progress-bar progress-bar-warning bar1" role="progressbar"
-             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-             style="width: 25%;">
-            <span class="sr-only">20% 完成（警告）</span>
-        </div>
+<nav class="progressbar">
+    <div class="process ps1">
+        <div class="circle">1</div>
+        <p>1.定制纸箱</p>
     </div>
-    <div class="progress2">
-        <div class="pg1">
-            <span class="cirle">1</span>
-            <p>1.定制纸箱</p>
-        </div>
-        <div class="pg2">
-            <span class="cirle">2</span>
-            <p>2.选择数量</p>
-        </div>
-        <div class="pg2">
-            <span class="cirle">3</span>
-            <p>3.上传附件</p>
-        </div>
-        <div class="pg2">
-            <span class="cirle">4</span>
-            <p>4.确认下单</p>
-        </div>
+    <div class="process ps2">
+        <div class="circle">2</div>
+        <p>2.选择数量</p>
     </div>
-</div>
+    <div class="process ps3">
+        <div class="circle">3</div>
+        <p>3.上传附件</p>
+    </div>
+    <div class="process ps4">
+        <div class="circle active-1-1">4</div>
+        <p>4.确认下单</p>
+    </div>
+</nav>
+ <div class="btna">
+<input type="button" id="bt1">
+<input type="button" id="bt2">
+<input type="button" id="bt3">
+<input type="button" id="bt4">
+ </div>
 <main>
     <h5><img src="img/borderblue.png"> 请您按照以下步骤来定制您的纸箱</h5>
     <div class="panel panel-default boxtype">
@@ -112,7 +112,7 @@
                 <input type="radio" name="boxtype" id="rdo5" checked><label for="rdo5">三层A瓦优质</label>
             </div>
             <div class="dropdown pull-right tg1">
-                <button type="button" class="btn dropdown-toggle details" id="dropdownMenu1" data-toggle="dropdown">查看详情
+                <button type="button" class="btn dropdown-toggle details" id="dropdownMenu1" data-toggle="dropdown"> 查看详情
                     <span><img src="img/多边形11.png"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
