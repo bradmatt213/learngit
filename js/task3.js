@@ -1,14 +1,16 @@
+//全局变量
+var i=0;
+var k=0;
+var canGo=true;
+var kills=JSON.parse(localStorage.getItem('kills'));
 function jump() {
     window.location.href="https://bradmatt213.github.io/learngit/task2-js";
 }
 function judge() {
-    window.location.href="https://bradmatt213.github.io/learngit/task7-2";
+    window.location.href="https://bradmatt213.github.io/learngit/task4-js";
 }
-var i=0;
-var k=0;
-function fapai() {
-    kills=JSON.parse(localStorage.getItem('kills'));
-        i++;
+function lookRoles() {
+    i++;
     if( i%2 !== 0 && k<kills.length) {
         $("#num").attr("value",k+1);
         $("#icon").attr("src","img/headicon.png");
@@ -24,7 +26,16 @@ function fapai() {
     }
     else {
         $("#fanpai").attr("value","法官查看");
-        judge();
+        canGo=false;
     }
+}
+
+function fapai() {
+        if(canGo){
+            lookRoles()
+        }else {
+            judge()
+        }
+
 
 }

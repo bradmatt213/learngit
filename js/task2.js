@@ -16,6 +16,11 @@ var police;
 var famer;
 var sniper;
 var kills = [];
+$(document).ready(function() {
+    $("#set").one("click", function () {
+        appendText();
+    })
+})
 function appendText(){
     put();
     var txt=[];
