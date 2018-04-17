@@ -2531,17 +2531,18 @@ header {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 1px solid lightgrey;
   padding: 0 4%;
 }
 footer div {
   width: 48%;
   padding-top: 0.1rem;
-  height: 0.57rem;
+  height: 0.67rem;
 }
 .footerleft {
   position: relative;
-  margin-top: 0.3rem;
+  margin-top: 0.1rem;
   color: #5fc0cd;
   font-size: 0.18rem;
   background-color: white;
@@ -2552,7 +2553,8 @@ footer div {
 }
 .footerright {
   position: relative;
-  margin-top: 0.3rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   color: white;
   font-size: 0.18rem;
   background-color: #5fc0cd;
