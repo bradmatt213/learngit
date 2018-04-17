@@ -61,14 +61,14 @@ header {
   position: fixed;
   background: #5fc0cd;
   height: 0.88rem;
+  padding: 0.3rem 0.2rem;
   line-height: 0.32rem;
   font-size: 32px;
   width: 100%;
   padding-left: 4%;
   padding-right: 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: white;
+  text-align: center;
 }
 header a {
   color: white;
@@ -77,6 +77,16 @@ header a {
 }
 header a:hover {
   text-decoration: none;
+  color: white;
+}
+header .a1 {
+  float: left;
+  display: inline;
+  color: white;
+}
+header .a3 {
+  float: right;
+  display: inline;
   color: white;
 }
 main {
@@ -114,9 +124,11 @@ main .content .login1 {
 }
 .text {
   background: #ffffff url("../img/iphone.png") no-repeat 0.32rem center;
+  background-size: 0.52rem 0.32rem;
 }
 .password {
   background: #ffffff url("../img/locked2.png") no-repeat 0.3rem center;
+  background-size: 0.52rem 0.32rem;
 }
 .button1 {
   margin-top: .3rem;
