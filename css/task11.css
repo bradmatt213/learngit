@@ -41,18 +41,6 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-.button {
-  margin-top: .3rem;
-  width: 100%;
-  line-height: .5rem;
-  font-size: .18rem;
-  letter-spacing: 1em;
-  background: #5fc0cd;
-  color: white;
-  border: 0 none;
-  text-align: center;
-  padding-left: 60px;
-}
 body {
   background-color: #f0f0f0;
 }
