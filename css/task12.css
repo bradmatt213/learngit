@@ -2383,12 +2383,11 @@ header {
   background: url("../img/head.png") 0 0 no-repeat;
   background-size: cover;
   width: 100%;
-  position: relative;
+  display: flex;
   height: 3.2rem;
   padding: 0 4%;
 }
 .content .section .head {
-  position: absolute;
   margin-top: 0.78rem;
 }
 .content .section .head img {
@@ -2408,6 +2407,37 @@ header {
   background-size: 0.16rem 0.16rem;
   font-size: 0.14rem;
   padding-left: 0.2rem;
+}
+@media screen and (max-width: 1080px) {
+  .content .section {
+    background: url("../img/head.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    height: 3.2rem;
+    padding: 0 4%;
+  }
+  .content .section .head {
+    margin-top: 0.78rem;
+  }
+  .content .section .head img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+  .content .section .info {
+    top: 40%;
+    font-size: 0.24rem;
+    color: white;
+    left: 10%;
+    padding-right: 10%;
+  }
+  .content .section .location {
+    background: url("../img/Shape 4.png") left center no-repeat;
+    background-size: 0.16rem 0.16rem;
+    font-size: 0.14rem;
+    padding-left: 0.2rem;
+  }
 }
 .form .formtitle {
   display: block;
@@ -2429,6 +2459,15 @@ header {
 }
 .form .formlist li {
   height: 1.01rem;
+}
+@media screen and (max-width: 310px) {
+  .form .formlist {
+    margin: 0;
+    padding: 0;
+  }
+  .form .formlist li {
+    height: 1.01rem;
+  }
 }
 .form .formtag {
   display: inline-block;
@@ -2463,15 +2502,27 @@ header {
   width: 28%;
   white-space: nowrap;
 }
+@media screen and (max-width: 320px) {
+  .form .lable .span1 {
+    font-size: 0.14rem;
+    margin-left: 0.12rem;
+  }
+}
 .form .lable span {
   font-size: 0.17rem;
   margin-left: 0.22rem;
+}
+@media screen and (max-width: 320px) {
+  .form .lable span {
+    font-size: 0.14rem;
+    margin-left: 0.12rem;
+  }
 }
 .form .lable span {
   display: inline-block;
 }
 .form .lable .small {
-  font-size: 0.08rem;
+  font-size: 0.14rem;
   width: 71%;
 }
 .form .red {

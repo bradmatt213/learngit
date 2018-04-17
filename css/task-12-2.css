@@ -171,11 +171,13 @@ footer {
   right: 0;
   text-align: center;
   font-size: 0.16rem;
-  height: 0.5rem;
+  height: 0.7rem;
   background-color: #f8fafb;
 }
 footer a {
   text-align: center;
+  margin-top:0.05rem;
+  display: inline-block;
   text-decoration: none;
 }
 footer .back {
@@ -190,9 +192,8 @@ footer .back {
 footer .write {
   display: inline-block;
   width: .6rem;
-  height: .6rem;
-  position: relative;
-  background: url("../img/椭圆4.png") 50% 40% no-repeat;
+  height: .8rem;
+  background: url("../img/椭圆4.png") 50% 0 no-repeat;
   background-size: 0.4rem 0.4rem;
   vertical-align: middle;
 }
@@ -208,4 +209,5 @@ footer .mine {
 }
 .scc {
   min-width: 1.2rem;
+  width:100%;
 }
