@@ -171,6 +171,9 @@ html{
 .noborder{
     border-top:none;
 }
+.boxtype2{
+
+}
 .chosebox{
     color:#1d7ad9!important;
     font-size:18px;
@@ -287,8 +290,13 @@ html{
     margin-top:-22px;
     }
 .chosebox3{
-    padding-top:42px;
-    margin-bottom:30px;
+    height: 1.40rem;
+    line-height: 1.40rem;
+}
+.boxtype1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .boxtype1 label{
     font-weight:normal;

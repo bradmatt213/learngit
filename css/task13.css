@@ -29,7 +29,18 @@ main {
 }
 main .mainb {
   margin-top: 0.3rem;
-  background: #ffffff url("../img/多边形1.png") 97% 52% no-repeat;
+  background-color: #ffffff;
+}
+main .mainb a {
+  display: block;
+  position: absolute;
+  width: 0.31rem;
+  height: 0.6rem;
+  background: url("../img/yellowtag.png") 0 0 no-repeat;
+  float: right;
+  display: inline;
+  margin-left: 80%;
+  margin-top: -2rem;
 }
 main .btnb {
   width: 100%;

@@ -2430,3 +2430,14 @@ header button {
 .card .content .card1 .wrap img {
   width: 3vw;
 }
+.start {
+  width: 91%;
+  height: 0.88rem;
+  background-color: #fbb435;
+  color: white;
+  font-size: 0.4rem;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  margin-left: 5%;
+}
