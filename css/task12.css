@@ -2374,192 +2374,218 @@ header {
   right: 0;
   top: 0;
   background-color: #5fc0cd;
-  height: 1.28rem;
-  line-height: 1.28rem;
-  font-size: 0.32rem;
+  height: 0.82rem;
+  line-height: 0.82rem;
+  font-size: 2vw;
   color: white;
+}
+header .pip .arrow {
+  width: 1.9vw;
+  height: 3.3vw;
+}
+@media screen and (max-width: 1080px) {
+  header {
+    font-size: 4vw;
+  }
 }
 .content .section {
   background: url("../img/head.png") 0 0 no-repeat;
   background-size: cover;
   width: 100%;
   display: flex;
-  height: 3.2rem;
+  height: 26vw;
   padding: 0 4%;
-}
-.content .section .head {
-  margin-top: 0.78rem;
-}
-.content .section .head img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  align-items: center;
 }
 .content .section .info {
-  position: relative;
-  top: 40%;
-  font-size: 0.24rem;
+  font-size: 2vw;
   color: white;
-  left: 2.09rem;
+  margin-left: 0.36rem;
+}
+.content .section .head .img-responsive {
+  height: 16vw;
+  width: 16vw;
 }
 .content .section .location {
   background: url("../img/Shape 4.png") left center no-repeat;
   background-size: 0.16rem 0.16rem;
-  font-size: 0.14rem;
+  font-size: 1.1vw;
   padding-left: 0.2rem;
 }
 @media screen and (max-width: 1080px) {
-  .content .section {
-    background: url("../img/head.png") 0 0 no-repeat;
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    height: 3.2rem;
-    padding: 0 4%;
-  }
-  .content .section .head {
-    margin-top: 0.78rem;
-  }
-  .content .section .head img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-  }
   .content .section .info {
-    top: 40%;
-    font-size: 0.24rem;
+    font-size: 4vw;
     color: white;
-    left: 10%;
-    padding-right: 10%;
+    margin-left: 0.36rem;
   }
   .content .section .location {
     background: url("../img/Shape 4.png") left center no-repeat;
     background-size: 0.16rem 0.16rem;
-    font-size: 0.14rem;
+    font-size: 1.2vw;
     padding-left: 0.2rem;
   }
 }
-.form .formtitle {
+.content .form {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid lightgrey;
+}
+.content .form .formtitle {
   display: block;
   display: flex;
   align-items: center;
-  font-size: 0.24rem;
-  height: 0.98rem;
+  font-size: 2vw;
+  height: 0.93rem;
   border-bottom: 1px solid #ccc;
 }
-.form .formtitle span {
+.content .form .formtitle span {
   display: block;
   margin-left: 0.3rem;
   padding-left: 0.28rem;
   border-left: 0.02rem solid #5fc0cd;
   line-height: 0.39rem;
 }
-.form ul {
+@media screen and (max-width: 1080px) {
+  .content .form .formtitle {
+    display: block;
+    display: flex;
+    align-items: center;
+    font-size: 4vw;
+    height: 0.7rem;
+    border-bottom: 1px solid #ccc;
+  }
+  .content .form .formtitle span {
+    display: block;
+    margin-left: 0.3rem;
+    padding-left: 0.28rem;
+    border-left: 0.02rem solid #5fc0cd;
+    line-height: 0.19rem;
+  }
+}
+.content .form ul {
   list-style: none;
 }
-.form .formlist li {
-  height: 1.01rem;
+.content .form .formlist li {
+  height: 0.93rem;
 }
-@media screen and (max-width: 310px) {
-  .form .formlist {
-    margin: 0;
-    padding: 0;
-  }
-  .form .formlist li {
-    height: 1.01rem;
+@media screen and (max-width: 1080px) {
+  .content .form .formlist li {
+    height: 0.7rem;
+    font-size: 3vw;
   }
 }
-.form .formtag {
+.content .form .formtag {
+  font-size: 1.8vw;
   display: inline-block;
-  padding-left: 0.28rem;
-  margin-left: 0.2rem;
-  background: url("../img/starbig.png") no-repeat left center;
+  padding-left: 1.7vw;
 }
-.form .formtag1 {
+.content .form .formtag1 {
   display: inline-block;
-  padding-left: 0.28rem;
+  font-size: 1.8vw;
+  padding-left: 2vw;
   border-right: 1px solid lightgrey;
   padding-right: 0.19rem;
-  background: url("../img/starbig.png") no-repeat left center;
 }
-.form .require {
+@media screen and (max-width: 1080px) {
+  .content .form .formtag {
+    font-size: 3vw;
+  }
+  .content .form .formtag1 {
+    font-size: 3vw;
+  }
+}
+.content .form .require {
   display: flex;
   align-items: center;
 }
-.form .lable {
+.content .form .lable {
   border-top: 1px solid lightgrey;
   display: flex;
   align-items: center;
 }
-.form .lable .span1 {
-  font-size: 0.17rem;
+.content .form .lable .span1 {
+  font-size: 1.8vw;
   color: #999999;
   margin-left: 0;
   padding-right: 0.29rem;
   border-right: 1px solid lightgrey;
-  height: 0.28rem;
   display: inline-block;
   width: 28%;
   white-space: nowrap;
 }
-@media screen and (max-width: 320px) {
-  .form .lable .span1 {
-    font-size: 0.14rem;
-    margin-left: 0.12rem;
-  }
-}
-.form .lable span {
-  font-size: 0.17rem;
+.content .form .lable span {
+  font-size: 1.8vw;
   margin-left: 0.22rem;
 }
-@media screen and (max-width: 320px) {
-  .form .lable span {
-    font-size: 0.14rem;
-    margin-left: 0.12rem;
+@media screen and (max-width: 1080px) {
+  .content .form .lable .span1 {
+    font-size: 3vw;
+    color: #999999;
+    margin-left: 0;
+    padding-right: 0.29rem;
+    border-right: 1px solid lightgrey;
+    display: inline-block;
+    width: 28%;
+    white-space: nowrap;
+  }
+  .content .form .lable span {
+    font-size: 3vw;
+    margin-left: 0.22rem;
   }
 }
-.form .lable span {
+.content .form .lable span {
   display: inline-block;
 }
-.form .lable .small {
-  font-size: 0.14rem;
-  width: 71%;
+.content .form .lable .small {
+  font-size: 1.5vw;
+  width: 54%;
 }
-.form .red {
+@media screen and (max-width: 1080px) {
+  .content .form .lable .small {
+    font-size: 2.5vw;
+  }
+}
+.content .form .red {
   color: #e26163;
 }
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid lightgrey;
-  padding: 0 4%;
-}
-footer div {
-  width: 48%;
-  padding-top: 0.1rem;
-  height: 0.67rem;
+  background-color: #ffffff;
+  z-index: 999;
+  position: fixed;
+  height: 2.25rem;
+  bottom: 0;
+  width: 100%;
 }
 .footerleft {
   position: relative;
-  margin-top: 0.1rem;
   color: #5fc0cd;
-  font-size: 0.18rem;
+  font-size: 2vw;
   background-color: white;
   border: 0.01rem solid #5fc0cd;
   border-radius: 5px;
   width: 100%;
-  height: 100%;
+  height: 0.78rem;
+  margin: 1.1rem 0.15rem 0 0.34rem;
+}
+@media screen and (max-width: 1080px) {
+  .footerleft {
+    font-size: 4vw;
+  }
 }
 .footerright {
   position: relative;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
+  height: 0.78rem;
+  margin: 1.1rem 0.5rem 0 0.15rem;
   color: white;
-  font-size: 0.18rem;
+  font-size: 2vw;
   background-color: #5fc0cd;
   border: none;
   border-radius: 5px;
   width: 100%;
-  height: 100%;
+}
+@media screen and (max-width: 1080px) {
+  .footerright {
+    font-size: 4vw;
+  }
 }
