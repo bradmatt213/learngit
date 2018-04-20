@@ -49,14 +49,30 @@ body {
   height: auto;
   margin-top: 0.2rem;
 }
-.vote audio {
+.vote .hidden {
   opacity: 0;
+  float: right;
+  display: inline;
+  display: inline-block;
 }
 .vote .item1 {
   margin-left: 6%;
+  display: inline-block;
   font-size: 2vw;
   white-space: normal;
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.clickbutton {
+  float: right;
+  display: inline;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -1rem;
+  margin-right: 7%;
+  opacity: 0;
 }
 .click {
   padding-left: 6%;
