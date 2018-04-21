@@ -1,14 +1,12 @@
 var kills = JSON.parse(localStorage.getItem('kills'));
-
 var killer = kills.filter(function (item, index, array) {
     return (item === "杀手");
 });
 var famer = kills.filter(function (item, index, array) {
     return (item === "平民");
 });
-function Kills(role,isAlive) {
-    this.role=role;
-    this.isAlive=isAlive;
+function jump() {
+    window.location.href="https://bradmatt213.github.io/learngit/task4-kill";
 }
 function setGamer(number,identity,state,kmode,ktime) {
     kills[i]={
@@ -23,7 +21,8 @@ function setGamer(number,identity,state,kmode,ktime) {
 function aliveordead() {
     var temp=[];
     for(i=0;i<kills.length;i++){
-         temp.push(kills[i]);
+
+        temp.push(kills[i]);
         setGamer();
          kills[i].state="alive";
          kills[i].identity=temp[i];
@@ -42,39 +41,39 @@ $(document).ready(function () {
             {name: 'deadmenspeak', from: 'kill', to: 'speak'},
             {name: 'playerspeak', from: 'speak', to: 'player'},
             {name: 'timetovote', from: 'player', to: 'vote'},
-            {name: 'reset', from: 'vote', to: "day"}
+            {name: 'reset', from: 'vote', to: "none"}
         ],
         methods: {
             onTimetokill: function () {
-                $("button").addClass("after");
+                $("#step1").addClass("after");
                 alert("天黑请闭眼");
             },
             onDeadmenspeak: function () {
-                $("button").addClass("after");
+                $("#step2").addClass("after");
                 alert("亡灵发表遗言");
             },
             onPlayerspeak: function () {
-                $("button").addClass("after");
+                $("#step3").addClass("after");
                 alert("玩家依次发表遗言");
             },
             onTimetovote: function () {
-                $("button").addClass("after");
+                $("#step4").addClass("after");
                 alert("投票");
             },
         }
     });
-    $("button1").click(function () {
+    $("#step1").click(function () {
         process.onTimetokill();
         jump();
     })
-    $("button1").click(function () {
+    $("#step2").click(function () {
         process.onDeadmenspeak();
     })
-    $("button1").click(function () {
+    $("#step3").click(function () {
         process.onPlayerspeak();
     })
-    $("button1").click(function () {
-        process.onTimetokill();
+    $("#step4").click(function () {
+        process.onTimetovote();
     })
 });
 

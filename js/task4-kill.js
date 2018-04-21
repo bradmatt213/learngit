@@ -10,12 +10,12 @@ window.onload=function auto() {
     }
 }
 function jump() {
-    window.location.href="https://bradmatt213.github.io/learngit/task2-js";
+    window.location.href="https://bradmatt213.github.io/learngit/task4-2";
 }
 var dead=[];
 $(document).ready(function () {
-
     $(".card1").click(function () {
+        $(this).addClass("red");
         var i=1;
         var index = $(this).index();
         dead.push(kills[index]);
