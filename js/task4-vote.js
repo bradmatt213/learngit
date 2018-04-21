@@ -1,6 +1,5 @@
 var kills = JSON.parse(localStorage.getItem('kills'));
 var day = JSON.parse(localStorage.getItem('day'));
-console.log(kills);
 window.onload = function auto() {
     for (i = 0; i < kills.length; i++) {
         if (kills[i].state === "alive") {
