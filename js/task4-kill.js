@@ -9,6 +9,7 @@ window.onload=function auto() {
                 $(txt3).addClass("red");
             }
             $(".content").append(txt3);
+            $(".title").text("请投票");
             $(txt3).append(txt1, txt2);
     }
 }
