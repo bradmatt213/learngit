@@ -11,7 +11,7 @@ function judge() {
 }
 function lookRoles() {
     i++;
-    if( i%2 !== 0 && k<kills.length-1) {
+    if( i%2 !== 0 && k<kills.length) {
         $("#num").attr("value",k+1);
         $("#icon").attr("src","img/headicon.png");
         $(".matt").append(kills[k]);
