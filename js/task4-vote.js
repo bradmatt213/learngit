@@ -15,17 +15,20 @@ window.onload = function auto() {
 
 function jump() {
            var alivegoodmen = kills.filter(function (item,index,array) {
-               return (kills.state === "alive" && kills.identity === "平民")
+               return (item.state === "alive" && item.identity === "平民")
            });
            var evilmen =  kills.filter(function (item,index,array) {
-               return (kills.state === "alive" && kills.identity === "杀手")
+               return (item.state === "alive" && item.identity === "杀手")
            });
+           console.log(alivegoodmen);
+           console.log(evilmen);
            if(alivegoodmen.length+1 - evilmen.length <2 ){
 //               跳到结果页杀手胜利
               var killermen =kills.filter(function (item,index,array) {
                    return (kills.identity === "杀手");
                });
               var goodfamer =kills.filter(function (item,index,array) {
+
                   return (kills.identity === "平民");
               });
                var outcome=[];
@@ -33,7 +36,7 @@ function jump() {
                outcome[1]="80%的杀手";
                outcome[2]=killermen.length;
                outcome[3]=goodfamer.length;
-               window.location.href="https://bradmatt213.github.io/learngit/task4-outcom";
+               window.location.href="https://bradmatt213.github.io/learngit/task4-outcome";
                localStorage.setItem('outcome',JSON.stringify(outcome))
                }
                else if(alivegoodmen.length+1 -evilmen.length >2 && evilmen.length === 0){
