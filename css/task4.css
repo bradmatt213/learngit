@@ -2430,6 +2430,9 @@ header button {
 .card .content .card1 .wrap img {
   width: 3vw;
 }
+.card .content .red .name {
+  background-color: #ff0000;
+}
 .start {
   width: 91%;
   height: 0.88rem;
