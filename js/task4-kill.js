@@ -2,14 +2,16 @@ var kills=JSON.parse(localStorage.getItem('kills'));
 console.log(kills);
 window.onload=function auto() {
     for(i=0;i<kills.length;i++) {
-        if(kills.state === "alive") {
+        if(kills[i].state === "alive") {
             var txt1 = $("<div></div>").text(kills[i].identity).addClass("name");
             var txt2 = $("<div></div>").text(i + 1).addClass("num");
             var txt3 = $("<li></li>").addClass("card1");
             $(".content").append(txt3);
             $(txt3).append(txt1, txt2);
         }
-        else{}
+        else{
+
+        }
     }
 }
 function jump() {
