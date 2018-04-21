@@ -5,6 +5,9 @@ window.onload=function auto() {
             var txt1 = $("<div></div>").text(kills[i].identity).addClass("name");
             var txt2 = $("<div></div>").text(i + 1).addClass("num");
             var txt3 = $("<li></li>").addClass("card1");
+            if(kills.state === "dead"){
+                $(txt3).addClass("red");
+            }
             $(".content").append(txt3);
             $(txt3).append(txt1, txt2);
     }
