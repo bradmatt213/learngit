@@ -20,10 +20,9 @@ function jump() {
 var dead=[];
 var day= 1;
 $(document).ready(function () {
-
     $(".card1").click(function () {
         var index = $(this).index();
-        if (kills[i].state === "alive"){
+        if (kills[index].state === "alive"){
         if(kills[index].identity === "杀手"){
             alert("自己人兄dei")
         }else{
@@ -37,7 +36,8 @@ $(document).ready(function () {
         localStorage.setItem('kills', JSON.stringify(kills));
             localStorage.setItem('day', JSON.stringify(day));
 
-        }}
+        }
+        }
         else{}
     })
 })
