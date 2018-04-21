@@ -1,15 +1,23 @@
-.btn1 {
-    display: inline-block;
-    background: url(./sina_gray_btn.png) no-repeat left top;
-    padding-left: 3px;
-    color: #000;
-    font-size: 12px;
-    text-decoration: none;
+@charset "utf-8";
+.pumant {
+  left: 0;
+  right: 0;
+  top: 0;
 }
-
-.btn1 cite {
-    display: block;
-    line-height: 26px;
-    padding: 0 13px 0 10px;
-    background: url() no-repeat right top;
+.pumanb {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.lay {
+  height: 200px;
+  width: 200px;
+  border: 2px solid green;
+}
+.lay div {
+  background-color: #ff0000;
+  height: 30px;
+  position: fixed;
+  transform: translate(-50%);
+  left: 25%;
 }

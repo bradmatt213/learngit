@@ -1,0 +1,51 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "css3";
+//公用的变量
+html{
+  font-size:625%;
+}
+.box{
+  height:100px;
+  width:100px;
+}
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.border{
+  width:300px;
+  height:100px;
+
+  margin:auto;
+  border:5px solid lawngreen;
+  .red{
+    .box;
+    .bgcolor(red);
+    .fl;
+    height:100px;
+  }
+.green{
+  .box;
+  .bgcolor(green);
+  .fl;
+}
+  .yellow{
+    .box;
+    .bgcolor(yellow);
+    .fl;
+  }
+}
+.purple{
+  .box;
+  .bgcolor(purple);
+  margin:0 auto;
+}

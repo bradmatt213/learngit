@@ -1,0 +1,92 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "font-awesome";
+@import "css3";
+//公用的变量
+@import "blmatt";
+html{
+  font-size:625%;
+}
+body{
+  .bgcolor(#f0f0f0);
+}
+
+//header
+header{
+  display: flex;
+  width:100%;
+  top:0;
+  left:0;
+  right:0;
+  .abs;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 2.5% 0 2.5%;
+  height:0.7rem;
+  .bgcolor(@main_bgc);
+  .font-s(0.34rem);
+  color:white;
+  span{
+    .dib;
+  }
+  button{
+    width:0.5rem;
+    height:0.5rem;
+    .abs;
+    opacity: 0;
+  }
+}
+main{
+  width:97%;
+  margin:1rem auto;
+  .bgcolor(white);
+  height:6rem;
+  .day{
+    padding:0.34rem 0;
+    color:#29bde0;
+    .font-s(0.3rem);
+    .w100;
+    border-bottom: 1px solid lightgrey;
+    .tc;
+  }
+  .process{
+    display: flex;
+    .left{
+      flex:1;
+      border-right: 1px solid lightgrey;
+    }
+    .right{
+      flex:5;
+      img{
+        margin-left:-30px;
+      }
+      .triangle{
+        width:20px;
+        .abs;
+        margin-top:40px;
+        .dib;
+        .triangle(right,20px,#24a7c6);
+      }
+      .lef{
+        margin-left:30px;
+      }
+     button{
+       margin-left:40px;
+       width:80%;
+       .bgcolor(#24a7c6);
+       height:0.73rem;
+       border: none;
+       color:white;
+       .font-s(0.3rem);
+       margin-top:0.23rem;
+     }
+      .after{
+        .bgcolor(#fdbc48);
+      }
+      .lf{
+        margin-left:70px;
+      }
+    }
+  }
+}

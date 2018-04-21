@@ -4,134 +4,161 @@
 @import "css3";
 //公用的变量
 @import "bl";
-html{
-  font-size:625%;
+
+html {
+  font-size: 625%;
 }
 
-body{
+body {
   .bgcolor(@main_bgc);
 }
 
 //页面2
-.padding_2{
-  padding-left:6%;
-  padding-right:6%;
+.padding_2 {
+  padding-left: 6%;
+  padding-right: 6%;
 }
-.headerbt_2{
+
+.headerbt_2 {
   .flexb;
   .padding_2;
-  padding-top:50px;
+  padding-top: 50px;
   .font-s22;
-  color:white;
-  span{
+  color: white;
+  span {
     .dib;
-    width:73px;
+    width: 73px;
     .tc;
   }
-
 }
+
 .vote {
-  .bgcolor(#b9e9f5);
+  background:#b9e9f5 url("../img/形状17.png") 93% center no-repeat;
   .w100;
-  height:85px;
+  white-space: nowrap;
+  margin-top: 0.14rem;
+  height: 85px;
   .padding_2;
   .txt-ver(85px);
-  .item2{
-    height:60px;
-    width:60px;
-    background:url("../img/buttonleft.png") no-repeat;
-    .fr;
-    .clearfix;
-    margin-top:20px;
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top:0.2rem;
   }
-  .item1{
-    margin-left:50px;
-    .font-s(0.16rem);
+    .hidden {
+      opacity: 0;
+      .fr;
+      .dib;
+    }
+  .item1 {
+    margin-left: 6%;
+    .dib;
+    .font-s(2vw);
+    white-space: normal;
+    width:100%;
+    .flexb;
   }
 }
-.click{
-  .padding_2;
-  p{
-    padding-left:10%;
-    .font-s(0.12rem);
-    color:white;
-  }
+.clickbutton{
+  .fr;
+  .dib;
+  width:1rem;
+  height:1rem;
+  margin-top:-1rem;
+  margin-right:7%;
+  opacity: 0;
 }
-.triangele{
-  .triangle-b(10px,#b9e9f5);
-  .db;
-  margin-left:10%;
-}
-.card{
-  margin-left:0.1rem;
 
+.click {
   .padding_2;
-  margin-top:3%;
-  .rel();
-  .content{
-    display:flex;
+  p {
+    padding-left: 10%;
+    .font-s(0.12rem);
+    color: white;
+  }
+}
+
+.triangele {
+  .triangle-b(10px, #b9e9f5);
+  .db;
+  margin-left: 10%;
+}
+
+.card {
+  margin-left: 0.1rem;
+  margin-bottom:2rem;
+  .w100;
+  .padding_2;
+  margin-top: 3%;
+  .content {
+    .w100;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    .card1{
+    .card1 {
       height: 25vw;
+      margin-top: 6vw;
       width: 25vw;
-      margin-right: 3vw;
-      margin-bottom: 8vw;
       .font-s(0.17rem);
       .tc;
+      &:hover {
+        .wrap {
+          display: flex;
+        }
+      }
       border: 1vw solid white;
-    }
+      .name {
+        height: 70%;
+        .bgcolor(#f5c97b);
+        .font-s(0.17rem);
+        .flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .num {
+        height: 30%;
+        .bgcolor(#83b09a);
+        color: white;
+        .font-s(0.15rem);
+        .flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrap {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        height: 8vw;
+        margin-top: 1vw;
+        img {
+          width: 3vw;
+        }
+      }
     }
   }
-.num{
- .w100;
-  height: 30%;
-  margin: 0;
-  .bgcolor(#83b09a);
-  .flex;
-  justify-content: center;
-  align-items: center;
-  .font-s22;
-  color:white;
-}
-.name{
-  .flex;
-  .font-s22;
-  justify-content: center;
-  align-items: center;
-  .w100;
-  height: 70%;
-  margin: 0;
-  color: #565656;
-  .bgcolor(#f5c97b);
-}
-.wrap{
-  display: none;
-  height: 8vw;
-  margin-top: 1vw;
-  justify-content: space-between;
-  align-items: center;  img{
-    width:3vw;
-  }
-}
-.card1:hover .wrap {
-  .flex;
-}
-footer{
-  .fix();
- .pumanb;
-  height:1.4rem;
-  .bgcolor(#29bde0);
-  .tc;
-}
-.f3 {
-  color:white;
-  .bgcolor(#fbb435);
-  width:80%;
-  .font-s(0.4rem);
-  margin-top:0.2rem;
 }
 
+//footer
+footer{
+  position:fixed;
+  left:0;
+  bottom:0;
+  right:0;
+  height:1rem;
+  background-color:#29bde0;
+  width:100%;
+  text-align:center;
+}
+.f3 {
+  margin-top:0.2rem;
+  color:white;
+  background-color:#fbb435;
+  width:76%;
+  height:0.45rem;
+  margin-bottom:.1rem;
+  font-size:0.2rem;
+}
 

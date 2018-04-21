@@ -4,7 +4,7 @@
 @import "font-awesome";
 @import "css3";
 //公用的变量
-@import "blmatt";
+@import "bl14";
 html{
   font-size:625%;
 }
@@ -25,7 +25,6 @@ html{
   .flex;
   flex-direction: column;
 }
-
 ///header样式
    //标题栏按钮样式
  .contact {
@@ -43,7 +42,6 @@ html{
      .tc;
      color: @main_bgc;
      .text-n;
-     border-right: 1px solid lightgrey;
      padding-right: 0.1rem;
      :hover{
        color:@link_hover;
@@ -98,18 +96,22 @@ html{
     .h100;
     margin: 0 auto;
   }
-  span a{
-    .text-n();
-    height:0.6rem;
-    margin-top:0.4rem;
-    color:@link_color;
-    .dib;
-    margin-left:0.2rem;
-    &:hover{
-      color:@link_hover;
-      border-bottom:4px solid white;
+  .link {
+    margin-right:-10px;
+    a {
+      .text-n();
+      height: 0.6rem;
+      margin-top: 0.4rem;
+      color: @link_color;
+      .dib;
+      width: 0.8rem;
+      .tc;
+      margin-left: 0.2rem;
+      &:hover {
+        color: @link_hover;
+        border-bottom: 4px solid white;
+      }
     }
-
   }
 }
 @media screen and (max-width: 1080px) {
@@ -199,7 +201,7 @@ main{
         padding-left:10%;
         &:hover{
           .bg-nc("../img/round8.png",left,center);
-          color:@link_hover;
+          color:#ff650e;
         }
       }
     }
@@ -228,23 +230,44 @@ main{
   }
 }
 @media screen and (max-width: 1080px) {
-main{
+  main {
     width: 100%;
-  margin:0 auto;
+    margin: 0 auto;
     .navbar {
       float: none;
       width: 70%;
       .db;
       margin: 0.3rem auto;
+
+      ul {
+        color: @main_bgc;
+        .list-sn;
+        width:1rem;
+        margin: 0.5rem auto;
+        padding:0;
+        li{
+          .tc;
+        }
+      }
+      .maincontent {
+        .title {
+          flex-direction: column;
+
+        }
+        float: none;
+        .db;
+        width: 70%;
+        margin: 0 auto;
+      }
     }
     .maincontent {
-      .title{
-       flex-direction: column;
+      .title {
+        flex-direction: column;
 
       }
       float: none;
       .db;
-      width:70%;
+      width: 70%;
       margin: 0 auto;
     }
   }

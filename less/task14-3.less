@@ -4,7 +4,7 @@
 @import "font-awesome";
 @import "css3";
 //公用的变量
-@import "blmatt";
+@import "bl14";
 html{
   font-size:625%;
 }
@@ -43,7 +43,6 @@ html{
     .tc;
     color: @main_bgc;
     .text-n;
-    border-right: 1px solid lightgrey;
     padding-right: 0.1rem;
     :hover{
       color:@link_hover;
@@ -98,18 +97,22 @@ html{
     .h100;
     margin: 0 auto;
   }
-  span a{
-    .text-n();
-    height:0.6rem;
-    margin-top:0.4rem;
-    color:@link_color;
-    .dib;
-    margin-left:0.2rem;
-    &:hover{
-      color:@link_hover;
-      border-bottom:4px solid white;
+  .link {
+    margin-right:-10px;
+    a {
+      .text-n();
+      height: 0.6rem;
+      margin-top: 0.4rem;
+      color: @link_color;
+      .dib;
+      width: 0.8rem;
+      .tc;
+      margin-left: 0.2rem;
+      &:hover {
+        color: @link_hover;
+        border-bottom: 4px solid white;
+      }
     }
-
   }
 }
 @media screen and (max-width: 1080px) {
@@ -190,6 +193,26 @@ main {
       }
     }
   }
+  .cell-bt{
+    display: none;
+  }
+  @media screen and (max-width: 1080px){
+   .direction{
+     display: none;
+   }
+    .cell-bt{
+      display: block;
+      width:30%;
+      margin: 0 auto;
+      .tc;
+      height:0.5rem;
+      line-height: 0.5rem;
+     select{
+      .w100;
+       height:0.5rem;
+     }
+    }
+  }
   .headline {
     width: 100%;
     .txt-ver(0.74rem);
@@ -206,11 +229,53 @@ main {
     width: 100%;
     .carrier {
       width: 30%;
-      margin-top: 0.1rem;
+      margin-top: 0.4rem;
       .bxshadow;
+      .hda{
+        .flex;
+        justify-content: space-around;
+        .item1{
+          flex:1;
+          .flex;
+          align-items: center;
+        }
+        .item2{
+          flex:2;
+          .flex;
+         align-items: center;
+          flex-wrap: wrap;
+          p{
+            margin-top:-50px;
+          }
+        }
+      }
       .door {
         padding: 0.1rem 0.1rem;
         color: @main_fontcolor;
+      }
+      &:hover .transparent{
+        display:block;
+      }
+      .transparent{
+        position:absolute;
+        top:0.01rem;
+        height:100%;
+        width:100%;
+        background:rgba(61,61,61,0.800);
+        color:white;
+        text-align:center;
+        display:none;
+        padding:0.5rem 0.5rem;
+        animation:myfirst 5s;
+        transform:none;
+        @keyframes myfirst
+        {
+          0% {transform:none;}
+          25% {transform:skewY(50deg);}
+          50%  {transform:scaleZ(2);}
+          75%  {transform:rotate(130deg);}
+          100% {transform:none;}
+        }
       }
       .money {
         .flex;
@@ -233,9 +298,17 @@ main {
         color: @main_fontcolor;
         .font-s(0.11rem);
         .font-wn;
+        padding: 0.1rem 0.1rem;
       }
+      .secondline{
+        padding: 0.1rem 0.1rem;
+      }
+
     }
   }
+}
+.carrer:hover .transparent{
+  display:block;
 }
 @media screen and (max-width: 1080px){
   main{
@@ -246,7 +319,20 @@ main {
       flex-direction: column;
       .carrier{
         width:80%;
-        margin:0 auto;
+        margin:0.5rem auto;
+        .transparent{
+          position:absolute;
+          top:0.01rem;
+          height:100%;
+          width:100%;
+          background:rgba(61,61,61,0.800);
+          color:white;
+          text-align:center;
+          display:none;
+          padding:0.5rem 0.5rem;
+          animation:myfirst 5s;
+          transform:none;
+        }
       }
     }
   }
