@@ -1,13 +1,17 @@
 var kills = JSON.parse(localStorage.getItem('kills'));
-var killer = kills.filter(function (item, index, array) {
-    return (item === "杀手");
-});
-var famer = kills.filter(function (item, index, array) {
-    return (item === "平民");
-});
+var day = (JSON.parse(localStorage.getItem('day'))>1)?JSON.parse(localStorage.getItem('day')):1;
+//定义天数
+window.onload = function daytime(){
+    $(".daytime").text(day);
+}
 function jump() {
     window.location.href="https://bradmatt213.github.io/learngit/task4-kill";
 }
+//跳转到杀人页面
+function jumptovote() {
+    window.location.href="https://bradmatt213.github.io/learngit/task4-vote";
+}
+//跳转到投票界面
 function setGamer(number,identity,state,kmode,ktime) {
     kills[i]={
         number:number,
@@ -41,7 +45,7 @@ $(document).ready(function () {
             {name: 'deadmenspeak', from: 'kill', to: 'speak'},
             {name: 'playerspeak', from: 'speak', to: 'player'},
             {name: 'timetovote', from: 'player', to: 'vote'},
-            {name: 'reset', from: 'vote', to: "none"}
+            {name: 'reset', from: 'vote', to: "day"}
         ],
         methods: {
             onTimetokill: function () {
@@ -58,7 +62,7 @@ $(document).ready(function () {
             },
             onTimetovote: function () {
                 $("#step4").addClass("after");
-                alert("投票");
+                alert("请投票");
             },
         }
     });
@@ -74,6 +78,7 @@ $(document).ready(function () {
     })
     $("#step4").click(function () {
         process.onTimetovote();
+        jumptovote();
     })
 });
 
