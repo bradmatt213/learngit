@@ -20,7 +20,7 @@ $(document).ready(function () {
     $(".card1").click(function () {
         var index = $(this).index();
         if(kills[index].state === "dead"){
-            alert("请杀活人");
+            alert("请投活人");
         }else {
             dead.push(kills[index]);
             $(this).addClass("red");
