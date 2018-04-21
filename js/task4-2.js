@@ -9,7 +9,7 @@ function jump() {
 }
 //跳转到杀人页面
 function jumptovote() {
-    window.location.href="https://bradmatt213.github.io/learngit/task4-vote";
+    window.location.href="https://bradmatt213.github.io/learngit/task4-kill";
 }
 //跳转到投票界面
 function setGamer(number,identity,state,kmode,ktime) {
@@ -63,12 +63,13 @@ $(document).ready(function () {
             onTimetovote: function () {
                 $("#step4").addClass("after");
                 alert("请投票");
-            },
+            }
         }
     });
     $("#step1").click(function () {
         process.onTimetokill();
         jump();
+        $(".title").text("杀手杀人");
     })
     $("#step2").click(function () {
         process.onDeadmenspeak();
@@ -79,6 +80,7 @@ $(document).ready(function () {
     $("#step4").click(function () {
         process.onTimetovote();
         jumptovote();
+        $(".title").text("请投票");
     })
 });
 
