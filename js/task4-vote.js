@@ -9,13 +9,47 @@ window.onload = function auto() {
             $(txt3).addClass("red");
          }
             $(".content").append(txt3);
-            $(".title").text("杀手杀人");
             $(txt3).append(txt1, txt2);
     }
 }
 
 function jump() {
-    window.location.href = "https://bradmatt213.github.io/learngit/task4-2";
+           var alivegoodmen = kills.filter(function (item,index,array) {
+               return (kills.state === "alive" && kills.identity === "平民")
+           });
+           var evilmen =  kills.filter(function (item,index,array) {
+               return (kills.state === "alive" && kills.identity === "杀手")
+           });
+           if(alivegoodmen.length+1 - evilmen.length <2 ){
+//               跳到结果页杀手胜利
+              var killermen =kills.filter(function (item,index,array) {
+                   return (kills.identity === "杀手");
+               });
+              var goodfamer =kills.filter(function (item,index,array) {
+                  return (kills.identity === "平民");
+              });
+               var outcome=[];
+               outcome[0]="杀手胜利";
+               outcome[1]="80%的杀手";
+               outcome[2]=killermen.length;
+               outcome[3]=goodfamer.length;
+               window.location.href="https://bradmatt213.github.io/learngit/task4-outcom";
+               localStorage.setItem('outcome',JSON.stringify(outcome))
+               }
+               else if(alivegoodmen.length+1 -evilmen.length >2 && evilmen.length === 0){
+           //    跳到到结果页好人胜利
+               var outcome=[];
+               outcome[0]="平民胜利";
+               outcome[1]="20%的平民";
+               outcome[2]=killermen.length;
+               outcome[3]=goodfamer.length;
+               window.location.href="https://bradmatt213.github.io/learngit/task4-outcome";
+               localStorage.setItem('outcome',JSON.stringify(outcome))
+           }
+           else {
+           //    跳到任务开始页面继续游戏
+               window.location.href="https://bradmatt213.github.io/learngit/task4-2";
+           }
 }
 
 var dead = [];
