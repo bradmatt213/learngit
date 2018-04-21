@@ -24,7 +24,6 @@ $(document).ready(function () {
 
     $(".card1").click(function () {
         var index = $(this).index();
-        if (kills[i].state === "alive") {
             dead.push(kills[index]);
             $(this).addClass("red");
             kills[index].state = "dead";
@@ -35,8 +34,5 @@ $(document).ready(function () {
             localStorage.setItem('kills', JSON.stringify(kills));
             day++;
             localStorage.setItem('day', JSON.stringify(day));
-        }
-        else {
-        }
     })
 })
