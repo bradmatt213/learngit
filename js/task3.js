@@ -18,7 +18,7 @@ function lookRoles() {
         $("#fanpai").attr("value","隐藏身份并传递给"+(k+2)+"号");
         k++;
     }
-    else if ( i%2 === 0 && k<kills.length){
+    else if ( i%2 === 0 && k<kills.length-1){
         $("#num").attr("value",k+1);
         $("#icon").attr("src","img/myking.png");
         $("#fanpai").attr("value","查看"+(k+1)+"号玩家身份");

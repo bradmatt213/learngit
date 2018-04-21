@@ -10,5 +10,5 @@ window.onload=function auto() {
     }
 }
 function jump() {
-    window.location.href="https://bradmatt213.github.io/learngit/task4-2"
+    window.location.href="https://bradmatt213.github.io/learngit/task4-2";
 }
