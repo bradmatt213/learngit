@@ -63,7 +63,7 @@ html{
     margin-top:0.5rem;
     color:white;
     font-size:16px;
-    height:0.5rem;
+    height:0.51rem;
     text-decoration: none;
     text-align:center;
     width:98px;
@@ -431,6 +431,7 @@ footer a:hover{
 }
 .copyright{
     padding-top:0.1rem;
+    margin-top: 0.1rem;
     text-align: center;
     color:white;
     font-size:0.13rem;
