@@ -124,35 +124,43 @@ html{
     display: none;
   }
 }
-//手机页面下的下拉菜单
 .dropdown{
   display: none;
 }
-@media screen and (max-width: 1080px){
-  .dropdown{
+@media screen and (max-width: 1080px) {
+  .dropdown {
     display: block;
-  }
-  .btn1{
-    .bgcolor(@main_bgc);
-    width:0.8rem;
-    .db;
-    .fr;
-    margin-right:0.1rem;
-    margin-top:0.15rem;
-  }
-  .menu1{
-    width:100%;
-    .bgcolor(@main_bgc);
+    width: 100%;
     .rel;
-    color:white;
-    .tc;
-    li a{
-      color:white;
+    .dib;
+    margin-top: 0.1rem;
+    .dropbtn {
+      .bgcolor(@main_bgc);
+      padding: 16px;
+      border: none;
+      cursor: pointer;
+      .fr;
+    }
+    .dropdown-content {
+      display: none;
+
+      z-index: 999;
+      .bgcolor(@main_bgc);
+      .w100;
+      margin-top: 0.8rem;
+      a {
+        color: white;
+        .font-s(0.2rem);
+        padding: 12px 16px;
+        .text-n();
+        .db;
+        .tc;
+      }
+    }
+    .blk {
+      display: block;
     }
   }
-}
-.clearfix{
-  .clearfix;
 }
 //图片样式
 .faster{
@@ -167,7 +175,11 @@ html{
     margin:0 auto;
       }
 }
-
+@media screen and (max-width: 1080px){
+  .faster{
+    margin-top:0rem;
+  }
+}
 //两栏布局
 main{
   width:1200px;
@@ -281,7 +293,7 @@ footer{
     .text-n();
     color:white;
     .font-s(0.16rem);
-    height:0.4rem;
+    height:0.3rem;
     padding:0 0 0 0;
     padding-bottom:0.1rem;
     &:hover{

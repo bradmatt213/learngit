@@ -6,19 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>vote</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/task14-2.css"/>
-    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" href="../less/task14-2.less"/>
+    <script src="https://cdn.bootcss.com/less.js/2.7.0/less.js"></script>
 </head>
 <body>
 <header>
     <div class="contact">
         <div>咨询电话:8208208820</div>
         <div>
-            <a href=""><span><img src="img/wechat.png" alt=""></span></a>
-            <a href=""><span><img src="img/qq.png" alt=""></span></a>
-            <a href=""><span><img src="img/sina.png" alt=""></span></a>
+            <a href=""><span><img src="../img/wechat.png" alt=""></span></a>
+            <a href=""><span><img src="../img/qq.png" alt=""></span></a>
+            <a href=""><span><img src="../img/sina.png" alt=""></span></a>
         </div>
     </div>
     <div class="cellphone">
@@ -31,7 +30,7 @@
         <a href="">退出</a>
     </div>
     <div class="navigation">
-        <div><span><img src="img/jinengshu.png" alt=""></span>
+        <div><span><img src="../img/jinengshu.png" alt=""></span>
             <span class="link"><a href="">首页</a>
         <a href="">职业</a>
         <a href="">推荐</a>
@@ -39,28 +38,18 @@
             </span>
         </div>
     </div>
-    <div class="clearfix"></div>
     <!--手机页面下拉菜单-->
     <div class="dropdown">
-        <button type="button" class="btn dropdown-toggle btn1" id="dropdownMenu1"
-                data-toggle="dropdown">
-            <img src="img/holder.png" alt="">
-        </button>
-        <ul class="dropdown-menu menu1" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">职业精英</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">线上学习</a>
-            </li>
-            <li role="presentation">
-                <a role="menuitem" tabindex="-1" href="#">我的学员</a>
-            </li>
-        </ul>
+        <button class="dropbtn" onclick="show()"><img src="../img/holder.png" alt=""></button>
+        <div class="dropdown-content" id="showme">
+            <a href="">首页</a>
+            <a href="">关于</a>
+            <a href="">职业</a>
+        </div>
     </div>
 </header>
 <div class="faster">
-    <img src="img/faster.jpg" alt="" class="resp">
+    <img src="../img/faster.jpg" alt="" class="resp">
 </div>
 <main>
     <div class="frontpage">首页><span>合作企业</span></div>
@@ -82,7 +71,7 @@
         </ul>
     </div>
     <div class="maincontent">
-        <div class="title"><span class="doudou"><img src="img/tudou.png" class="tudou2"></span><span>土豆网公司成立于1998年11月， 是目前中国最大的互联网综合服务提供商之一，也是中国
+        <div class="title"><span class="doudou"><img src="../img/tudou.png" class="tudou2"></span><span>土豆网公司成立于1998年11月， 是目前中国最大的互联网综合服务提供商之一，也是中国
         服务用户最多的互联网企业之一。成立10多年以来，腾讯一直秉承一切以用户价值为依归的
         经营理念，始终处于稳健、高速发展的状态。2004年6月16日，腾讯公司在香港联交所主板
           公开上市（股票代号700）。
@@ -136,10 +125,12 @@
         </div>
         <div class="fr">
             <span>微信公众平台</span>
-            <img src="img/erweima.png" alt="">
+            <img src="../img/erweima.png" alt="">
         </div>
     </div>
 </footer>
 <div class="copyright">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</div>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/task8.js"></script>
 </body>
 </html>
