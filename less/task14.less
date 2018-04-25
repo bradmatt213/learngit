@@ -11,14 +11,17 @@ html{
 .bxshadow{
   box-shadow:1px 1px 3px lightgrey;
 }
+//所有盒子阴影
 .borderr{
   .border-radius(5px);
 }
+//圆角
 .fonthead{
   font-weight:bold;
   font-size:18px;
   .tc;
 }
+//标题字体样式
 .media{
     width: 100%;
     margin: 0 auto;
@@ -83,6 +86,7 @@ html{
   left:0;
   right:0;
   .abs;
+  .clearfix;
   color:@link_color;
   .bgcolor(@main_bgc);
   .font-s15;
@@ -128,36 +132,61 @@ html{
 .dropdown{
   display: none;
 }
-@media screen and (max-width: 1080px){
-  .dropdown{
+@media screen and (max-width: 1080px) {
+  .dropdown {
     display: block;
-  }
-  .btn1{
-    .bgcolor(@main_bgc);
-    width:0.8rem;
-    .db;
-    .fr;
-    margin-right:0.1rem;
-    margin-top:0.15rem;
-  }
-  .menu1{
-    width:100%;
-    .bgcolor(@main_bgc);
+    width: 100%;
     .rel;
-    color:white;
-    .tc;
-    li a{
-      color:white;
+    .abs;
+    .dib;
+    margin-top: 0.1rem;
+    .dropbtn {
+      .bgcolor(@main_bgc);
+      padding: 16px;
+      border: none;
+      cursor: pointer;
+      .fr;
     }
+    .dropdown-content {
+      display: none;
+      .abs;
+      z-index: 999;
+      .bgcolor(@main_bgc);
+      .w100;
+      margin-top: 0.8rem;
+      a {
+        color: white;
+        .font-s(0.2rem);
+        padding: 12px 16px;
+        .text-n();
+        .db;
+        .tc;
+      }
+    }
+    .blk {
+      display: block;
+    }
+  }
+}
+//轮播图
+.lunbo{
+  margin-top: 1rem;
+  img{
+    .dib;
+    max-width: 100%;
   }
 }
 //我们的优势
 .howtolearn{
   width:1200px;
   margin:0.5rem auto;
+
   .font-s16;
   .rel;
   .flexb;
+  p{
+    color:#dddddd;
+  }
   .item1{
     .flex;
     flex-direction: column;
@@ -172,9 +201,9 @@ html{
     .flex;
     flex-direction: column;
     width:25%;
+    .tc;
     padding:0.3rem 0.3rem;
     span{
-      .tc;
       padding:0.1rem;
     }
   }
@@ -234,9 +263,6 @@ html{
   background-size: 1px 25px;
   background-repeat: repeat-y;
  }
-.lunbotu{
-  margin-top:1rem;
-}
 .imgw{
   width:100%;
 }
@@ -306,6 +332,9 @@ h3{
         height: auto;
       }
     }
+    .content{
+      text-align: left;
+    }
     height:3.74rem;
    .bxshadow;
     .flex;
@@ -363,7 +392,7 @@ h3{
          a{
         color:@main_fontcolor;
         &:hover{
-          color:@link_hover;
+          color:@main_bgc;
         }
       }
     }
@@ -392,7 +421,7 @@ footer{
     .text-n();
     color:white;
     .font-s(0.16rem);
-    height:0.4rem;
+    height:0.3rem;
     padding:0 0 0 0;
     padding-bottom:0.1rem;
     &:hover{
