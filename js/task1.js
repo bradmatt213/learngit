@@ -2,7 +2,6 @@ var auto;
 
 function start() {
     auto = setInterval(select, 1000);
-    alert(auto);
 }
 
 //每一秒钟运行一次select();
@@ -14,6 +13,7 @@ var box = document.getElementsByClassName('box');
 
 function select() {
     color();
+    //给其他盒子添加颜色之后选取三个小盒子附上颜色
     var num = [];
     for (var a = 0; a < 3; a++) {
             num[a] = Math.floor(Math.random()*10-1);

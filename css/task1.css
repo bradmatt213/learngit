@@ -2351,7 +2351,7 @@ html {
 }
 .sukudou {
   display: flex;
-  width: 5rem;
+  width: 30%;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -2366,10 +2366,16 @@ html {
   border-radius: 20px;
 }
 .btn1 {
-  width: 5rem;
-  margin: 0.3rem auto;
+  width: 30%;
+  margin: 0.1rem auto;
+  display: flex;
+  flex-direction: column;
 }
 .btn1 .btn {
-  width: 5rem;
-  margin-top: 0.3rem;
+  width: 100%;
+  margin-top: 0.1rem;
+  height:0.3rem;
+  background-color: #0F9E5E;
+  color:white;
+  border:none;
 }
