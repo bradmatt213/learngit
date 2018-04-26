@@ -129,33 +129,42 @@ html{
 .dropdown{
   display: none;
 }
-@media screen and (max-width: 1080px){
-  .dropdown{
+@media screen and (max-width: 1080px) {
+  .dropdown {
     display: block;
-  }
-  .btn1{
-    .bgcolor(@main_bgc);
-    width:0.8rem;
-    .db;
-    .fr;
-    margin-right:0.1rem;
-    margin-top:0.15rem;
-  }
-  .menu1{
-    width:100%;
-    .bgcolor(@main_bgc);
+    width: 100%;
     .rel;
-    color:white;
-    .tc;
-    li a{
-      color:white;
+    .abs;
+    .dib;
+    margin-top: 0.1rem;
+    .dropbtn {
+      .bgcolor(@main_bgc);
+      padding: 16px;
+      border: none;
+      cursor: pointer;
+      .fr;
+    }
+    .dropdown-content {
+      display: none;
+      .abs;
+      z-index: 999;
+      .bgcolor(@main_bgc);
+      .w100;
+      margin-top: 0.8rem;
+      a {
+        color: white;
+        .font-s(0.2rem);
+        padding: 12px 16px;
+        .text-n();
+        .db;
+        .tc;
+      }
+    }
+    .blk {
+      display: block;
     }
   }
 }
-.clearfix{
-  .clearfix;
-}
-
 
 //三个页面
 main {
@@ -265,7 +274,6 @@ main {
         color:white;
         text-align:center;
         display:none;
-        padding:0.5rem 0.5rem;
         animation:myfirst 5s;
         transform:none;
         @keyframes myfirst

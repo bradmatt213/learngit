@@ -271,17 +271,31 @@ html{
   width:1200px;
   margin:0.3rem auto;
   .flex;
+  .item10{
+    .flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right:50px;
+    width:25%;
+    background: url("../img/arrowgreen.png") right center no-repeat;
+  }
+  .item11-1{
+    .flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right:50px;
+    padding-left:50px;
+    width:25%;
+    background: url("../img/arrowgreen.png") right center no-repeat;
+  }
+  .item11{
+    .flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:25%;
+    padding-left:50px;
+  }
 
-}
-.item10{
-  .flexb;
-  align-items: center;
-  width:27%;
-}
-.item11{
-  .flexb;
-  align-items: center;
-  width:23%;
 }
 .num{
   width:50px;
@@ -306,9 +320,16 @@ h3{
 @media screen and (max-width: 1080px){
   .theway{
     .media;
-    .item11,.item10{
+    .item10,.item11-1{
       width:60%;
       margin:0.2rem auto;
+      padding:0 30px 0 0;
+    }
+    .item11{
+      background: url("../img/arrowgreen.png") right center no-repeat;
+      width:60%;
+      margin:0.2rem auto;
+      padding:0 30px 0 0;
     }
   }
   .htl{

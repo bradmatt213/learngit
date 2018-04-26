@@ -1,41 +1,39 @@
-var kills = JSON.parse(localStorage.getItem('kills'));
-var day = JSON.parse(localStorage.getItem('day'));
-var dead = JSON.parse(localStorage.getItem('dead'));
+var kills=JSON.parse(localStorage.getItem('kills'));
+var day =JSON.parse(localStorage.getItem('day'));
+var dead= JSON.parse(localStorage.getItem('dead'));
 window.onload = function auto() {
-    for (i = 0; i < kills.length; i++) {
+    for (i = 0; i <kills.length; i++) {
         var txt1 = $("<div></div>").text(kills[i].identity).addClass("name");
         var txt2 = $("<div></div>").text(i + 1).addClass("num");
         var txt3 = $("<li></li>").addClass("card1");
-        if (kills[i].state === "dead") {
+        if(kills[i].state === "dead"){
             $(txt3).addClass("red1");
         }
         $(".content").append(txt3);
         $(txt3).append(txt1, txt2);
     }
 }
-
-
 $(document).ready(function () {
-
     $(".card1").click(function () {
         $(".card1").removeClass("red");
         var index = $(this).index();
-        if (kills[index].state === "dead") {
-            alert("请投活人");
-        } else {
+        if(kills[index].state === "dead"){
+            alert("请杀活人");}
+        else if(kills[index].identity === "杀手"){
+            alert("自己人兄dei")
+        }else{
             $(this).addClass("red");
             localStorage.setItem('index', JSON.stringify(index));
+
         }
     })
 })
-
 function jump() {
-    var index = localStorage.getItem('index', JSON.stringify(index));
+    var index=localStorage.getItem('index', JSON.stringify(index));
     dead.push(kills[index]);
-    kills[index].state = "dead";
-    kills[index].kmode = "votedead";
-    kills[index].ktime = day;
-    day++;
+    kills[index].state="dead";
+    kills[index].kmode="killdead";
+    kills[index].ktime=day;
     localStorage.setItem('dead', JSON.stringify(dead));
     localStorage.setItem('index', JSON.stringify(index));
     localStorage.setItem('kills',JSON.stringify(kills));

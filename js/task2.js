@@ -1,16 +1,16 @@
 function jump() {
-    window.location.href="https://bradmatt213.github.io/learngit/task2-js";
+    window.location.href="task2-js.html";
 }
 function  task3() {
    if(kills.length === 0){
        alert("请先设置人数");
    }
    else{
-       window.location.href="https://bradmatt213.github.io/learngit/task3-js";
+       window.location.href="task3-js.html";
    }
 }
 function jumpback() {
-    window.location.href="https://bradmatt213.github.io/learngit/task7";
+    window.location.href="task7.html";
 }
 var police;
 var famer;
@@ -38,7 +38,7 @@ function appendText(){
 
     }
     localStorage.clear();
-    localStorage.setItem('kills', JSON.stringify(kills));
+    localStorage.setItem('killInit', JSON.stringify(kills));
 }
 function change(){
     var num=document.getElementById("range");
@@ -80,44 +80,44 @@ function put() {
     switch (num.value) {
         case "4":
         case "5":
-            police = 2;
+            police = 1;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "6":
         case "7":
-            police = 3;
+            police = 2;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "8":
         case "9":
-            police = 4;
+            police = 2;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "10":
         case "11":
-            police = 5;
+            police = 3;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "12":
         case "13":
-            police = 6;
+            police = 3;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "14":
         case "15":
-            police = 7;
+            police = 4;
             sniper=1;
             famer = num.value - police - sniper;
             break;
         case "16":
         case "17":
         case "18":
-            police = 8;
+            police = 5;
             sniper=1;
             famer = num.value - police - sniper;
             break;

@@ -2350,100 +2350,30 @@ html {
   font-size: 625%;
 }
 body {
-  background-color: #29bde0;
+  background: url("../img/loginphoto.jpg");
+  background-size: cover;
 }
-header {
-  display: flex;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
+.login {
+  width: 5rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: #29bde0;
   position: absolute;
-  justify-content: space-between;
+  top: 20%;
+  left: 30%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 2.5% 0 2.5%;
-  height: 0.7rem;
-  background-color: #29bde0;
-  font-size: 0.34rem;
-  color: white;
+  flex-direction: column;
 }
-header span {
-  display: inline-block;
-}
-header button {
-  width: 0.5rem;
+.login input {
+  display: block;
+  width: 90%;
   height: 0.5rem;
-  position: absolute;
-  opacity: 0;
 }
-.card {
-  margin-left: 0.1rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  padding-left: 6%;
-  padding-right: 6%;
-  margin-top: 3%;
-}
-.card .content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-}
-.card .content .card1 {
-  height: 25vw;
-  margin-top: 6vw;
-  width: 25vw;
-  font-size: 0.17rem;
-  text-align: center;
-  border: 1vw solid white;
-}
-.card .content .card1:hover .wrap {
-  display: flex;
-}
-.card .content .card1 .name {
-  height: 70%;
-  background-color: #f5c97b;
-  font-size: 0.17rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card .content .card1 .num {
-  height: 30%;
-  background-color: #83b09a;
-  color: white;
-  font-size: 0.15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card .content .card1 .wrap {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  height: 8vw;
-  margin-top: 1vw;
-}
-.card .content .card1 .wrap img {
-  width: 3vw;
-}
-.card .content .red .name {
-  background-color: #ff0000;
-}
-.card .content .red1 .name {
-  background-color: #ff0000;
-}
-.start {
-  width: 91%;
-  height: 0.88rem;
-  background-color: #fbb435;
-  color: white;
-  font-size: 0.4rem;
+.login #flogin {
+  width: 90%;
+  background-color: #fd9f0b;
   border: none;
-  position: fixed;
-  bottom: 0;
-  margin-left: 5%;
+  height: 0.5rem;
 }

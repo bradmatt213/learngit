@@ -1,5 +1,4 @@
-var kills=JSON.parse(localStorage.getItem('kills'));
-console.log(kills)
+var kills=JSON.parse(localStorage.getItem('killInit'));
 window.onload=function auto() {
     for(i=0;i<kills.length;i++) {
         var txt1 = $("<div></div>").text(kills[i]).addClass("name");
@@ -10,5 +9,24 @@ window.onload=function auto() {
     }
 }
 function jump() {
-    window.location.href="https://bradmatt213.github.io/learngit/task4-2";
+    function aliveordead() {
+        var temp=[];
+        var day=1;
+        var dead=[];
+        for(i=0;i<kills.length;i++){
+            temp.push({
+                state:"alive",
+                identity:kills[i],
+                number:i+1,
+                kmode:"notyet",
+                ktime:"notyet"
+            });
+        }
+        localStorage.setItem('kills', JSON.stringify(temp));
+        localStorage.setItem('day', JSON.stringify(day));
+        localStorage.setItem('dead',JSON.stringify(dead));
+    }
+    aliveordead();
+    window.location.href="task4-2.html";
+
 }

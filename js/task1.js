@@ -2,6 +2,7 @@ var auto;
 
 function start() {
     auto = setInterval(select, 1000);
+    alert(auto);
 }
 
 //每一秒钟运行一次select();
@@ -14,14 +15,8 @@ var box = document.getElementsByClassName('box');
 function select() {
     color();
     var num = [];
-//创建一个空数组
-    var temp = [];
     for (var a = 0; a < 3; a++) {
-        do {
             num[a] = Math.floor(Math.random()*10-1);
-        }
-        while (temp.indexOf(num[a]) >= 0);
-        temp.push(num[a]);
         //   将得到的随机数字push到一个空的数组中
     }
     box[num[0]].style.background = getcolor();
