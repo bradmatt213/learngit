@@ -36,10 +36,12 @@ function jump() {
     kills[index].kmode = "votedead";
     kills[index].ktime = day;
     day++;
+    var stp="none";
     localStorage.setItem('dead', JSON.stringify(dead));
     localStorage.setItem('index', JSON.stringify(index));
     localStorage.setItem('kills',JSON.stringify(kills));
     localStorage.setItem('day', JSON.stringify(day));
+    localStorage.setItem('step', JSON.stringify(stp));
     var aliveevilmen = kills.filter(function (item, index, array) {
         return (item.identity === "杀手" && item.state === "alive");
     });

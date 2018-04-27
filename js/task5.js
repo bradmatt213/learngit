@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest();
 function ip() {
-    var name = $("#fname").val();
-    var code = $("#fcode").val();
+    var name = $("#name").val();
+    var code = $("#code").val();
 // 指定通信过程中状态改变时的回调函数
     xhr.open("post", "/carrots-admin-ajax/a/login",true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -17,7 +17,7 @@ function ip() {
                 if (JSON.parse(xhr.responseText).code >= 0) {
                     window.location.href = "http://dev.admin.carrots.ptteng.com/";
                 } else {
-                    alert("aaaa");
+                    $(".alert").html("该用户不存在或密码不正确");
                 }
             }
         }

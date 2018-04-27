@@ -2,6 +2,7 @@ var killsInit = JSON.parse(localStorage.getItem('killInit'));
 var kills = JSON.parse(localStorage.getItem('kills'));
 var deadmen = JSON.parse(localStorage.getItem(('dead')));
 var day = JSON.parse(localStorage.getItem(('day')));
+var gameprocess = JSON.parse(localStorage.getItem(('gameprocess')));
 //定义天数
 
 //0 杀人 1 投票
@@ -90,51 +91,92 @@ function show() {
 show();
 //状态机
 $(document).ready(function () {
-    var process = new StateMachine({
+    var fsm = {
         //   初始化
-        init: 'day',
-        transitions: [
-            {name: 'timetokill', from: 'day', to: 'kill'},
-            {name: 'deadmenspeak', from: 'kill', to: 'speak'},
-            {name: 'playerspeak', from: 'speak', to: 'player'},
-            {name: 'timetovote', from: 'player', to: 'vote'},
-            {name: 'reset', from: 'vote', to: "day"}
-        ],
-        methods: {
-            onTimetokill: function () {
-                $(".step1").addClass("after");
-                alert("天黑请闭眼");
-            },
-            onDeadmenspeak: function () {
-                $(".step2").addClass("after");
-                alert("亡灵发表遗言");
-            },
-            onPlayerspeak: function () {
-                $(".step3").addClass("after");
-                alert("玩家依次发表遗言");
-            },
-            onTimetovote: function () {
-                $(".step4").addClass("after");
-                alert("请投票");
+        state: JSON.parse(localStorage.getItem(('step'))),
+        timetokill: function () {
+            switch (fsm.state) {
+                case"none":
+                    console.log(fsm.state);
+                    fsm.state = "kill";
+                    $(".step1").addClass("after");
+                    alert("天黑请闭眼");
+                    localStorage.setItem('step',JSON.stringify(fsm.state));
+                    window.location.href = "kill-record.html";
+                    break;
+                case"kill":
+                    alert("请勿重复点击");
+                    break;
+                case"speak":
+                case"vote":
+                    alert("请按照步骤来");
+                    break;
             }
-        }
-    });
-    $(".step1").click(function () {
-        process.onTimetokill();
-        jump();
-    })
-    $(".step2").click(function () {
-        process.onDeadmenspeak();
-    })
-    $(".step3").click(function () {
-        process.onPlayerspeak();
-    })
-    $(".step4").click(function () {
-        process.onTimetovote();
-        jumptovote();
-    })
-});
+        },
+        timetospeak: function () {
+            switch (fsm.state) {
+                case"kill":
+                    fsm.state = "speak";
+                    $(".step2").addClass("after");
+                    alert("亡灵发表遗言");
+                    break;
+                case"speak":
+                    alert("请勿重复点击");
+                    break;
+                case"none":
+                case"vote":
+                    alert("请按照步骤来");
+                    break;
+            }
+        },
+        timetotalk: function () {
+            switch (fsm.state) {
+                case"speak":
+                    fsm.state = "vote";
+                    $(".step3").addClass("after");
+                    alert("玩家依次发言");
+                    break;
+                case"none":
+                case"kill":
+                    alert("请按照步骤来");
+                    break;
+                case"vote":
+                    alert("请勿重复点击");
+                    break;
+            }
+        },
+        timetovote: function () {
+            switch (fsm.state) {
+                case"vote":
+                    fsm.state = "none";
+                    $(".step4").addClass("after");
+                    alert("请投票");
+                    window.location.href = "task4-vote.html";
+                    break;
+                case"speak":
+                case"kill":
+                case"none":
+                    alert("请按照步骤来");
+                    break;
+            }
+        },
 
+
+    };
+    $(".step1").click(function () {
+        fsm.timetokill();
+    });
+    $(".step2").click(function () {
+        fsm.timetospeak();
+    });
+    $(".step3").click(function () {
+        fsm.timetotalk();
+    });
+    $(".step4").click(function () {
+        fsm.timetovote();
+    });
+
+});
 //点击显示具体的天数
 $(document).ready(function () {
     $("h1").click(function () {

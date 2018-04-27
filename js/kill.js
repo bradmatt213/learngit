@@ -61,5 +61,6 @@ function jump() {
     }
     else {
         window.location.href = "task4-2.html";
+
     }
 }

@@ -11,6 +11,7 @@ window.onload=function auto() {
 function jump() {
     function aliveordead() {
         var temp=[];
+        var gameprocess="none";
         var day=1;
         var dead=[];
         for(i=0;i<kills.length;i++){
@@ -25,6 +26,7 @@ function jump() {
         localStorage.setItem('kills', JSON.stringify(temp));
         localStorage.setItem('day', JSON.stringify(day));
         localStorage.setItem('dead',JSON.stringify(dead));
+        localStorage.setItem('step', JSON.stringify(gameprocess));
     }
     aliveordead();
     window.location.href="task4-2.html";

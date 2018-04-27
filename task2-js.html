@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>选择人数</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/task2-js.css">
     <script src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet/less" href="less/task2-js.less">
+    <script src="https://cdn.bootcss.com/less.js/2.7.0/less.js"></script>
     <script src="js/task2.js"></script>
 </head>
 <body>
@@ -20,16 +21,16 @@
                 <ul></ul>
             </div>
             <div>
-                <button id="set" class="btns">点击设置 <i class="fa fa-pencil"></i></button>
+                <button id="set" class="btns" onclick="appendText()">点击设置 <i class="fa fa-pencil"></i></button>
             </div>
         </div>
     </div>
     <div class="mainmenu">
-        <p>玩家人数 <input type="text" placeholder="18" class="number" id="test" value="10" onchange="put()">人</p>
+        <p>玩家人数 <input type="text" placeholder="10" class="number" id="test" value="10" onchange="change1()">人</p>
         <div>
-            <button id="down" onclick="down()"><img src="img/down.png" alt=""></button>
-            <input type="range" id="range" oninput="change()" max="18" min="5">
-            <button id="up" onclick="up()"><img src="img/up.png" alt=""></button>
+            <button id="down"><img src="img/down.png" alt=""></button>
+            <input type="range" id="range" oninput="change()" value="10" max="18" min="5">
+            <button id="up"><img src="img/up.png" alt=""></button>
         </div>
     </div>
     <button class="fap" onclick="task3()">发牌</button>

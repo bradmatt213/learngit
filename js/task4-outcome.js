@@ -2,6 +2,29 @@ var kills = JSON.parse(localStorage.getItem('kills'));
 var dead = JSON.parse(localStorage.getItem('dead'));
 var outcome = JSON.parse(localStorage.getItem('outcome1'));
 var outcome2 = JSON.parse(localStorage.getItem('outcome2'));
+var day=JSON.parse(localStorage.getItem('day'));
+
+function showpage() {
+    $(document).ready(function () {
+        for (i = 0; i < day-1; i++) {
+            var strHtml = [];
+            strHtml.push(
+                 '<li class="day">'+ '<div class="emi">' + '<span class="first">' +'</span>'+'<span class="second"> '+"0小时7分"
+                +'</span>'+'</div>'+'<div class="time">'+'</div>'+'<div class="night">'+'</div>'+'<div class="vote">'+'</div>'+'</li>'
+            )
+            $(".outcome1").append(strHtml);
+        }
+    });
+}
+showpage();
+
+
+
+
+
+
+
+
 
 function auto() {
     var killers = kills.filter(function (item) {
@@ -26,31 +49,31 @@ function auto() {
        for(i=0;i<killed.length;i++){
         switch (killed[i].ktime){
             case 1:
-                $(".day1").find(".night").append("第一天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(0).find(".night").append("第一天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 2:
-                $(".day2").find(".night").append("第二天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(1).find(".night").append("第二天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 3:
-                $(".day3").find(".night").append("第三天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(2).find(".night").append("第三天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 4:
-                $(".day4").find(".night").append("第四天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(3).find(".night").append("第四天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 5:
-                $(".day5").find(".night").append("第五天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(4).find(".night").append("第五天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 6:
-                $(".day6").find(".night").append("第六天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(5).find(".night").append("第六天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 7:
-                $(".day7").find(".night").append("第七天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(6).find(".night").append("第七天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 8:
-                $(".day8").find(".night").append("第八天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(7).find(".night").append("第八天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             case 9:
-                $(".day9").find(".night").append("第九天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
+                $(".day").eq(8).find(".night").append("第九天晚上被杀死的是"+killed[i].number+"号玩家，他的身份是"+killed[i].identity);
                 break;
             default:
                 alert("aaaaa");
@@ -58,31 +81,31 @@ function auto() {
         for(i=0;i<votedead.length;i++){
             switch (votedead[i].ktime){
                 case 1:
-                    $(".day1").find(".vote").append("第一天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(0).find(".vote").append("第一天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 2:
-                    $(".day2").find(".vote").append("第二天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(1).find(".vote").append("第二天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 3:
-                    $(".day3").find(".vote").append("第三天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(2).find(".vote").append("第三天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 4:
-                    $(".day4").find(".vote").append("第四天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(3).find(".vote").append("第四天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 5:
-                    $(".day5").find(".vote").append("第五天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(4).find(".vote").append("第五天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 6:
-                    $(".day6").find(".vote").append("第六天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(5).find(".vote").append("第六天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 7:
-                    $(".day7").find(".vote").append("第七天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(6).find(".vote").append("第七天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 8:
-                    $(".day8").find(".vote").append("第八天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(7).find(".vote").append("第八天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 case 9:
-                    $(".day9").find(".vote").append("第九天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
+                    $(".day").eq(8).find(".vote").append("第九天白天被投死的是"+votedead[i].number+"号玩家，他的身份是"+votedead[i].identity);
                     break;
                 default:
                     alert("aaaaa");
