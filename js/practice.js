@@ -1,4 +1,27 @@
-var app=angular.module("myApp",[]);
-app.controller('myCtrl',function ($scope) {
-    $scope.name="john doe";
-})
+function f1(){
+
+    n = 999;
+
+    nAdd = function(){
+
+        n+=1;
+
+    };
+
+    function f2(){
+
+        alert(n);
+
+    }
+
+    return f2;
+
+}
+
+var result = f1();
+
+result();//999
+
+nAdd();
+
+result();//1000

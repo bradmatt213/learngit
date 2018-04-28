@@ -1,0 +1,66 @@
+@charset "utf-8";
+//less库
+@import "z";
+@import "font-awesome";
+@import "css3";
+//公用的变量
+@import "blmatt";
+html{
+  font-size:625%;
+}
+.container{
+  width: 100%!important;
+  .nav{
+    padding-bottom: 100%;
+    padding-right:0;
+    h1{
+      .font-s(0.2rem);
+      color:white;
+      .tc;
+      border-bottom: 1px solid #fdbb6b;
+      height:0.3rem;
+      .db;
+    }
+    ul{
+      margin-top: 0.1rem;
+      li{
+        background-color: transparent;
+        color:white;
+        border:none;
+        .flexb;
+        .w100;
+        .tc;
+        &:hover{
+          .bgcolor(#feae45);
+        }
+        span{
+          i{
+            margin-right:0.3rem;
+          }
+        }
+      }
+    }
+    background: linear-gradient(to bottom, #f8a74e, #c35b52);
+  }
+  .main{
+    padding:0 0 0 0;
+    .breadcrumb{
+      text-align: right;
+      height:0.5rem;
+      color:#f8a74e;
+      line-height: 0.5rem;
+    }
+    .panel{
+      width:90%;
+      height:1.6rem;
+      margin:0 auto;
+      .panel-body{
+        .xdsoft_datetimepicker  .xdsoft_calendar td > div{
+          padding-right:100px;
+          padding-top: 5px
+        }
+        }
+
+      }
+    }
+  }
