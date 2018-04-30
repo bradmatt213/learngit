@@ -17,10 +17,10 @@ function select() {
     color();
     //给其他盒子添加颜色之后选取三个小盒子附上颜色
 
-    for(i=0;i<9;i++){
-        var num1 = Math.floor(Math.random()*10-1);
-        var num2 = Math.floor(Math.random()*10-1);
-        var num3 = Math.floor(Math.random()*10-1);
+    for(var i=0;i<10000;i++){
+        var num1 = Math.floor(Math.random()*9);
+        var num2 = Math.floor(Math.random()*9);
+        var num3 = Math.floor(Math.random()*9);
         if(num1!==num2&&num2!==num3&&num1!==num3){
             break;
         }
@@ -31,9 +31,9 @@ function select() {
 }
 
 function getcolor() {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.round(Math.random() * 256);
-    var b = Math.round(Math.random() * 256);
+    var r = Math.ceil(Math.random() * 255);
+    var g = Math.ceil(Math.random() * 255);
+    var b = Math.ceil(Math.random() * 255);
     return "rgb(" + r + "," + g + "," + b + ")";
 }
 
