@@ -159,7 +159,7 @@ $(document).ready(function () {
                     alert("请按照步骤来");
                     break;
             }
-        },
+        }
 
 
     };

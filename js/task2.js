@@ -1,3 +1,4 @@
+//如果数组里没有人数，弹出警告，数组赋值后可以跳转
 function task3() {
     if (kills.length === 0) {
         alert("请先设置人数");
@@ -9,9 +10,11 @@ function task3() {
 }
 
 function jumpback() {
-    window.location.href = "task7.html";
+    window.location.href = "task2-first.html";
 }
 
+
+//给数组中的每一个人一个身份牌
 var police;
 var famer;
 var sniper;
@@ -22,7 +25,7 @@ function appendText() {
     var txt = [];
     var kn = kills.filter(function (item, index, array) {
         return (item === "杀手")
-    })
+    });
     var fm = kills.length - kn.length - 1;
     if (kills.length > 4 && kills.length < 19) {
         txt1 = $("<li></li>").text("杀手" + kn.length + "人").addClass("orange");
@@ -32,40 +35,43 @@ function appendText() {
     }
 }
 
-function changeOne(){
-    people=document.getElementById("test");
-    line=document.getElementById("range");
-    line.value=people.value;
-}
-function changeTwo(){
-    people=document.getElementById('test');
-    line=document.getElementById("range");
-    people.value=line.value;
 
+//将表单里的数值赋给滑块
+function range(){
+    people=document.getElementById("test");
+    slider =document.getElementById("range");
+    slider.value=people.value;
+}
+//将滑块里的值赋给表单
+function input(){
+    people=document.getElementById('test');
+    slider=document.getElementById("range");
+    people.value=slider.value;
 }
 //点击减少人数
 function minus(){
-    line=document.getElementById("range").value;
-    if (line==5) {
+    slider=document.getElementById("range").value;
+    if (slider==5) {
        alert("不能再少啦");
     }else{
-        line--;
+        slider--;
     }
 
-    document.getElementById("range").value=line;
-    document.getElementById('test').value=line;
+    document.getElementById("range").value=slider;
+    document.getElementById('test').value=slider;
 
 }
 //点击增加人数
 function add(){
-    line=document.getElementById("range").value;
-    if (line==18) {
+    slider=document.getElementById("range").value;
+    if (slider==18) {
         alert("不能再多啦");
-        line++;
+    }else{
+        slider++;
     }
 
-    document.getElementById("range").value=line;
-    document.getElementById('test').value=line;
+    document.getElementById("range").value=slider;
+    document.getElementById('test').value=slider;
 }
 //输入框
 function over(){

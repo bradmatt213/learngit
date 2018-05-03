@@ -117,5 +117,5 @@ function auto() {
 
 auto();
 function anothergame() {
-    window.location.href = "task2-js.html";
+    window.location.href = "task2-first.html";
 }

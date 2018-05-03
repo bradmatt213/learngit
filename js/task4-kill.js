@@ -41,4 +41,4 @@ $(document).ready(function () {
         localStorage.setItem('day', JSON.stringify(day));
         }
     })
-})
+});

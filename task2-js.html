@@ -26,10 +26,10 @@
         </div>
     </div>
     <div class="mainmenu">
-        <p>玩家人数 <input type="text" class="number" id="test" value="10" onchange="changeOne(),over()" >人</p>
+        <p>玩家人数 <input type="text" class="number" id="test" value="10" onchange="range(),over()">人</p>
         <div>
             <button id="down" onclick="minus()"><img src="img/down.png" alt=""></button>
-            <input type="range" id="range" oninput="changeTwo()" value="10" max="18" min="5">
+            <input type="range" id="range" oninput="input()" value="10" max="18" min="5">
             <button id="up" onclick="add()"><img src="img/up.png" alt=""></button>
         </div>
     </div>

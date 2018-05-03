@@ -12,7 +12,7 @@ window.onload = function auto() {
         $(".content").append(txt3);
         $(txt3).append(txt1, txt2);
     }
-}
+};
 $(document).ready(function () {
     $(".card1").click(function () {
         $(".card1").removeClass("red");
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
         }
     })
-})
+});
 function jump() {
     var index=localStorage.getItem('index', JSON.stringify(index));
     dead.push(kills[index]);
