@@ -101,7 +101,7 @@ $(document).ready(function () {
                     fsm.state = "kill";
                     $(".step1").addClass("after");
                     alert("天黑请闭眼");
-                    localStorage.setItem('step',JSON.stringify(fsm.state));
+                    localStorage.setItem('step', JSON.stringify(fsm.state));
                     window.location.href = "kill-record.html";
                     break;
                 case"kill":
@@ -164,16 +164,32 @@ $(document).ready(function () {
 
     };
     $(".step1").click(function () {
-        fsm.timetokill();
+        if ($(this).hasClass("after")) {
+            alert("请别乱玩兄dei~")
+        } else {
+            fsm.timetokill();
+        }
     });
     $(".step2").click(function () {
-        fsm.timetospeak();
+        if ($(this).hasClass("after")) {
+            alert("请别乱玩兄dei~")
+        } else {
+            fsm.timetospeak();
+        }
     });
     $(".step3").click(function () {
-        fsm.timetotalk();
+        if ($(this).hasClass("after")) {
+            alert("请别乱玩兄dei~")
+        } else {
+            fsm.timetotalk();
+        }
     });
     $(".step4").click(function () {
-        fsm.timetovote();
+        if ($(this).hasClass("after")) {
+            alert("请别乱玩兄dei~")
+        } else {
+            fsm.timetovote();
+        }
     });
 
 });
@@ -284,7 +300,7 @@ function count() {
                     }
                     else {
                         var txt18 = $("<p></p>").text("昨天晚上大家投死的是" + deadmen[i].number + "号玩家，他的身份是" + deadmen[i].identity);
-                        $("body").find("button").eq(i).after(txt18).addClass("after");
+                        $("body").find("button").eq(i).after(txt18).addClass("after ");
                         $("ul").eq(8).find("div").addClass("after");
                     }
                     break;

@@ -7,23 +7,24 @@ function task3() {
         window.location.href = "task3-js.html";
     }
 }
+
 function jumpback() {
     window.location.href = "task7.html";
 }
+
 var police;
 var famer;
 var sniper;
 var kills = [];
-
 function appendText() {
     $("ul").empty();
     put();
     var txt = [];
-    var kn=kills.filter(function (item,index,array) {
-        return(item==="杀手")
+    var kn = kills.filter(function (item, index, array) {
+        return (item === "杀手")
     })
-    var fm=kills.length-kn.length-1;
-    if(kills.length>4&&kills.length<19) {
+    var fm = kills.length - kn.length - 1;
+    if (kills.length > 4 && kills.length < 19) {
         txt1 = $("<li></li>").text("杀手" + kn.length + "人").addClass("orange");
         txt2 = $("<li></li>").text("平民" + fm + "人").addClass("blue");
         txt3 = $("<li></li>").text("狙击手" + 1 + "人").addClass("purple");
@@ -31,45 +32,51 @@ function appendText() {
     }
 }
 
-function change() {
-    var range = $("#range").val();
-    $("#test").val(range);
+function changeOne(){
+    people=document.getElementById("test");
+    line=document.getElementById("range");
+    line.value=people.value;
 }
+function changeTwo(){
+    people=document.getElementById('test');
+    line=document.getElementById("range");
+    people.value=line.value;
 
-function change1() {
-    var num = $("#test").val();
-    if(num<4 || num>15){
-        alert("请输入正确的玩家数");
+}
+//点击减少人数
+function minus(){
+    line=document.getElementById("range").value;
+    if (line==5) {
+       alert("不能再少啦");
+    }else{
+        line--;
     }
-    $("#range").val(num);
+
+    document.getElementById("range").value=line;
+    document.getElementById('test').value=line;
+
+}
+//点击增加人数
+function add(){
+    line=document.getElementById("range").value;
+    if (line==18) {
+        alert("不能再多啦");
+        line++;
+    }
+
+    document.getElementById("range").value=line;
+    document.getElementById('test').value=line;
+}
+//输入框
+function over(){
+    people=document.getElementById('test').value;
+    if (people>18) {
+        alert("请输入4-18个人数");
+    }else if(people<5){
+        alert("请输入4-18个人数");
+    }
 }
 
-$(document).ready(function () {
-    var range = $("#range").val();
-    var num = $("#test").val();
-    $("#down").click(function () {
-        if (num > 5) {
-            range--;
-            num--;
-            $("#range").val(range);
-            $("#test").val(num);
-        }
-        else {
-            alert("不能再少啦")
-        }
-    });
-    $("#up").click(function () {
-        if (num < 19) {
-            range++;
-            num++;
-            $("#range").val(range);
-            $("#test").val(num);
-        }
-        else {
-            alert("不能再多啦")
-        }
-    });
-})
 
 function put() {
     kills = [];

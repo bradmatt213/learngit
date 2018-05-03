@@ -53,10 +53,10 @@ function jump() {
 
     }
     else if (alivegoodmen.length + 1 - aliveevilmen.length > 2 && aliveevilmen.length === 0) {
-        var txt1 = "平民胜利";
-        var txt2 = "20%的平民";
-        localStorage.setItem('outcome1', JSON.stringify(txt1));
-        localStorage.setItem('outcome2', JSON.stringify(txt2));
+        var txt3 = "平民胜利";
+        var txt4 = "20%的平民";
+        localStorage.setItem('outcome1', JSON.stringify(txt3));
+        localStorage.setItem('outcome2', JSON.stringify(txt4));
         window.location.href = "task4outcome.html";
     }
     else {

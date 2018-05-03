@@ -1,4 +1,5 @@
 $(document).ready(function () {
-    $('#datetimepicker').datetimepicker();
-
+    $(".slidebutton").click(function () {
+        $(".slide").toggle();
+    })
 })

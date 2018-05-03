@@ -5,62 +5,122 @@
 @import "css3";
 //公用的变量
 @import "blmatt";
-html{
-  font-size:625%;
+
+html {
+  font-size: 625%;
 }
-.container{
-  width: 100%!important;
-  .nav{
+
+.container {
+  width: 100% !important;
+  .nav {
     padding-bottom: 100%;
-    padding-right:0;
-    h1{
+    padding-right: 0;
+    h1 {
       .font-s(0.2rem);
-      color:white;
+      color: white;
       .tc;
       border-bottom: 1px solid #fdbb6b;
-      height:0.3rem;
+      height: 0.3rem;
       .db;
     }
-    ul{
+    ul {
       margin-top: 0.1rem;
-      li{
+      .article {
+        .bgcolor(#f8a74e);
+        border: none;
+        color: white;
+      }
+      li {
         background-color: transparent;
-        color:white;
-        border:none;
+        color: white;
+        border: none;
         .flexb;
         .w100;
         .tc;
-        &:hover{
-          .bgcolor(#feae45);
-        }
-        span{
-          i{
-            margin-right:0.3rem;
+        input{
+          .w100;
+          background-color: transparent;
+          border: none;
+          color: white;
+          padding: 0;
+          :active {
+            .bgcolor(#feae45);
           }
         }
+        &:hover {
+          .bgcolor(#feae45);
+        }
+        span {
+          i {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+      .slide{
+        display: none;
       }
     }
     background: linear-gradient(to bottom, #f8a74e, #c35b52);
   }
-  .main{
-    padding:0 0 0 0;
-    .breadcrumb{
+  .main {
+    padding: 0 0 0 0;
+    .breadcrumb {
       text-align: right;
-      height:0.5rem;
-      color:#f8a74e;
+      height: 0.5rem;
+      color: #f8a74e;
       line-height: 0.5rem;
     }
-    .panel{
-      width:90%;
-      height:1.6rem;
-      margin:0 auto;
+    .panel {
+      width: 90%;
+      height: 1.2rem;
+      margin: 0 auto;
+      .panel-body {
+        .form-group {
+          .flexb;
+          align-items: center;
+          .form-control {
+            width: 310px;
+            .dib;
+          }
+        }
+        .gp1 {
+          margin-top: 10px;
+          .flexb;
+          .form-control {
+            margin-left: 42px;
+          }
+        }
+      }
+    }
+    .sss {
+       height:6rem;
+      .panel-heading {
+        .flexb;
+        button {
+          color: white;
+        }
+      }
       .panel-body{
-        .xdsoft_datetimepicker  .xdsoft_calendar td > div{
-          padding-right:100px;
-          padding-top: 5px
+        height:14rem;
+      }
+      .table {
+        .tc;
+        th {
+          .tc;
         }
+        td {
+          height: 0.3rem;
+          line-height: 0.3rem;
         }
-
+      }
+    }
+    .ccc {
+      .fr;
+      margin-right: 5%;
+      margin-top: 0.2rem;
+      #name12, #name31 {
+        width: 0.44rem;
       }
     }
   }
+}

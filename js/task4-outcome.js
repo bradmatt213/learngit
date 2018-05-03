@@ -6,7 +6,10 @@ var day=JSON.parse(localStorage.getItem('day'));
 
 function showpage() {
     $(document).ready(function () {
-        for (i = 0; i < day-1; i++) {
+        if(dead.length%2!==1){
+            day++
+        }
+        for (i = 0; i < day; i++) {
             var strHtml = [];
             strHtml.push(
                  '<li class="day">'+ '<div class="emi">' + '<span class="first">' +'</span>'+'<span class="second"> '+"0小时7分"
@@ -17,13 +20,6 @@ function showpage() {
     });
 }
 showpage();
-
-
-
-
-
-
-
 
 
 function auto() {
@@ -39,7 +35,13 @@ function auto() {
     var votedead = kills.filter(function (item) {
         return (item.kmode === "votedead");
     })
+    var deadperson=kills.filter(function (item) {
+        return (item.state === "dead");
+    })
 
+    if(deadperson.length%2!==1){
+        day++
+    }
     $(document).ready(function () {
         $(".dt2").append(outcome);
         $(".percent").append(outcome2);

@@ -6,10 +6,6 @@ function ip() {
     xhr.open("post", "/carrots-admin-ajax/a/login",true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("name=" + name + "&pwd=" + code);
-    xhr.timeout = 3000;
-    xhr.ontimeout = function () {
-        alert("请求超时");
-    };
     xhr.onreadystatechange = function () {
 
         if (xhr.readyState == 4) {
@@ -23,3 +19,28 @@ function ip() {
         }
     };
 }
+
+$(function () {
+    $("#summit").click(function () {
+        var name = $("#name").val();
+        var code = $("#pwd").val();
+        $.ajax({
+            type: "POST",
+            url: "/carrots-admin-ajax/a/login",
+            data: {
+                "name": name,
+                "pwd": code
+            },
+            datatype:"json",
+            success: function (data) {
+                console.log(data);
+                if (JSON.parse(data).code==0) {
+                    alert(JSON.parse(data).message);
+                }
+                else {
+                    alert(JSON.parse(data).message)
+                }
+            }
+        })
+    })
+});
