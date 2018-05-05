@@ -59,7 +59,12 @@
                 <tr ng-repeat="x in articleList">
                     <td>{{$index+1}}</td>
                     <td>{{x.title}}</td>
-                    <td>{{x.type}}</td>
+                    <td>{{x.type|typeFilter}}</td>
+                    <td>{{x.createAt|date:"yyyy-MM-dd hh:mm:ss"}}</td>
+                    <td>{{x.updateAt |date:"yyyy-MM-dd hh:mm:ss"}}</td>
+                    <td>{{x.author}}</td>
+                    <td>{{x.status|updatefilter}}</td>
+                    <td><a>下线</a> <a>编辑</a> <a>删除</a></td>
                 </tr>
             </table>
         </div>
