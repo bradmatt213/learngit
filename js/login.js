@@ -1,5 +1,4 @@
-var myApp = angular.module('myApp', ['ui.router']);
-myApp.controller('validateCtrl', function ($scope,$http,$state) {
+myApp.controller('login', function ($scope,$http,$state,$log) {
     $scope.user = '登录名';
     $scope.code = '*****';
     $scope.login = function () {

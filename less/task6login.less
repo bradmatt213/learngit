@@ -10,11 +10,27 @@ html {
   font-size: 625%;
 }
 
+canvas {
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+  -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+  box-shadow: 3px 3px 3px 0 #e3e3e3;
+  border: 1px solid #c3c3c3;
+  height: 300px;
+  width: 300px;
+  margin: 6px 0 0 6px;
+}
+
 .container {
+  .bgcolor(#f5f5f5);
   width: 100% !important;
   .nav {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
     padding-bottom: 100%;
-    padding-right: 0;
+    background: linear-gradient(#f7a54f, #be564d);
     h1 {
       .font-s(0.2rem);
       color: white;
@@ -23,104 +39,118 @@ html {
       height: 0.3rem;
       .db;
     }
-    ul {
-      margin-top: 0.1rem;
-      .article {
-        .bgcolor(#f8a74e);
-        border: none;
-        color: white;
-      }
-      li {
-        background-color: transparent;
-        color: white;
-        border: none;
-        .flexb;
-        .w100;
-        .tc;
-        input{
-          .w100;
-          background-color: transparent;
-          border: none;
-          color: white;
-          padding: 0;
-          :active {
-            .bgcolor(#feae45);
+    .panel-default {
+      border:none!important;
+      .bgcolor(transparent);
+          ul {
+            display: none;
+            list-style: none;
+            color: white;
+            .w100;
+            padding: 0;
+            li {
+              text-align: center;
+              height:0.4rem;
+              line-height: 0.4rem;
+              &:hover {
+                .bgcolor(#fdbb6b);
+              }
+            }
           }
-        }
+      div{
+        height:0.4rem;
+        padding-top: 0.1rem;
+        margin-top:0.2rem;
+        .tc;
+        .font-s(18px);
+        .bgcolor(transparent);
+        border: none;
+        color: white;
         &:hover {
-          .bgcolor(#feae45);
+          .bgcolor(#fdbb6b);
         }
-        span {
-          i {
-            margin-right: 0.3rem;
-          }
-        }
-      }
-      .slide{
-        display: none;
       }
     }
-    background: linear-gradient(to bottom, #f8a74e, #c35b52);
   }
-  .main {
-    padding: 0 0 0 0;
-    .breadcrumb {
-      text-align: right;
-      height: 0.5rem;
-      color: #f8a74e;
-      line-height: 0.5rem;
+  .breadcrumb {
+    text-align: right;
+    .bgcolor(white);
+    .glyphicon{
+      color:#fdbb6b ;
     }
-    .panel {
-      width: 90%;
-      height: 1.2rem;
-      margin: 0 auto;
-      .panel-body {
-        .form-group {
-          .flexb;
-          align-items: center;
-          .form-control {
-            width: 310px;
-            .dib;
-          }
-        }
-        .gp1 {
-          margin-top: 10px;
-          .flexb;
-          .form-control {
-            margin-left: 42px;
-          }
-        }
-      }
+  }
+  .headding {
+    height: 1.5rem;
+    .row {
+      margin-top: 0.3rem;
     }
-    .sss {
-       height:6rem;
-      .panel-heading {
-        .flexb;
-        button {
-          color: white;
-        }
-      }
-      .panel-body{
-        height:14rem;
-      }
-      .table {
-        .tc;
-        th {
-          .tc;
-        }
-        td {
-          height: 0.3rem;
-          line-height: 0.3rem;
-        }
-      }
+    .text-right {
+      margin-top: -0.3rem;
     }
-    .ccc {
-      .fr;
-      margin-right: 5%;
-      margin-top: 0.2rem;
-      #name12, #name31 {
-        width: 0.44rem;
-      }
+  }
+}
+
+.form-group {
+  .file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    &:hover {
+      background: #AADFFD;
+      border-color: #78C3F3;
+      color: #004974;
+      text-decoration: none;
     }
+    input {
+      position: absolute;
+      font-size: 100px;
+      right: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.article {
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+
+.maincontent {
+  th {
+    text-align: center;
+  }
+  td {
+    text-align: center;
+    vertical-align: middle !important;
+    padding: 1px !important;
+    .font-s(0.12rem);
+  }
+  .pagination {
+    padding-right: 0.2rem;
+    .flex;
+    align-items: center;
+    input {
+      width: 0.3rem;
+    }
+  }
+}
+
+.bootbox-body {
+  div {
+    color: lightgrey;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    padding-top: 0.2rem;
   }
 }

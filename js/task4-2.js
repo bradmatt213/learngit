@@ -27,7 +27,7 @@ function showpage() {
                 '</div>' + '</li>' + '<li>' + '<div class="step3">' + "玩家依次发言" +
                 '</div>' + '</li>' + '<li>' + '<button class="step4">' + "投票" +
                 '</button>' + '</li>' + '</ul>'
-            )
+            );
             $("main").append(strHtml);
         }
     });
@@ -102,7 +102,7 @@ $(document).ready(function () {
                     $(".step1").addClass("after");
                     alert("天黑请闭眼");
                     localStorage.setItem('step', JSON.stringify(fsm.state));
-                    window.location.href = "kill-record.html";
+                    window.location.href = "task4-kill.html";
                     break;
                 case"kill":
                     alert("请勿重复点击");

@@ -6,46 +6,30 @@
 html{
   font-size:625%;
 }
-.box{
-  height:100px;
-  width:100px;
+.mixin (dark, @color) {
+  color: darken(@color, 10%);
 }
-.clearfix() {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-  }
-  &:after {
-    clear: both;
-  }
+.mixin (light, @color) {
+  color: lighten(@color, 40%);
 }
-.border{
-  width:300px;
-  height:100px;
+.mixin (@_, @color) {
+  display: block;
+}
 
-  margin:auto;
-  border:5px solid lawngreen;
-  .red{
-    .box;
-    .bgcolor(red);
-    .fl;
-    height:100px;
-  }
-.green{
-  .box;
-  .bgcolor(green);
-  .fl;
+
+@switch: light;
+
+.box{
+  .mixin(@switch, #888);
+  padding-bottom: 200px;
+  width:200px;
+  background-color: khaki;
+  color:red;
 }
-  .yellow{
-    .box;
-    .bgcolor(yellow);
-    .fl;
-  }
+.box1{
+  padding-bottom: 200px;
+  width:200px;
+  background-color: khaki;
+  color:red;
 }
-.purple{
-  .box;
-  .bgcolor(purple);
-  margin:0 auto;
-}
+

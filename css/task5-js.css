@@ -2350,25 +2350,30 @@ html {
   font-size: 625%;
 }
 body {
-  background: url("../img/loginphoto.jpg") no-repeat;
+  background: url("../img/loginphoto.jpg");
   background-size: cover;
 }
-.form{
-  width:30%;
-  margin:0 auto;
-  margin-top:10%;
-}
-button{
-  width:30%;
-  height:5rem;
-  margin:4rem auto!important;
-  display: block;
-  color:white!important;
-  background-color: #1b91ff;
-  box-shadow: 1px 1px 1px 1px lightgrey;
-  border:none;
-}
-p{
-  color:salmon;
+.login {
+  width: 5rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: #29bde0;
   position: absolute;
+  top: 20%;
+  left: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.login input {
+  display: block;
+  width: 90%;
+  height: 0.5rem;
+}
+.login #flogin {
+  width: 90%;
+  background-color: #fd9f0b;
+  border: none;
+  height: 0.5rem;
 }

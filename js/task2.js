@@ -51,7 +51,7 @@ function input(){
 //点击减少人数
 function minus(){
     slider=document.getElementById("range").value;
-    if (slider==5) {
+    if (slider<=5) {
        alert("不能再少啦");
     }else{
         slider--;
@@ -64,7 +64,7 @@ function minus(){
 //点击增加人数
 function add(){
     slider=document.getElementById("range").value;
-    if (slider==18) {
+    if (slider>=18) {
         alert("不能再多啦");
     }else{
         slider++;

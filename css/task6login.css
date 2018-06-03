@@ -2349,13 +2349,27 @@
 html {
   font-size: 625%;
 }
+canvas {
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+  -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+  box-shadow: 3px 3px 3px 0 #e3e3e3;
+  border: 1px solid #c3c3c3;
+  height: 300px;
+  width: 300px;
+  margin: 6px 0 0 6px;
+}
 .container {
+  background-color: #f5f5f5;
   width: 100% !important;
 }
 .container .nav {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
   padding-bottom: 100%;
-  padding-right: 0;
-  background: linear-gradient(to bottom, #f8a74e, #c35b52);
+  background: linear-gradient(#f7a54f, #be564d);
 }
 .container .nav h1 {
   font-size: 0.2rem;
@@ -2365,103 +2379,106 @@ html {
   height: 0.3rem;
   display: block;
 }
-.container .nav ul {
-  margin-top: 0.1rem;
-}
-.container .nav ul .article {
-  background-color: #f8a74e;
-  border: none;
-  color: white;
-}
-.container .nav ul li {
+.container .nav .panel-default {
+  border: none!important;
   background-color: transparent;
-  color: white;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  text-align: center;
 }
-.container .nav ul li input {
-  width: 100%;
-  background-color: transparent;
-  border: none;
+.container .nav .panel-default ul {
+  display: none;
+  list-style: none;
   color: white;
+  width: 100%;
   padding: 0;
 }
-.container .nav ul li input :active {
-  background-color: #feae45;
+.container .nav .panel-default ul li {
+  text-align: center;
+  height: 0.4rem;
+  line-height: 0.4rem;
 }
-.container .nav ul li:hover {
-  background-color: #feae45;
+.container .nav .panel-default ul li:hover {
+  background-color: #fdbb6b;
 }
-.container .nav ul li span i {
-  margin-right: 0.3rem;
-}
-.container .nav ul .slide {
-  display: none;
-}
-.container .main {
-  padding: 0 0 0 0;
-}
-.container .main .breadcrumb {
-  text-align: right;
-  height: 0.5rem;
-  color: #f8a74e;
-  line-height: 0.5rem;
-}
-.container .main .panel {
-  width: 90%;
-  height: 1.2rem;
-  margin: 0 auto;
-}
-.container .main .panel .panel-body .form-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.container .main .panel .panel-body .form-group .form-control {
-  width: 310px;
-  display: inline-block;
-}
-.container .main .panel .panel-body .gp1 {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.container .main .panel .panel-body .gp1 .form-control {
-  margin-left: 42px;
-}
-.container .main .sss {
-  height: 6rem;
-}
-.container .main .sss .panel-heading {
-  display: flex;
-  justify-content: space-between;
-}
-.container .main .sss .panel-heading button {
+.container .nav .panel-default div {
+  height: 0.4rem;
+  padding-top: 0.1rem;
+  margin-top: 0.2rem;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
   color: white;
 }
-.container .main .sss .panel-body {
-  height: 14rem;
+.container .nav .panel-default div:hover {
+  background-color: #fdbb6b;
 }
-.container .main .sss .table {
+.container .breadcrumb {
+  text-align: right;
+  background-color: #ffffff;
+}
+.container .breadcrumb .glyphicon {
+  color: #fdbb6b ;
+}
+.container .headding {
+  height: 1.5rem;
+}
+.container .headding .row {
+  margin-top: 0.3rem;
+}
+.container .headding .text-right {
+  margin-top: -0.3rem;
+}
+.form-group .file {
+  position: relative;
+  display: inline-block;
+  background: #D0EEFF;
+  border: 1px solid #99D3F5;
+  border-radius: 4px;
+  padding: 4px 12px;
+  overflow: hidden;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+}
+.form-group .file:hover {
+  background: #AADFFD;
+  border-color: #78C3F3;
+  color: #004974;
+  text-decoration: none;
+}
+.form-group .file input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+.article {
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+.maincontent th {
   text-align: center;
 }
-.container .main .sss .table th {
+.maincontent td {
+  text-align: center;
+  vertical-align: middle !important;
+  padding: 1px !important;
+  font-size: 0.12rem;
+}
+.maincontent .pagination {
+  padding-right: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.maincontent .pagination input {
+  width: 0.3rem;
+}
+.bootbox-body div {
+  color: lightgrey;
   text-align: center;
 }
-.container .main .sss .table td {
-  height: 0.3rem;
-  line-height: 0.3rem;
-}
-.container .main .ccc {
-  float: right;
-  display: inline;
-  margin-right: 5%;
-  margin-top: 0.2rem;
-}
-.container .main .ccc #name12,
-.container .main .ccc #name31 {
-  width: 0.44rem;
+.bootbox-body p {
+  text-align: center;
+  padding-top: 0.2rem;
 }

@@ -31,6 +31,7 @@ $(function () {
                 "name": name,
                 "pwd": code
             },
+            // beforeSend: function(xhr){xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");},
             datatype:"json",
             success: function (data) {
                 console.log(data);
@@ -44,3 +45,15 @@ $(function () {
         })
     })
 });
+// $.post("/carrots-admin-ajax/a/login",{
+//     name:$("#name").val(),
+//     pwd:$("#pwd").val()
+// },function(data,textStatus){
+//     console.log(data);
+//     if (JSON.parse(data).code==0) {
+//         alert(JSON.parse(data).message);
+//     }
+//     else {
+//         alert(JSON.parse(data).message)
+//     }
+// });
