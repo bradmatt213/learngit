@@ -6,7 +6,7 @@
                 {{articlename}}
             </div>
             <div class="panel-body">
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" name="myForm">
                     <div class="form-group">
                         <label class="col-lg-2 control-label">标题名称</label>
                         <div class="col-lg-10">
@@ -50,7 +50,10 @@
                     <div class="form-group">
                         <label class="col-lg-2 control-label">跳转链接</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="jump" ng-model="params.url">
+                            <input type="text" name="myurl" class="form-control" id="jump" ng-model="params.url" ng-pattern="/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/">
+                        </div>
+                        <div ng-messages="myForm.myurl.$error" style="color:maroon" role="alert">
+                            <div ng-message="pattern" style="margin-left:240px">请输入正确的url</div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -120,10 +123,10 @@
                         <label class="col-lg-2 control-label"></label>
                         <div class="col-lg-10">
                             <button class="btn btn-success" ng-disabled="img_view === undefined || myForm.$invalid"
-                                    ng-click="upload()">立即上线
+                                    ng-click="upload(2)">立即上线
                             </button>
                             <button class="btn btn-success" ng-disabled="img_view === undefined || myForm.$invalid"
-                                    ng-click="save()">存为草稿
+                                    ng-click="upload(1)">存为草稿
                             </button>
                             <button class="btn pull-right" ui-sref="article">取消</button>
                         </div>

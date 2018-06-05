@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootstrap', 'angularFileUpload']);
+var myApp = angular.module('myApp', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootstrap', 'angularFileUpload', 'ngMessages']);
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {
     // 需要加载的文件
@@ -29,148 +29,43 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
                 controller: 'article'
             })
 });
-myApp.controller('article',function ($rootScope, $scope, $http, $state, $stateParams, $log, selected, request) {
+//数据页面
+myApp.controller('article', function ($rootScope, $scope, $http, $state, $stateParams, $log, request, demoservice) {
     $scope.date = "";
     $scope.todate = "";
     $scope.goedit = function () {
         var id = this.x.id;
         $state.go("image", {
-            id:id
+            id: id
         }, {})
     };
     $scope.upload = function () {
-        bootbox.setLocale("zh_CN");
-        $log.log(this);
+        var status = this.x.status;
         var id = this.x.id;
-        if (this.x.status === 1) {
-            bootbox.confirm({
-                size: 'medium',
-                title: '操作提示',
-                message: '<div>上线后该图片将在轮播图中显示</div>' +
-                '<p>是否执行上线操作</p>',
-                buttons: {
-                    confirm: {
-                        label: '确认',
-                        className: 'btn-success'
-                    },
-                    cancel: {
-                        label: '取消',
-                        className: 'btn-danger'
-                    }
+        demoservice.get(id, status);
 
-                },
-                callback: function (result) {
-                    if (result) {
-                        request.articlePut(id, 2).then(
-                            function (data) {
-                                if (data.data.code === 0) {
-                                    $log.log(data);
-                                    $state.go($state.current, {}, {
-                                        reload: true
-                                    });
-                                    bootbox.alert('上线成功');
-                                }
-                            }
-                        )
-
-                    }
-                }
-            })
-        } else {
-            bootbox.confirm({
-                size: 'medium',
-                title: '操作提示',
-                message: '<div>下线后该图片将不展示在轮播banner中</div>' +
-                '<p>是否执行下线操作</p>',
-                buttons: {
-                    confirm: {
-                        label: '确认',
-                        className: 'btn-success'
-                    },
-                    cancel: {
-                        label: '取消',
-                        className: 'btn-danger'
-                    }
-
-                },
-                callback: function (result) {
-                    if (result) {
-                        request.articlePut(id, 1).then(
-                            function (data) {
-                                if (data.data.code === 0) {
-                                    $state.go($state.current, {}, {
-                                        reload: true
-                                    });
-                                    bootbox.alert('下线成功');
-                                }
-                            }
-                        )
-
-                    }
-                }
-            })
+    };
+    $scope.del = function () {
+        var id = this.x.id;
+        demoservice.del(id);
+    };
+    $scope.pop = {
+        popup1: {
+            opened: false
+        },
+        popup2: {
+            opened: false
+        },
+        open2: function () {
+            $scope.pop.popup2.opened = true;
+        },
+        open1: function () {
+            $scope.pop.popup1.opened = true;
         }
-
     };
-    $scope.delete = function () {
-        bootbox.setLocale("zh_CN");
-        var id = this.x.id;
-        bootbox.confirm({
-            size: 'medium',
-            title: '提示',
-            message: '是否确认删除',
-            buttons: {
-                confirm: {
-                    label: '确认',
-                    className: 'btn-primary'
-                },
-                cancel: {
-                    label: '取消',
-                    className: 'btn-warning'
-                }
-
-            },
-            callback: function (result) {
-                if (result) {
-                    request.articleDelete(id).then(
-                        function (data) {
-                            if (data.data.code === 0) {
-                                $log.log(data);
-                                $state.go($state.current), {}, {
-                                    reload: true
-                                };
-                                bootbox.alert("删除成功")
-                            }
-                        }
-                    )
-                }
-            }
-
-        })
-    };
-    $scope.open1 = function () {
-        $scope.popup1.opened = true;
-    };
-
-    $scope.open2 = function () {
-        $scope.popup2.opened = true;
-    };
-
-    $scope.popup1 = {
-        opened: false
-    };
-
-    $scope.popup2 = {
-        opened: false
-    };
-    $scope.params = {
-        page: $stateParams.page,
-        status: $stateParams.status,
-        type: $stateParams.type,
-        startAt: $stateParams.startAt,
-        endAt: $stateParams.endAt
-    };
+    $scope.params = $stateParams;
     $log.log($scope.params);
+    console.log($stateParams);
     $scope.params.size = ($stateParams.size) ? $stateParams.size : 10;
     request.articleList($scope.params).then(
         function (data) {
@@ -209,8 +104,6 @@ myApp.controller('article',function ($rootScope, $scope, $http, $state, $statePa
     };
 });
 myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $stateParams, FileUploader, request) {
-
-    $log.log($stateParams);
     if ($stateParams.id) {
         $scope.articlename = "编辑article";
         var id = $stateParams.id;
@@ -224,11 +117,13 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
                 $scope.img_view = $scope.params.img;
             }
         );
-        $scope.upload = function () {
-            $scope.params.status = 2;
+        $scope.upload = function (status) {
+            $scope.params.status = status;
+            console.log(typeof(status));
             $scope.params.img = $scope.img_view;
             $scope.params.content = editor1.txt.text();
-            request.articleEdit(id,$scope.params).then(
+            console.log($scope.params);
+            request.articleEdit(id, $scope.params).then(
                 function (data) {
                     bootbox.alert("新增成功");
                     $state.go('article');
@@ -236,22 +131,10 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
             )
 
         };
-        $scope.save = function () {
-            $scope.params.status = 1;
-            $scope.params.img = $scope.img_view;
-            $scope.params.content = editor1.txt.text();
-            request.articleEdit(id,$scope.params).then(
-                function (data) {
-                    bootbox.alert("新增成功");
-                    $state.go('article');
-                }
-            )
-
-        }
     } else {
         $scope.articlename = "新增article";
-        $scope.upload = function () {
-            $scope.params.status = 2;
+        $scope.upload = function (status) {
+            $scope.params.status = status;
             $scope.params.img = $scope.img_view;
             $scope.params.content = editor1.txt.text();
             request.articleNewadd($scope.params).then(
@@ -260,30 +143,14 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
                     $state.go('article');
                 }
             )
-
         };
-        $scope.save = function () {
-            $scope.params.status = 1;
-            $scope.params.img = $scope.img_view;
-            $scope.params.content = editor1.txt.text();
-            request.articleNewadd($scope.params).then(
-                function (data) {
-                    bootbox.alert("新增成功");
-                    $state.go('article');
-                }
-            )
-
-        }
     }
-
-
     var uploader = $scope.uploader = new FileUploader({
         url: '/carrots-admin-ajax/a/u/img/task'
     });
     uploader.onSuccessItem = function (fileItem, rsp, status, headers) {
         console.info('onSuccessItem', fileItem, rsp, status, headers);
-        $scope.src = rsp.data.url;
-        $scope.img_view = $scope.src;
+        $scope.img_view = rsp.data.url;
     };
 });
 
