@@ -114,13 +114,13 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
                 var content = $scope.params.content;
                 $("#content").html(content);
                 $scope.params.type = $scope.params.type.toString();
-                $scope.img_view = $scope.params.img;
+                $scope.imgreview = $scope.params.img;
             }
         );
         $scope.upload = function (status) {
             $scope.params.status = status;
             console.log(typeof(status));
-            $scope.params.img = $scope.img_view;
+            $scope.params.img = $scope.imgreview;
             $scope.params.content = editor1.txt.text();
             console.log($scope.params);
             request.articleEdit(id, $scope.params).then(
@@ -135,7 +135,7 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
         $scope.articlename = "新增article";
         $scope.upload = function (status) {
             $scope.params.status = status;
-            $scope.params.img = $scope.img_view;
+            $scope.params.img = $scope.imgreview;
             $scope.params.content = editor1.txt.text();
             request.articleNewadd($scope.params).then(
                 function (data) {
@@ -150,7 +150,7 @@ myApp.controller('image', function ($rootScope, $scope, $http, $state, $log, $st
     });
     uploader.onSuccessItem = function (fileItem, rsp, status, headers) {
         console.info('onSuccessItem', fileItem, rsp, status, headers);
-        $scope.img_view = rsp.data.url;
+        $scope.imgreview = rsp.data.url;
     };
 });
 

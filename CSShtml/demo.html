@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Object-oriented JavaScript inheritance</title>
+    <title>demo</title>
     <script src="../js/jquery-3.3.1.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -17,25 +17,51 @@
     <script src="demo.js"></script>
     <!--表单验证-->
     <script src="../js/angular-messages/angular-messages.js"></script>
+    <style>
+        .odd {
+            background-color: brown;
+            color:white;
+        }
+        .even {
+            background-color: palevioletred;
+            color:white;
+        }
+        .black{
+            background-color: aquamarine;
+            color:red;
+        }
+    </style>
 </head>
-<body ng-app="myApp" ng-controller="SomeController">
-<div>
-    <form name="myForm">
-        <label>
-            Enter your name:
-            <input type="text"
-                   ng-model="name"
-                   ng-pattern="/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/"
-                   ng-minlength="5"
-                   ng-maxlength="120"
-                   required />
-        </label>
-        <div ng-messages="myForm.$error" style="color:maroon" role="alert">
-            <div ng-message="required">You did not enter a field</div>
-            <div ng-message="minlength">Your field is too short</div>
-            <div ng-message="pattern">请输入正确的url</div>
-        </div>
-    </form>
+<body ng-app="app">
+<div class="row">
+    <div class="col-md-3">
+        <superman strength>力量</superman>
+    </div>
 </div>
+<div class="row">
+    <div class="col-md-3">
+        <superman speed strength>速度</superman>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <superman speed light strength>光</superman>
+    </div>
+</div>
+<div ng-controller="myCtrl">
+    <input type="text" ng-model="ctrlFlavor">
+    <drink flavor="ctrlFlavor" name="matt" class="dog"></drink>
+    <greeting greet="sayHello(name)"></greeting>
+    <ul>
+        <li ng-repeat="item in moduleList" ng-class="{even: !$even, odd: !$odd,black:$first}">{{item.name}}{{}}</li>
+    </ul>
+</div>
+
+<form name="myForm" ng-submit="save()" ng-controller="demoCtrl">
+    <input type="text" ng-model="user.userName" required>id
+    <input type="password" ng-model="user.password" required>
+    <input type="submit" ng-disabled="myForm.$invalid">
+</form>
+
 </body>
 </html>
