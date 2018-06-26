@@ -383,7 +383,7 @@ app.controller('demoCtrl', function ($scope) {
     $scope.user = {
         userName: 'matt',
         password: ''
-    }
+    };
     $scope.save = function () {
         alert("保存数据")
     }

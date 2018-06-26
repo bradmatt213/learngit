@@ -43,7 +43,6 @@ myApp.controller('article', function ($rootScope, $scope, $http, $state, $stateP
         var status = this.x.status;
         var id = this.x.id;
         demoservice.get(id, status);
-
     };
     $scope.del = function () {
         var id = this.x.id;
